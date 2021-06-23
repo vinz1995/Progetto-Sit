@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $host= 'localhost';
 $db = 'gis2021';
 $user = 'postgres';
@@ -20,14 +20,39 @@ try {
 
 			print_r($result);
 		*/
-		$stmt = $pdo->prepare("SELECT * FROM utenti WHERE email=?");
-		$stmt->execute([$_POST['email']]); 
+		$stmt = $pdo->prepare("SELECT password, email, cognome, nome FROM utenti WHERE email=:email");
+		$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+		$stmt->execute(); 
+		$stmt->bindColumn('password', $password);
+		$stmt->bindColumn('email', $email);
+		$stmt->bindColumn('nome', $nome);
+		$stmt->bindColumn('cognome', $cognome);
+		
 		$user = $stmt->fetch();
-		print_r($user);
+		// echo $_POST['password'];
+		// echo $password;
+		// if ($_POST['password'] === $password) {
+		// 	// code...
+		// 	echo "ok";
+		// }
+		// else{
+		// 	echo 'no';
+		// }
+		if ($_POST['password'] === $password) {
+			session_regenerate_id();
+			$_SESSION['loggedin'] = TRUE;
+			$_SESSION['name'] = $nome.' '.$cognome;
+			$_SESSION['id'] = session_id();
+			//$_SESSION['id'] = $id;
+			header('Location: home.php');
+		}
+		else{
+			echo 'email o password sbagliate';
+		}
+
 		}
 } catch (PDOException $e) {
 	die($e->getMessage());
 } finally {
 	$pdo=null;
 }
-
