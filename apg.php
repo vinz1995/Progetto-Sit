@@ -15,15 +15,14 @@ try {
 	}
 } catch (PDOException $e) {
 	die($e->getMessage());
-} /*finally {
+} finally {
 	if ($pdo) {
-		$pdo = null;
-	}
-}*/
-
-$data = $pdo->query("SELECT * FROM tabella_spaziale")->fetchAll();
+		$data = $pdo->query("SELECT * FROM tabella_spaziale")->fetchAll();
 // and somewhere later:
 foreach ($data as $row) {
-	echo 'ok';
-    print_r( $row)."<br />\n";
+
+    print_r( $row['id'])."<br />\n";
 }
+	}
+}
+
