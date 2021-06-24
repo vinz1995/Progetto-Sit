@@ -46,7 +46,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
     
@@ -60,13 +60,13 @@ if (!isset($_SESSION['loggedin'])) {
       </button>
      	<div class="dropdown">
 	      <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-	      	<strong class="me-2"><?php echo $_SESSION['name'];?></strong>
+	      	<strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
 	        <img src="img/sublogo_3.png" alt="" width="32" height="32" class="rounded-circle">
 	      </a>
 	      <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-lg-end" aria-labelledby="dropdownUser1">
 	        <li><a class="dropdown-item" href="#">New project...</a></li>
 	        <li><a class="dropdown-item" href="#">Settings</a></li>
-	        <li><a class="dropdown-item" href="#">Profile</a></li>
+	        <li><a class="dropdown-item" href="profilo.php">Profile</a></li>
 	        <li><hr class="dropdown-divider"></li>
 	        <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
 	      </ul>
@@ -78,9 +78,8 @@ if (!isset($_SESSION['loggedin'])) {
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-    <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+    <h1 class="mt-5">Welcome <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
+    
   </div>
 </main>
 

@@ -9,7 +9,7 @@
     <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
-
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     
 
     <!-- Bootstrap core CSS -->
@@ -36,7 +36,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
     
@@ -53,39 +53,44 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
-          
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
-        <div class="ms-auto">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item me-2">
-            <a class="btn btn-outline-success" href="login.html" role="button">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-primary" href="login.html" role="button">Register</a>
-          </li>
-        </ul>
+        
       </div>
-      </div>
-      
     </div>
   </nav>
 </header>
 
 <!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container  text-center">
-    <h1 class="mt-5 ">Sticky footer with fixed navbar</h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-    <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+<main class="form-signin">
+  <div class="container">
+    <form method="POST" action="authenticate.php">
+    <img class="mb-4" src="img/sublogo_3.png" alt="" width="300" height="150">
+    <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+    <div class="form-floating ">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Sign in</button>
+    </form>
+
+    <form method="POST" action="register.php">
+       <button class="w-100 btn btn-primary" type="submit" name="SignUp">Sign Up</button>
+    </form>
   </div>
+  
 </main>
+
 
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container text-center">
-    <span class="text-muted f-ce" >Place sticky footer content here.</span>
+    <span class="text-muted">Place sticky footer content here.</span>
   </div>
 </footer>
       

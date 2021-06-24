@@ -1,3 +1,13 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+  header('Location: index.html');
+  exit;
+}
+?>
+
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -48,38 +58,37 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <div class="ms-auto">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item me-2">
-            <a class="btn btn-outline-success" href="login.html" role="button">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-primary" href="login.html" role="button">Register</a>
-          </li>
+      <div class="dropdown">
+        <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
+          <img src="img/sublogo_3.png" alt="" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-lg-end" aria-labelledby="dropdownUser1">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
         </ul>
       </div>
-      </div>
-      
     </div>
   </nav>
 </header>
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">
-  <div class="container  text-center">
-    <h1 class="mt-5 ">Sticky footer with fixed navbar</h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-    <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+  <div class="container">
+    <h1 class="mt-5">Welcome <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
+    <div class="card text-center" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><?php  echo $_SESSION['nome'];?></li>
+        <li class="list-group-item"><?php  echo $_SESSION['cognome'];?></li>
+        <li class="list-group-item"><?php  echo $_SESSION['codiceFiscale'];?></li>
+      </ul>
+  <div class="card-footer">
+    Card footer
+  </div>
+</div>
   </div>
 </main>
 
@@ -87,7 +96,12 @@
   <div class="container text-center">
     <span class="text-muted f-ce" >Place sticky footer content here.</span>
   </div>
+   <h1 class="visually-hidden">Sidebars examples</h1>
+
+  
 </footer>
       
   </body>
 </html>
+
+

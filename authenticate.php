@@ -41,7 +41,8 @@ try {
 		if ($_POST['password'] === $password) {
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
-			$_SESSION['name'] = $nome.' '.$cognome;
+			$_SESSION['nome'] = $nome;
+			$_SESSION['cognome']=$cognome;
 			$_SESSION['id'] = session_id();
 			//$_SESSION['id'] = $id;
 			header('Location: home.php');
