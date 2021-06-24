@@ -61,7 +61,7 @@ if (!isset($_SESSION['loggedin'])) {
      	<div class="dropdown">
 	      <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 	      	<strong class="me-2"><?php echo $_SESSION['name'];?></strong>
-	        <img src="" alt="" width="32" height="32" class="rounded-circle">
+	        <img src="img/sublogo_3.png" alt="" width="32" height="32" class="rounded-circle">
 	      </a>
 	      <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-lg-end" aria-labelledby="dropdownUser1">
 	        <li><a class="dropdown-item" href="#">New project...</a></li>
