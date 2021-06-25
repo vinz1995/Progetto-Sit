@@ -3,8 +3,8 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
-	exit;
+    header('Location: index.html');
+    exit;
 }
 ?>
 
@@ -18,9 +18,9 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="generator" content="Hugo 0.83.1">
     <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+  	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -44,15 +44,15 @@ if (!isset($_SESSION['loggedin'])) {
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
-    
+
 <header>
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Fixed navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,8 +78,8 @@ if (!isset($_SESSION['loggedin'])) {
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5">Welcome <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
-    
+  	<h1 class="mt-5">Welcome <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
+
   </div>
 </main>
 
@@ -89,8 +89,8 @@ if (!isset($_SESSION['loggedin'])) {
   </div>
    <h1 class="visually-hidden">Sidebars examples</h1>
 
-  
+
 </footer>
-      
+
   </body>
 </html>
