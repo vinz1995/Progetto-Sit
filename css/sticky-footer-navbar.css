@@ -35,3 +35,7 @@ main > .container {
 .form-signin button[name="SignIn"]{
    margin-top: 10px ;
 }
+
+.card-dati-utente{
+  margin: auto;
+}

@@ -3,8 +3,8 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: index.html');
-  exit;
+    header('Location: index.html');
+    exit;
 }
 ?>
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -44,12 +44,12 @@ if (!isset($_SESSION['loggedin'])) {
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
-    
+
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
@@ -58,6 +58,12 @@ if (!isset($_SESSION['loggedin'])) {
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+          </li>
+      </div>
       <div class="dropdown">
         <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
           <strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
@@ -76,32 +82,32 @@ if (!isset($_SESSION['loggedin'])) {
 </header>
 
 <!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5">Welcome <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
-    <div class="card text-center" style="width: 18rem;">
+<main class="flex-shrink-0 ">
+  <div class="container ">
+    <h1 class="mt-5 text-center">Ciao ecco i tuoi dati <?php echo  $_SESSION['nome'].' '.$_SESSION['cognome'];?> </h1>
+    <div class="card card-dati-utente" style="width: 20rem;">
+      <div class="card-header">
+          Dati utente
+      </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><?php  echo $_SESSION['nome'];?></li>
-        <li class="list-group-item"><?php  echo $_SESSION['cognome'];?></li>
-        <li class="list-group-item"><?php  echo $_SESSION['codiceFiscale'];?></li>
+
+        <li class="list-group-item"> <label class="text-muted">Nome: </label> <?php  echo $_SESSION['nome'];?></li>
+        <li class="list-group-item"><label class="text-muted">Cognome: </label> <?php  echo $_SESSION['cognome'];?></li>
+        <li class="list-group-item"><label class="text-muted">Email: </label><?php  echo ' '.$_SESSION['email'];?></li>
+        <li class="list-group-item"><label class="text-muted">Codice Fiscale: </label><?php  echo $_SESSION['codiceFiscale'];?></li>
+        <li class="list-group-item"><label class="text-muted">Numero di telefono: </label><?php  echo $_SESSION['telefono'];?></li>
       </ul>
-  <div class="card-footer">
-    Card footer
-  </div>
 </div>
   </div>
 </main>
-
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container text-center">
     <span class="text-muted f-ce" >Place sticky footer content here.</span>
   </div>
    <h1 class="visually-hidden">Sidebars examples</h1>
 
-  
+
 </footer>
-      
+
   </body>
 </html>
-
-

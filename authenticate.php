@@ -43,6 +43,7 @@ try {
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome']=$cognome;
+			$_SESSION['email']=$email;
 			$_SESSION['id'] = session_id();
 			//$_SESSION['id'] = $id;
 			header('Location: home.php');

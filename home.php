@@ -58,6 +58,12 @@ if (!isset($_SESSION['loggedin'])) {
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+          </li>
+      </div>
      	<div class="dropdown">
 	      <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 	      	<strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
