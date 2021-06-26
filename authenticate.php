@@ -1,9 +1,6 @@
 <?php
 session_start();
-$host= 'localhost';
-$db = 'gis2021';
-$user = 'postgres';
-$password = '306090120'; // change to your password
+require_once 'configDB.php';
 
 try {
 	$dsn = "pgsql:host=$host;port=5432;dbname=$db;";

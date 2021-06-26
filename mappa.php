@@ -15,10 +15,6 @@
     <title></title>
 </head>
 <body>
-<div class="row ">
-    <div class="col-6">.col-6</div>
-    <div class="col-6 ">.col-6</div>
-</div>
 <div class="container">
   <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
     <div class="col">Column</div>
