@@ -36,10 +36,14 @@ try {
 			header('Location: register.php');
 		}
 		else{
-			$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordC)");
+			$stmt = $pdo->prepare("INSERT INTO utenti (nome, cognome, email, password, codicefiscale, telefono ) VALUES (:nome, :cognome, :email, :passwordC, :codicefiscale, :telefono)");
+			$stmt->bindParam(':nome', $_POST['nome'], PDO::PARAM_STR);
+			$stmt->bindParam(':cognome', $_POST['cognome'], PDO::PARAM_STR);
 			$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$stmt->bindParam(':passwordC', $password, PDO::PARAM_STR);
+			$stmt->bindParam(':codicefiscale', $_POST['codicefiscale'], PDO::PARAM_STR);
+			$stmt->bindParam(':telefono', $_POST['telefono'], PDO::PARAM_STR);
 			$stmt->execute();
 			$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
 			header('Location: login.php');
