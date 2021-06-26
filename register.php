@@ -37,7 +37,8 @@ try {
 		else{
 			$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordInChiaro)");
 			$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
-			$stmt->bindParam(':passwordInChiaro', $_POST['password'], PDO::PARAM_STR);
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			$stmt->bindParam(':passwordInChiaro', $password, PDO::PARAM_STR);
 			$stmt->execute(); 
 			echo 'You have successfully registered, you can now login!';
 			

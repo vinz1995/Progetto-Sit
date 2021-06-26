@@ -25,7 +25,7 @@ try {
 		$stmt->bindColumn('nome', $nome);
 		$stmt->bindColumn('cognome', $cognome);
 		
-		$user = $stmt->fetch();
+		$user = $stmt->fetch(PDO::FETCH_ASSOC);
 		// echo $_POST['password'];
 		// echo $password;
 		// if ($_POST['password'] === $password) {
@@ -35,7 +35,7 @@ try {
 		// else{
 		// 	echo 'no';
 		// }
-		if ($_POST['password'] === $password) {
+		if(password_verify($_POST['password'], $password)){
 			session_regenerate_id();
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['nome'] = $nome;
