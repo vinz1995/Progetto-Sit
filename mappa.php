@@ -19,8 +19,6 @@
   <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
     <div class="col">Column</div>
     <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
   </div>
 </div>
 </body>

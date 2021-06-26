@@ -65,11 +65,23 @@ if (isset($_SESSION['loggedin'])) {
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
+          <div class="ms-auto">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item me-2">
+                <a class="btn btn-outline-success" href="login.php" role="button">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-primary" href="register.php" role="button">Register</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
       </div>
     </nav>
   </header>
@@ -85,7 +97,9 @@ if (isset($_SESSION['loggedin'])) {
                echo $_SESSION['RegistrazioneRiuscita'];
                session_destroy();
           }
-          echo 'Please sign in';
+          else{
+           echo 'Please sign in';
+          }
           ?>
             
         </h1>

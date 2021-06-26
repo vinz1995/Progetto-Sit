@@ -41,7 +41,7 @@ try {
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$stmt->bindParam(':passwordC', $password, PDO::PARAM_STR);
 			$stmt->execute();
-			$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adessp puoi accedere';
+			$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
 			header('Location: login.php');
 		}
 
