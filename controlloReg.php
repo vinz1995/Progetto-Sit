@@ -32,7 +32,7 @@ try {
 		
 		if ($stmt->rowCount()>0) {
 			echo 'email exists, please choose another!';
-			$_SESSION['erroreEmail']='errore email';
+			$_SESSION['erroreEmail']='email exists';
 			header('Location: register.php');
 		}
 		else{

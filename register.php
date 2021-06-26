@@ -1,10 +1,10 @@
 <?php
 session_start();
-// If the user is not logged in redirect to the login page...
-if (isset($_SESSION['erroreEmail'])) {
-    //header('Location: index.html');
-  $erroreEmail='esiste l email';
+if (isset($_SESSION['loggedin'])) {
+    header('Location: home.php');
+    exit;
 }
+session_destroy();
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
@@ -78,7 +78,6 @@ if (isset($_SESSION['erroreEmail'])) {
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="Inserisci il nome" name="nome" required>
       <label for="floatingInput"  >Nome</label>
-      <span class="form-control"><?php  echo $erroreEmail;?></span>
     </div>
     <div class="form-floating ">
       <input type="text" class="form-control" id="floatingInput" placeholder="Inserisci il cognome" name="cognome" required>
@@ -106,6 +105,7 @@ if (isset($_SESSION['erroreEmail'])) {
       <label for="floatingInput">Ripeti password</label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Registrati</button>
+    <span><?php  echo $_SESSION['erroreEmail'];?></span>
     </form>
 </main>
 
