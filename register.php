@@ -1,9 +1,6 @@
 <?php
 session_start();
-$host= 'localhost';
-$db = 'gis2021';
-$user = 'postgres';
-$password = '306090120'; // change to your password
+require_once 'configDB.php';
 // Now we check if the data was submitted, isset() function will check if the data exists.
 // if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 // 	// Could not get the data that should have been sent.

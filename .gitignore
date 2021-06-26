@@ -2,3 +2,5 @@
 .DS_Store
 *.iml
 *.xml
+
+configDB.php
