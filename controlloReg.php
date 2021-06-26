@@ -42,7 +42,8 @@ try {
 			$stmt->bindParam(':passwordInChiaro', $password, PDO::PARAM_STR);
 			$stmt->execute(); 
 			echo 'You have successfully registered, you can now login!';
-			
+			sleep(5);
+			header('Location: login.php');
 		}
 
 
