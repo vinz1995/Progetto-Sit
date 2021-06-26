@@ -94,7 +94,6 @@ session_destroy();
      <div class="form-floating">
       <input type="tel" class="form-control" id="floatingPassword" placeholder="10" name="telefono" pattern="[0-9]{10}" required>
       <label for="floatingPassword">Numero di telefono</label>
-      
     </div>
     <div class="form-floating ">
       <input type="password" class="form-control" id="floatingInput" placeholder="Inserisci il nome" name="password" required>
@@ -106,6 +105,7 @@ session_destroy();
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Registrati</button>
     <span><?php  echo $_SESSION['erroreEmail'];?></span>
+    <span><?php  echo $_SESSION['errorePassword'];?></span>
     </form>
 </main>
 

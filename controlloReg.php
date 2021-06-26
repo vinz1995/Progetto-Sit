@@ -36,13 +36,20 @@ try {
 			header('Location: register.php');
 		}
 		else{
-			$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordC)");
-			$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
-			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-			$stmt->bindParam(':passwordC', $password, PDO::PARAM_STR);
-			$stmt->execute();
-			$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
-			header('Location: login.php');
+			if ($_POST['password']===$_POST['ripetiPassword']) {
+				$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordC)");
+				$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+				$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+				$stmt->bindParam(':passwordC', $password, PDO::PARAM_STR);
+				$stmt->execute();
+				$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
+				header('Location: login.php');
+			}
+			else{
+				$_SESSION['errorePassword']='match errato';
+				header('Location: register.php');
+			}
+			
 		}
 
 
