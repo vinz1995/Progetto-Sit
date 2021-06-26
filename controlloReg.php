@@ -36,13 +36,12 @@ try {
 			header('Location: register.php');
 		}
 		else{
-			$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordInChiaro)");
+			$stmt = $pdo->prepare("INSERT INTO utenti (email,password) VALUES (:email,:passwordC)");
 			$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-			$stmt->bindParam(':passwordInChiaro', $password, PDO::PARAM_STR);
-			$stmt->execute(); 
-			echo 'You have successfully registered, you can now login!';
-			sleep(5);
+			$stmt->bindParam(':passwordC', $password, PDO::PARAM_STR);
+			$stmt->execute();
+			$_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adessp puoi accedere';
 			header('Location: login.php');
 		}
 

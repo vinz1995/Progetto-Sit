@@ -3,9 +3,10 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (isset($_SESSION['loggedin'])) {
-    header('Location: home.php');
-    exit;
-}
+      header('Location: home.php');
+      exit;
+  }
+
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
@@ -78,7 +79,16 @@ if (isset($_SESSION['loggedin'])) {
     <div class="container">
       <form method="POST" action="authenticate.php">
         <img class="mb-4" src="img/sublogo_3.png" alt="" width="300" height="150">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <h1 class="h3 mb-3 fw-normal">
+          <?php 
+          if (isset($_SESSION['RegistrazioneRiuscita'])) {
+               echo $_SESSION['RegistrazioneRiuscita'];
+               session_destroy();
+          }
+          echo 'Please sign in';
+          ?>
+            
+        </h1>
         <div class="form-floating ">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
           <label for="floatingInput">Email address</label>
