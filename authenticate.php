@@ -17,13 +17,15 @@ try {
 
 			print_r($result);
 		*/
-		$stmt = $pdo->prepare("SELECT password, email, cognome, nome FROM utenti WHERE email=:email");
+		$stmt = $pdo->prepare("SELECT password, email, cognome, nome, telefono, codicefiscale FROM utenti WHERE email=:email");
 		$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
 		$stmt->execute(); 
 		$stmt->bindColumn('password', $password);
 		$stmt->bindColumn('email', $email);
 		$stmt->bindColumn('nome', $nome);
 		$stmt->bindColumn('cognome', $cognome);
+		$stmt->bindColumn('telefono', $telefono);
+		$stmt->bindColumn('codicefiscale', $codicefiscale);
 		
 		$user = $stmt->fetch(PDO::FETCH_ASSOC);
 		// echo $_POST['password'];
@@ -41,12 +43,15 @@ try {
 			$_SESSION['nome'] = $nome;
 			$_SESSION['cognome']=$cognome;
 			$_SESSION['email']=$email;
+			$_SESSION['codicefiscale']=$codicefiscale;
+			$_SESSION['telefono']=$telefono;
 			$_SESSION['id'] = session_id();
 			//$_SESSION['id'] = $id;
 			header('Location: home.php');
 		}
 		else{
-			echo 'email o password sbagliate';
+			$_SESSION['erroreEmail']='email o password sbagliate';
+			header('Location: login.php');
 		}
 
 		}

@@ -111,6 +111,10 @@ if (isset($_SESSION['loggedin'])) {
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
           <label for="floatingPassword">Password</label>
         </div>
+        <span><?php  
+            echo $_SESSION['erroreEmail']; 
+            session_destroy();
+          ?></span>
         <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Sign in</button>
       </form>
 

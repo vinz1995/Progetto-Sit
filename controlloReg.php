@@ -36,6 +36,7 @@ try {
 			header('Location: register.php');
 		}
 		else{
+			
 
 			if ($_POST['password']===$_POST['ripetiPassword']) {
 				$stmt = $pdo->prepare("INSERT INTO utenti (nome, cognome, email, password, codicefiscale, telefono ) VALUES (:nome, :cognome, :email, :passwordC, :codicefiscale, :telefono)");

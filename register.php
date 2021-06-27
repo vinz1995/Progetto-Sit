@@ -88,7 +88,7 @@ session_destroy();
       <label for="floatingInput">Email</label>
     </div>
     <div class="form-floating ">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Inserisci il nome" name="codiceFiscale" pattern="[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]" required>
+      <input type="text" class="form-control" id="floatingInput" placeholder="Inserisci il nome" name="codicefiscale" pattern="[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]" required>
       <label for="floatingInput">Codice Fiscale</label>
     </div>
      <div class="form-floating">

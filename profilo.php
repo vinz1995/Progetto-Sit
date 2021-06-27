@@ -79,7 +79,7 @@ if (!isset($_SESSION['loggedin'])) {
         <li class="list-group-item"> <label class="text-muted">Nome: </label> <?php  echo $_SESSION['nome'];?></li>
         <li class="list-group-item"><label class="text-muted">Cognome: </label> <?php  echo $_SESSION['cognome'];?></li>
         <li class="list-group-item"><label class="text-muted">Email: </label><?php  echo ' '.$_SESSION['email'];?></li>
-        <li class="list-group-item"><label class="text-muted">Codice Fiscale: </label><?php  echo $_SESSION['codiceFiscale'];?></li>
+        <li class="list-group-item"><label class="text-muted">Codice Fiscale: </label><?php  echo $_SESSION['codicefiscale'];?></li>
         <li class="list-group-item"><label class="text-muted">Numero di telefono: </label><?php  echo $_SESSION['telefono'];?></li>
       </ul>
 </div>
