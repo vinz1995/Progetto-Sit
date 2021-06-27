@@ -87,7 +87,7 @@ if (isset($_SESSION['loggedin'])) {
   </header>
 
   <!-- Begin page content -->
-  <main class="form-signin">
+  <main class="flex-shrink-0 form-signin">
     <div class="container">
       <form method="POST" action="authenticate.php">
         <img class="mb-4" src="img/sublogo_3.png" alt="" width="300" height="150">
@@ -103,18 +103,29 @@ if (isset($_SESSION['loggedin'])) {
           ?>
             
         </h1>
-        <div class="form-floating ">
+        <div class="form-floating">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
           <label for="floatingInput">Email address</label>
+          <!-- <small id="passwordHelpInline" class="text-muted ">
+      Must be 8-20 characters long.
+    </small> -->
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
           <label for="floatingPassword">Password</label>
         </div>
-        <span><?php  
+        <div class="container">
+          <small class="text-muted ">
+          <?php  
             echo $_SESSION['erroreEmail']; 
             session_destroy();
-          ?></span>
+          ?>
+        </small>
+        </div>
+        <!-- <span><?php  
+            echo $_SESSION['erroreEmail']; 
+            session_destroy();
+          ?></span> -->
         <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Sign in</button>
       </form>
 
@@ -122,7 +133,6 @@ if (isset($_SESSION['loggedin'])) {
         <button class="w-100 btn btn-primary" type="submit" name="SignUp">Sign Up</button>
       </form>
     </div>
-
   </main>
 
 
