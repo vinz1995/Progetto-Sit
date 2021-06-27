@@ -4,7 +4,6 @@ if (isset($_SESSION['loggedin'])) {
     header('Location: home.php');
     exit;
 }
-session_destroy();
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
@@ -104,8 +103,9 @@ session_destroy();
       <label for="floatingInput">Ripeti password</label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="SignIn">Registrati</button>
-    <span><?php  echo $_SESSION['erroreEmail'];?></span>
-    <span><?php  echo $_SESSION['errorePassword'];?></span>
+    <span><?php  echo $_SESSION['erroreEmail']; session_destroy();?></span>
+    <span><?php  echo $_SESSION['errorePassword']; session_destroy();?></span>
+    <span><?php  echo $_SESSION['erroreCodicefiscale']; session_destroy();?></span>
     </form>
 </main>
 

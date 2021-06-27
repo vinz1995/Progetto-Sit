@@ -19,25 +19,30 @@ try {
 	$pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 	if ($pdo) {
 		echo "Connected to the $db database successfully!";
-		$stmt = $pdo->prepare("SELECT email FROM utenti WHERE email=:email");
+		$stmt = $pdo->prepare("SELECT email, codicefiscale FROM utenti WHERE email=:email OR  codicefiscale=:codicefiscaleLetto");
 		$stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR);
+		$stmt->bindParam(':codicefiscaleLetto', $_POST['codicefiscale'], PDO::PARAM_STR);
 
 		$stmt->execute(); 
 		//non serve non voglio leg i res del DB
 		// $stmt->bindColumn('email', $email);// restituita
-		
-		// $user = $stmt->fetch(PDO::FETCH_ASSOC);
-		// echo $email;
+		$stmt->bindColumn('codicefiscale', $codicefiscale);
+		$user = $stmt->fetch();
+		//echo $email;
 
 		
 		if ($stmt->rowCount()>0) {
-			echo 'email exists, please choose another!';
-			$_SESSION['erroreEmail']='email exists';
+			if ($codicefiscale === $_POST['codicefiscale']) {
+				$_SESSION['erroreCodicefiscale']='codice Fiscale presente';
+				
+			}
+			else{
+				$_SESSION['erroreEmail']='email exists';
+
+			}	
 			header('Location: register.php');
 		}
-		else{
-			
-
+		else{			
 			if ($_POST['password']===$_POST['ripetiPassword']) {
 				$stmt = $pdo->prepare("INSERT INTO utenti (nome, cognome, email, password, codicefiscale, telefono ) VALUES (:nome, :cognome, :email, :passwordC, :codicefiscale, :telefono)");
 				$stmt->bindParam(':nome', $_POST['nome'], PDO::PARAM_STR);
@@ -52,7 +57,7 @@ try {
 				header('Location: login.php');
 			}
 			else{
-				$_SESSION['errorePassword']='match errato';
+				$_SESSION['errorePassword']='Ripeti pass non =';
 				header('Location: register.php');
 			}
 
