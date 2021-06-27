@@ -27,7 +27,7 @@ try {
 		//non serve non voglio leg i res del DB
 		// $stmt->bindColumn('email', $email);// restituita
 		$stmt->bindColumn('codicefiscale', $codicefiscale);
-		$user = $stmt->fetch();
+		$user = $stmt->fetch(PDO::FETCH_ASSOC);
 		//echo $email;
 
 		
@@ -62,8 +62,7 @@ try {
 			}
 
 		}
-
-
+		
 		}
 } catch (PDOException $e) {
 	die($e->getMessage());
