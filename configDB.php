@@ -1,6 +1,6 @@
 <?php
 $host= 'localhost';
-$db = 'postgres';
+$db = 'gis2021';
 $user = 'postgres';
-$password = '20091995'; // change to your password
+$password = '306090120'; // change to your password
 ?>
