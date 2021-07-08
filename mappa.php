@@ -49,6 +49,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <script src="https://unpkg.com/elm-pep"></script>
     <style>
       .map {
         height: 400px;
@@ -100,7 +101,18 @@ if (!isset($_SESSION['loggedin'])) {
       <h3>se</h3>
     </div>
     <div class="col mt-5">
+    <!-- <div id="map" class="map"></div> -->
     <div id="map" class="map"></div>
+    <div id="mouse-position"></div>
+    <form>
+      <label for="projection">Projection </label>
+      <select id="projection">
+        <option value="EPSG:4326">EPSG:4326</option>
+        <option value="EPSG:3857">EPSG:3857</option>
+      </select>
+      <label for="precision">Precision</label>
+      <input id="precision" type="number" min="0" max="12" value="4"/>
+    </form>
     <script src="mappa.js"></script>
 
     </div>

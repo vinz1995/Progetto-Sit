@@ -55,7 +55,7 @@ var map = new Map({
   layers: layers,
   target: 'map',
   view: new View({
-    center: [-10997148, 4569099],
+    center: [0, 0],
     zoom: 4,
   }),
 });
