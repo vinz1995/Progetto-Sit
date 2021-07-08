@@ -49,7 +49,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
-    <script src="https://unpkg.com/elm-pep"></script>
+    <!-- <script src="https://unpkg.com/elm-pep"></script> -->
     <style>
       .map {
         height: 400px;
@@ -102,9 +102,13 @@ if (!isset($_SESSION['loggedin'])) {
      <!--  echo $_COOKIE['profile_viewer_uid'];  -->
 
       <form>
-        <div class="form-floating">
-      <input type="text" class="form-control" id="coordinate" >
-      <label for="floatingPassword">Coo</label>
+      <div class="form-floating">
+      <input type="text" class="form-control" id="lat" >
+      <label for="floatingPassword">lat</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="lon" >
+      <label for="floatingPassword">lon</label>
     </div>
       </form>
     </div>
@@ -117,7 +121,6 @@ if (!isset($_SESSION['loggedin'])) {
     </label>
     <p>
       position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
-      position : <code id="position"></code>
       <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
       heading : <code id="heading"></code>&nbsp;&nbsp;
       speed : <code id="speed"></code> -->

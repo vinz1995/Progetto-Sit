@@ -13,6 +13,7 @@ var Fill=ol.style.Fill;
 var Stroke=ol.style.Stroke;
 var Style=ol.style.Style;
 var proj=ol.proj;
+var toStringXY=ol.coordinate.toStringXY;
 //var toStringHDMS=ol.coordinate.toStringHDMS;
 var toLonLat=ol.proj.toLonLat;
 // var {OSM, Vector as VectorSource} = ol.source;
@@ -52,8 +53,11 @@ el('track').addEventListener('change', function () {
 // update the HTML page when the position changes.
 geolocation.on('change', function () {
   el('accuracy').innerText = geolocation.getAccuracy() + ' [m]';
-  el('position').innerText = geolocation.getPosition();
-  document.getElementById('coordinate').value = toLonLat(geolocation.getPosition()).split(',');
+
+  var coo=toStringXY(toLonLat(geolocation.getPosition()),10).split(',');
+  
+  document.getElementById('lat').value = coo[1];
+  document.getElementById('lon').value = coo[0];
   //document.cookie="profile_viewer_uid="+geolocation.getPosition();
   // el('altitudeAccuracy').innerText = geolocation.getAltitudeAccuracy() + ' [m]';
   // el('heading').innerText = geolocation.getHeading() + ' [rad]';

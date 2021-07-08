@@ -70,7 +70,7 @@ if (!isset($_SESSION['loggedin'])) {
 	        <img src="img/sublogo_3.png" alt="" width="32" height="32" class="rounded-circle">
 	      </a>
 	      <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-lg-end" aria-labelledby="dropdownUser1">
-	        <li><a class="dropdown-item" href="mappa.php">Buca</a></li>
+	        <li><a class="dropdown-item" href="mappaConPosizione.php">Buca</a></li>
 	        <li><a class="dropdown-item" href="#">Settings</a></li>
 	        <li><a class="dropdown-item" href="profilo.php">Profile</a></li>
 	        <li><hr class="dropdown-divider"></li>
