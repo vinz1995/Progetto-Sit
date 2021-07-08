@@ -11,11 +11,11 @@ var MousePosition = ol.control.MousePosition;
 
 
 
-var createStringXY = ol.coordinate.createStringXY;
+//var createStringXY = ol.coordinate.createStringXY;
 var defaultControls  = ol.control.defaults;
 
 var mousePositionControl = new MousePosition({
-  coordinateFormat: createStringXY(4),
+  coordinateFormat: ol.coordinate.createStringXY(4),
   projection: 'EPSG:4326',
   // comment the following two lines to have the mouse position
   // be placed within the map.
@@ -29,15 +29,6 @@ var layers = [
     controls: defaultControls().extend([mousePositionControl]),
     source: new OSM(),
   }),
-  // new ImageLayer({
-  //   extent: [-13884991, 2870341, -7455066, 6338219],
-  //   source: new ImageWMS({
-  //     url: 'http://localhost:8080/geoserver/Strade/wms',
-  //     params: {'LAYERS': 'Strade:Strade'},
-  //     ratio: 1,
-  //     serverType: 'geoserver',
-  //   }),
-  // }) 
   new ImageLayer({
         source: new ImageWMS({
           ratio: 1,
@@ -67,9 +58,12 @@ projectionSelect.addEventListener('change', function (event) {
 
 var precisionInput = document.getElementById('precision');
 precisionInput.addEventListener('change', function (event) {
-  var format = createStringXY(event.target.valueAsNumber);
+  var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
   mousePositionControl.setCoordinateFormat(format);
 });
+
+  
+
 
   //     var pureCoverage = false;
   //     // if this is just a coverage or a group of them, disable a few items,
