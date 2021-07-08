@@ -12,7 +12,7 @@ var MousePosition = ol.control.MousePosition;
 
 
 var createStringXY = ol.coordinate.createStringXY;
-var defaults  = ol.control.defaults;
+var defaultControls  = ol.control.defaults;
 
 var mousePositionControl = new MousePosition({
   coordinateFormat: createStringXY(4),
