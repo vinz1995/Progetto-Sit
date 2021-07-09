@@ -67,11 +67,11 @@ if (!isset($_SESSION['loggedin'])) {
                         <!--  echo $_COOKIE['profile_viewer_uid'];  -->
                         <form method="POST" action="inviaSegnalazione.php">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lat" name="lat">
+                                <input type="text" class="form-control" id="lat" name="lat" required>
                                 <label for="floatingPassword">lat</label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lon" name="lon">
+                                <input type="text" class="form-control" id="lon" name="lon" required>
                                 <label for="floatingPassword">lon</label>
                             </div>
                             <div class="form-floating">
