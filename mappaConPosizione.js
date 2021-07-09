@@ -20,6 +20,7 @@ var toLonLat=ol.proj.toLonLat;
 var VectorSource=ol.source.Vector;
 var VectorLayer = ol.layer.Vector;
 
+
 var view = new View({
   center: [0,0],
   zoom: 2,
