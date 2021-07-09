@@ -1,3 +1,5 @@
+
+
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
@@ -18,7 +20,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="generator" content="Hugo 0.83.1">
     <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  	<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
 
 
@@ -58,60 +60,55 @@ if (!isset($_SESSION['loggedin'])) {
   <body class="d-flex flex-column h-100">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
-<header>
-  <!-- Fixed navbar -->
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-          </li>
+
+<header class="p-1 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-1 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+        <div class="text-end">
+          <strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
+
+          <a class="btn btn-outline-light me-2" href="logout.php" role="button">Esci</a>
+
+        </div>
       </div>
-     	<div class="dropdown">
-	      <a href="#" class="d-inline-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-	      	<strong class="me-2"><?php echo $_SESSION['nome'].' '.$_SESSION['cognome'];?></strong>
-	        <img src="img/sublogo_3.png" alt="" width="32" height="32" class="rounded-circle">
-	      </a>
-	      <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-lg-end" aria-labelledby="dropdownUser1">
-	        <li><a class="dropdown-item" href="mappa.php">Buca</a></li>
-	        <li><a class="dropdown-item" href="#">Settings</a></li>
-	        <li><a class="dropdown-item" href="profilo.php">Profile</a></li>
-	        <li><hr class="dropdown-divider"></li>
-	        <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
-	      </ul>
-    	</div>
     </div>
-  </nav>
-</header>
+  </header>
+
+
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-  	<div class="container mt-auto">
-  <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
-    <div class="col mt-5">
-      <h3>utente</h3>
+    <div class="container mt-1">
+      <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
+        <div class="col mt-1">
+          <h3>utente</h3>
      <!--  echo $_COOKIE['profile_viewer_uid'];  -->
 
-      <form>
-      <div class="form-floating">
-      <input type="text" class="form-control" id="lat" >
-      <label for="floatingPassword">lat</label>
-    </div>
-    <div class="form-floating">
-      <input type="text" class="form-control" id="lon" >
-      <label for="floatingPassword">lon</label>
-    </div>
-      </form>
-    </div>
-    <div class="col mt-5">
-    <div id="map" class="map"></div>
-    <div id="info" style="display: none;"></div>
+            <form>
+                    <div class="form-floating">
+                  <input type="text" class="form-control" id="lat" >
+                  <label for="floatingPassword">lat</label>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="lon" >
+                  <label for="floatingPassword">lon</label>
+                </div>
+            </form>
+      </div>
+    <div class="col mt-1">
+  <div id="map" class="map"></div>
+  <div id="info" style="display: none;"></div>
     <label for="track">
       track position
       <input id="track" type="checkbox"/>
