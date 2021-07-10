@@ -26,6 +26,7 @@ var view = new View({
   zoom: 2,
 });
 
+
 var map = new Map({
   layers: [
     new TileLayer({
@@ -63,6 +64,7 @@ geolocation.on('change', function () {
   // el('altitudeAccuracy').innerText = geolocation.getAltitudeAccuracy() + ' [m]';
   // el('heading').innerText = geolocation.getHeading() + ' [rad]';
   // el('speed').innerText = geolocation.getSpeed() + ' [m/s]';
+
 });
 
 // handle geolocation error.
@@ -112,5 +114,4 @@ map.on('singleclick', function (evt) {
   document.getElementById('lon').value = clickC[0];
   // var hdms = toStringHDMS(toLonLat(coordinate));
   // document.getElementById('coordinate').value=hsms;
-
 });
