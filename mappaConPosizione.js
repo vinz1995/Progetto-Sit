@@ -31,7 +31,19 @@ var map = new Map({
   layers: [
     new TileLayer({
       source: new OSM(),
-    }) ],
+    }),
+    new ImageLayer({
+        source: new ImageWMS({
+          ratio: 1,
+          url: 'http://localhost:8080/geoserver/Strade/wms',
+          params: {'VERSION': '1.1.1',  
+                "STYLES": '',
+                "LAYERS": 'Strade:Strade',
+                "exceptions": 'application/vnd.ogc.se_inimage',
+          }
+        })
+      })
+     ],
   target: 'map',
   view: view,
 });
@@ -114,4 +126,15 @@ map.on('singleclick', function (evt) {
   document.getElementById('lon').value = clickC[0];
   // var hdms = toStringHDMS(toLonLat(coordinate));
   // document.getElementById('coordinate').value=hsms;
+});
+
+var projectionSelect = document.getElementById('projection');
+projectionSelect.addEventListener('change', function (event) {
+  mousePositionControl.setProjection(event.target.value);
+});
+
+var precisionInput = document.getElementById('precision');
+precisionInput.addEventListener('change', function (event) {
+  var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
+  mousePositionControl.setCoordinateFormat(format);
 });
