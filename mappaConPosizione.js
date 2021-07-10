@@ -14,7 +14,7 @@ var Stroke=ol.style.Stroke;
 var Style=ol.style.Style;
 var proj=ol.proj;
 var toStringXY=ol.coordinate.toStringXY;
-//var toStringHDMS=ol.coordinate.toStringHDMS;
+var toStringHDMS=ol.coordinate.toStringHDMS;
 var toLonLat=ol.proj.toLonLat;
 // var {OSM, Vector as VectorSource} = ol.source;
 var VectorSource=ol.source.Vector;
@@ -103,4 +103,14 @@ new VectorLayer({
   source: new VectorSource({
     features: [accuracyFeature, positionFeature],
   }),
+});
+
+map.on('singleclick', function (evt) {
+  var coordinate = evt.coordinate;
+  var clickC=toStringXY(toLonLat(coordinate),10).split(',');
+  document.getElementById('lat').value = clickC[1];
+  document.getElementById('lon').value = clickC[0];
+  // var hdms = toStringHDMS(toLonLat(coordinate));
+  // document.getElementById('coordinate').value=hsms;
+
 });
