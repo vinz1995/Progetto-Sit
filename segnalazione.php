@@ -65,7 +65,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="col mt-1">
                         <h3>utente</h3>
                         <!--  echo $_COOKIE['profile_viewer_uid'];  -->
-                        <form method="POST" action="inviaSegnalazione.php">
+                        <form method="POST" action="inviaSegnalazione.php" enctype="multipart/form-data">
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="lat" name="lat" required>
                                 <label for="floatingPassword">lat</label>
@@ -87,7 +87,7 @@ if (!isset($_SESSION['loggedin'])) {
                                 <label for="floatingTextarea2">Descrizione</label>
                             </div>
                             <div class="mb-3">
-                                <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                <input class="form-control form-control-sm" id="formFileSm" type="file" name="fileCaricato">
                             </div>
                             <div>
                                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="inviaSegnalazione">Invia</button>
