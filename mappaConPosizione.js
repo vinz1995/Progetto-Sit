@@ -126,6 +126,15 @@ map.on('singleclick', function (evt) {
   document.getElementById('lon').value = clickC[0];
   // var hdms = toStringHDMS(toLonLat(coordinate));
   // document.getElementById('coordinate').value=hsms;
+  var punto=new Point(coordinate);
+  positionFeature.setGeometry(punto);
+
+  // map.setView(new ol.View({
+  //           //center: [1795941.70, 4709367.44],
+  //           center: [1725048.44,5031840.61],
+  //           zoom: 6,
+  //    }));
+
 });
 
 var projectionSelect = document.getElementById('projection');
