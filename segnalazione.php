@@ -96,17 +96,27 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="col mt-1">
                         <div id="map" class="map"></div>
-                        <div id="info" style="display: none;"></div>
+                        <form class="form-inline">
+                            <div id="info" style="display: none;"></div>
                         <label for="track">
                             track position
                             <input id="track" type="checkbox" />
                         </label>
+                            <label class="ms-3" for="type">Geometry type &nbsp;</label>
+                            <select id="type">
+                                <option value="Point">Point</option>
+                                <option value="Polygon">Polygon</option>
+                                <option value="Circle">Circle</option>
+                            </select>
+                        </form>
+                        
                         <p>
                             position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
                             <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
                             heading : <code id="heading"></code>&nbsp;&nbsp;
                             speed : <code id="speed"></code> -->
                         </p>
+
                         <script src="mappaConPosizione.js"></script>
                     </div>
                 </div>
