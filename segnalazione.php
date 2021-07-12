@@ -104,6 +104,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </label>
                             <label class="ms-3" for="type">Geometry type &nbsp;</label>
                             <select id="type">
+                                <option value="None">None</option>
                                 <option value="Point">Point</option>
                                 <option value="Polygon">Polygon</option>
                                 <option value="Circle">Circle</option>

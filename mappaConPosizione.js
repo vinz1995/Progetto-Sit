@@ -165,6 +165,7 @@ var proj = ol.proj;
 var toStringXY = ol.coordinate.toStringXY;
 var toStringHDMS = ol.coordinate.toStringHDMS;
 var toLonLat = ol.proj.toLonLat;
+var fromLonLat = ol.proj.fromLonLat;
 // var {OSM, Vector as VectorSource} = ol.source;
 var VectorSource = ol.source.Vector;
 var VectorLayer = ol.layer.Vector;
@@ -229,6 +230,12 @@ geolocation.on('change', function() {
     // el('heading').innerText = geolocation.getHeading() + ' [rad]';
     // el('speed').innerText = geolocation.getSpeed() + ' [m/s]';
 
+        map.setView(new ol.View({
+              //center: [1795941.70, 4709367.44],
+              center: fromLonLat(toLonLat(geolocation.getPosition())),
+              zoom: 17,
+       }));
+
 });
 
 // handle geolocation error.
@@ -271,7 +278,7 @@ new VectorLayer({
     }),
 });
 
-map.on('singleclick', function(evt) {
+map.on('dblclick', function(evt) {
     var coordinate = evt.coordinate;
     var clickC = toStringXY(toLonLat(coordinate), 10).split(',');
     document.getElementById('lat').value = clickC[1];
@@ -281,47 +288,45 @@ map.on('singleclick', function(evt) {
     var punto = new Point(coordinate);
     positionFeature.setGeometry(punto);
 
-    // map.setView(new ol.View({
-    //           //center: [1795941.70, 4709367.44],
-    //           center: [1725048.44,5031840.61],
-    //           zoom: 6,
-    //    }));
-
-    var source = new VectorSource({ wrapX: false });
-
-    var vector = new VectorLayer({
-        source: source,
-    });
-    var typeSelect = document.getElementById('type');
-
-    var draw; // global so we can remove it later
-    function addInteraction() {
-        var value = typeSelect.value;
-        if (value !== 'None') {
-            draw = new Draw({
-                source: source,
-                type: typeSelect.value,
-            });
-            map.addInteraction(draw);
-        }
-    }
-
-    /**
-     * Handle change event.
-     */
-    typeSelect.onchange = function() {
-        map.removeInteraction(draw);
-        addInteraction();
-    };
-
-    // document.getElementById('undo').addEventListener('click', function() {
-    //     draw.removeLastPoint();
-    // });
-
-    addInteraction();
+    map.setView(new ol.View({
+              //center: [1795941.70, 4709367.44],
+              center: fromLonLat(toLonLat(coordinate)),
+              zoom: 17,
+       }));
 
 });
+// var source = new VectorSource({ wrapX: false });
 
+//     var vector = new VectorLayer({
+//         source: source,
+//     });
+//     var typeSelect = document.getElementById('type');
+
+//     var draw; // global so we can remove it later
+//     function addInteraction() {
+//         var value = typeSelect.value;
+//         if (value !== 'None') {
+//             draw = new Draw({
+//                 source: source,
+//                 type: typeSelect.value,
+//             });
+//             map.addInteraction(draw);
+//         }
+//     }
+
+//     /**
+//      * Handle change event.
+//      */
+//     typeSelect.onchange = function() {
+//         map.removeInteraction(draw);
+//         addInteraction();
+//     };
+
+//     // document.getElementById('undo').addEventListener('click', function() {
+//     //     draw.removeLastPoint();
+//     // });
+
+//     addInteraction();
 
 
 var projectionSelect = document.getElementById('projection');
