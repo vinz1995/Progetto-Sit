@@ -266,23 +266,6 @@ function addInteraction() {
     }
 }
 
-//web 
-var Polygon = ol.geom.Polygon;
-
-var feature = new Feature({
-  geometry: new Polygon(polyCoords),
-  labelPoint: new Point(labelCoords),
-  name: 'My Polygon'
-});
-
-// get the polygon geometry
-var poly = feature.getGeometry();
-
-// Render the feature as a point using the coordinates from labelPoint
-feature.setGeometryName('labelPoint');
-
-// get the point geometry
-var point = feature.getGeometry();
 
 // map.addInteraction(new Draw({
 //   type: 'Polygon',
