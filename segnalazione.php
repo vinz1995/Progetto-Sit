@@ -116,7 +116,7 @@ if (!isset($_SESSION['loggedin'])) {
                             speed : <code id="speed"></code> -->
                         </p>
 
-                        <script src="mappaConPosizione.js"></script>
+                        <script src="mappDraw.js"></script>
                     </div>
                 </div>
             </div>
