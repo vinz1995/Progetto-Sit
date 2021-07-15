@@ -68,11 +68,11 @@ if (!isset($_SESSION['loggedin'])) {
                         <form method="POST" action="inviaSegnalazione.php" enctype="multipart/form-data">
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="lat" name="lat" required>
-                                <label for="floatingPassword">lat</label>
+                                <label for="floatingInput">latitudine</label>
                             </div>
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="lon" name="lon" required>
-                                <label for="floatingPassword">lon</label>
+                                <label for="floatingInput">longitudine</label>
                             </div>
                             <div class="form-floating">
                                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="dimensioneBuca">
@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedin'])) {
                             </div>
                             <div class="mb-3">
                                 <input class="form-control form-control-sm" id="formFileSm" type="file" name="fileCaricato">
-                                <input type="hidden" id="createdAt" name="Cfeatures" />
+                                <input type="hidden" id="geometriaPoly" name="geometriaPoly" />
                             </div>
                             <div>
                                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="inviaSegnalazione">Invia</button>
@@ -105,7 +105,8 @@ if (!isset($_SESSION['loggedin'])) {
                         </label>
                             <label class="ms-3" for="type">Geometry type &nbsp;</label>
                             <select id="type">
-                                <option value="posizione">Scegli posizione</option>
+                                <option >Scegli</option>
+                                <option  value="Point">Scegli la posizione</option>
                                 <option value="Polygon">Polygon</option>
                             </select>
                         </form>
@@ -117,7 +118,7 @@ if (!isset($_SESSION['loggedin'])) {
                             speed : <code id="speed"></code> -->
                             
                         </p>
-                        <script src="mappDraw.js"></script>
+                        <script src="mappa.js"></script>
                     </div>
                 </div>
             </div>
