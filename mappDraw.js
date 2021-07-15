@@ -79,8 +79,6 @@ function addInteraction() {
             //     geometry: new Polygon(polyCoords),
             // })
             var a=e.feature.getGeometry().getCoordinates();
-            console.log(a[0][1]);
-            console.log(a[0][1][0]);
             // console.log(JSON.stringify(e.feature.getGeometry().getCoordinates()));
         });
         map.addInteraction(draw);
