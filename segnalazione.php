@@ -88,6 +88,7 @@ if (!isset($_SESSION['loggedin'])) {
                             </div>
                             <div class="mb-3">
                                 <input class="form-control form-control-sm" id="formFileSm" type="file" name="fileCaricato">
+                                <input type="hidden" id="createdAt" name="Cfeatures" />
                             </div>
                             <div>
                                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="inviaSegnalazione">Invia</button>
@@ -96,7 +97,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="col mt-1">
                         <div id="map" class="map"></div>
-                        <form class="form-inline">
+                        <form class="form-inline" method="POST">
                             <div id="info" style="display: none;"></div>
                         <label for="track">
                             track position
@@ -114,8 +115,8 @@ if (!isset($_SESSION['loggedin'])) {
                             <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
                             heading : <code id="heading"></code>&nbsp;&nbsp;
                             speed : <code id="speed"></code> -->
+                            
                         </p>
-
                         <script src="mappDraw.js"></script>
                     </div>
                 </div>

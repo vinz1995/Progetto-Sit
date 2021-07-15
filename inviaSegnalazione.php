@@ -1,12 +1,14 @@
 <?php
 session_start();
+require_once 'configDB.php';
 echo $_POST['lat'];
 echo $_POST['lon'];
 echo $_POST['dimensioneBuca'];
 echo $_POST['descrizione'];
 echo date("d/m/y");
 echo $_SESSION['nome'];
-
+echo $_POST['Cfeatures'];
+// echo sizeof($_POST['Cfeature']);
 // $target_dir = "/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/";
 // $target_file = $target_dir . basename($_FILES["fileCaricato"]["name"]);
 // $uploadOk = 1;
@@ -37,6 +39,28 @@ echo 'Here is some more debugging info:';
 print_r($_FILES);
 
 print "</pre>";
+
+try {
+    $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
+    // make a database connection
+    $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    if ($pdo) {
+        $stmt = $pdo->prepare("INSERT INTO segnal (email, descrizione, geometry, dim, data ) VALUES (:email, :descrizione, :geometry, :dim, :data)");
+        $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+        $stmt->bindParam(':descrizione', $_POST['descrizione'], PDO::PARAM_STR);
+        $stmt->bindParam(':dim', $_POST['dimensioneBuca'], PDO::PARAM_STR);
+        $stmt->bindParam(':geometry', $_POST['Cfeatures'], PDO::PARAM_STR);
+        $stmt->bindParam(':data', date("d/m/y"), PDO::PARAM_STR);
+        $stmt->execute();
+        $_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
+        
+    }
+} catch (PDOException $e) {
+    die($e->getMessage());
+} finally {
+    $pdo=null;
+}
+
 
 
 ?>

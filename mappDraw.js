@@ -24,6 +24,7 @@ var VectorLayer = ol.layer.Vector;
 var Draw = ol.interaction.Draw;
 var Polygon = ol.geom.Polygon;
 
+
 const raster = new TileLayer({
     source: new OSM(),
 });
@@ -62,7 +63,6 @@ const typeSelect = document.getElementById('type');
 let draw; // global so we can remove it later
 function addInteraction() {
     const value = typeSelect.value;
-    var p = new Feature();
     if (value !== 'None') {
         draw = new Draw({
             source: source,
@@ -78,8 +78,22 @@ function addInteraction() {
             // poly = new Feature({
             //     geometry: new Polygon(polyCoords),
             // })
-            var a=e.feature.getGeometry().getCoordinates();
+
+            e.feature.getGeometry().getCoordinates()[0];
+            // console.log(a.length);
+
+            // var feature = new Feature({
+            //         geometry: new Polygon(e.feature.getGeometry().getCoordinates()[0]),
+                
+            // })
+            console.log(e.feature.getGeometry().getCoordinates()[0]);
+            var format = new ol.format.WKT();
+            console.log('normale'+format.writeFeature(e.feature));
             // console.log(JSON.stringify(e.feature.getGeometry().getCoordinates()));
+            
+            document.getElementById("createdAt").value=format.writeFeature(e.feature);
+            
+
         });
         map.addInteraction(draw);
 
