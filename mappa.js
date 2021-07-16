@@ -23,6 +23,7 @@ var VectorLayer = ol.layer.Vector;
 
 var Draw = ol.interaction.Draw;
 var Polygon = ol.geom.Polygon;
+var format = new ol.format.WKT();
 
 var view = new View({
     center: [0, 0],
@@ -128,6 +129,8 @@ positionFeature.setStyle(
 geolocation.on('change:position', function() {
     var coordinates = geolocation.getPosition();
     positionFeature.setGeometry(coordinates ? new Point(coordinates) : null);
+    document.getElementById("geometriaPoint").value = format.writeFeature(positionFeature);
+
 });
 var ff = new Feature();
 
@@ -182,7 +185,7 @@ function addInteraction() {
             // console.log('ff ' + ff.getGeometry());
             // f.setGeometry(f1);
             console.log(e.feature.getGeometry().getCoordinates()[0]);
-            var format = new ol.format.WKT();
+            
             console.log(format.writeFeature(e.feature));
 
             document.getElementById("geometriaPoly").value = format.writeFeature(e.feature);
@@ -209,8 +212,7 @@ function addInteraction() {
 
             var format = new ol.format.WKT();
             console.log(format.writeFeature(e.feature));
-            // console.log(JSON.stringify(e.feature.getGeometry().getCoordinates()));
-
+            document.getElementById("geometriaPoint").value = format.writeFeature(e.feature);
             // document.getElementById("createdAt").value = format.writeFeature(e.feature);
 
 
@@ -220,5 +222,5 @@ function addInteraction() {
     }
     // var punto = new Point(e.feature.getGeometry().getCoordinates());
     
-    document.getElementById("geometriaPoly").value = format.writeFeature(positionFeature);
+    // document.getElementById("geometriaPoly").value = format.writeFeature(positionFeature);
 }

@@ -1,10 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['geometry'])) {
-    $_SESSION['erroreGeom']='inserisci geom';
-   header('Location: segnalazione.php');
-}
 require_once 'configDB.php';
+if ($_POST['geometriaPoint']==='NULL') {
+    $_SESSION['erroreGeomPoint']='Seleziona la posizione sulla Mappa';
+    header('Location: segnalazione.php');
+    exit;
+}
 echo $_POST['lat'];
 echo $_POST['lon'];
 echo $_POST['dimensioneBuca'];
@@ -12,6 +13,8 @@ echo $_POST['descrizione'];
 echo date("d/m/y");
 echo $_SESSION['nome'];
 echo $_POST['geometriaPoly'];
+echo $_POST['geometriaPoint'];
+
 // echo sizeof($_POST['Cfeature']);
 // $target_dir = "/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/";
 // $target_file = $target_dir . basename($_FILES["fileCaricato"]["name"]);
@@ -51,15 +54,28 @@ try {
     // make a database connection
     $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     if ($pdo) {
-        $stmt = $pdo->prepare("INSERT INTO segnalazioni (email, descrizione, geometry, dim, data, lat, lon ) VALUES (:email, :descrizione, :geometry, :dim, :data, :lat, :lon)");
-        $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
-        $stmt->bindParam(':descrizione', $_POST['descrizione'], PDO::PARAM_STR);
-        $stmt->bindParam(':dim', $_POST['dimensioneBuca'], PDO::PARAM_STR);
-        $stmt->bindParam(':geometry', $_POST['geometriaPoly'], PDO::PARAM_STR);
-        $stmt->bindParam(':data', date("d/m/y"), PDO::PARAM_STR);
-        $stmt->bindParam(':lat', $_POST['lat'], PDO::PARAM_STR);
-        $stmt->bindParam(':lon', $_POST['lom'], PDO::PARAM_STR);
-        // $stmt->bindParam(':foto', $foto, PDO::PARAM_STR);
+        if($_POST['geometriaPoly']==='NULL'){
+            $stmt = $pdo->prepare("INSERT INTO segnalazioni (email, descrizione, dim, data, lat, lon, geometry ) VALUES (:email, :descrizione, :dim, :data, :lat, :lon, :geometry)");
+            $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+            $stmt->bindParam(':descrizione', $_POST['descrizione'], PDO::PARAM_STR);
+            $stmt->bindParam(':dim', $_POST['dimensioneBuca'], PDO::PARAM_STR);
+            $stmt->bindParam(':geometry', $_POST['geometriaPoint'], PDO::PARAM_STR);
+            $stmt->bindParam(':data', date("d/m/y"), PDO::PARAM_STR);
+            $stmt->bindParam(':lat', $_POST['lat'], PDO::PARAM_STR);
+            $stmt->bindParam(':lon', $_POST['lon'], PDO::PARAM_STR);
+            // $stmt->bindParam(':foto', $foto, PDO::PARAM_STR);
+        }
+        else{
+            $stmt = $pdo->prepare("INSERT INTO segnalazioni (email, descrizione, dim, data, lat, lon, geometry ) VALUES (:email, :descrizione, :dim, :data, :lat, :lon, :geometry)");
+            $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+            $stmt->bindParam(':descrizione', $_POST['descrizione'], PDO::PARAM_STR);
+            $stmt->bindParam(':dim', $_POST['dimensioneBuca'], PDO::PARAM_STR);
+            $stmt->bindParam(':geometry', $_POST['geometriaPoly'], PDO::PARAM_STR);
+            $stmt->bindParam(':data', date("d/m/y"), PDO::PARAM_STR);
+            $stmt->bindParam(':lat', $_POST['lat'], PDO::PARAM_STR);
+            $stmt->bindParam(':lon', $_POST['lon'], PDO::PARAM_STR);
+            // $stmt->bindParam(':foto', $foto, PDO::PARAM_STR);
+        }
 
         $stmt->execute();
         $_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';

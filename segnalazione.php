@@ -67,11 +67,12 @@ if (!isset($_SESSION['loggedin'])) {
                         <!--  echo $_COOKIE['profile_viewer_uid'];  -->
                         <form method="POST" action="inviaSegnalazione.php" enctype="multipart/form-data">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lat" name="lat" required>
+                                <input type="text" class="form-control" id="lat" name="lat" >
                                 <label for="floatingInput">latitudine</label>
+
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lon" name="lon" required>
+                                <input type="text" class="form-control" id="lon" name="lon" >
                                 <label for="floatingInput">longitudine</label>
                             </div>
                             <div class="form-floating">
@@ -88,7 +89,8 @@ if (!isset($_SESSION['loggedin'])) {
                             </div>
                             <div class="mb-3">
                                 <input class="form-control form-control-sm" id="formFileSm" type="file" name="fileCaricato">
-                                <input type="hidden" id="geometriaPoly" name="geometriaPoly" />
+                                <input type="hidden" id="geometriaPoly" name="geometriaPoly" value="NULL">
+                                <input type="hidden" id="geometriaPoint" name="geometriaPoint" value="NULL">
                             </div>
                             <div>
                                 <button class="w-100 btn btn-lg btn-primary" type="submit" name="inviaSegnalazione">Invia</button>
@@ -96,6 +98,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </form>
                     </div>
                     <div class="col mt-1">
+                                 <span class="text-center" style="color: red;"> <?php echo $_SESSION['erroreGeomPoint']; unset($_SESSION['erroreGeomPoint']); ?></span>
                         <div id="map" class="map"></div>
                         <form class="form-inline" method="POST">
                             <div id="info" style="display: none;"></div>
@@ -116,7 +119,6 @@ if (!isset($_SESSION['loggedin'])) {
                             <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
                             heading : <code id="heading"></code>&nbsp;&nbsp;
                             speed : <code id="speed"></code> -->
-                            
                         </p>
                         <script src="mappa.js"></script>
                     </div>
