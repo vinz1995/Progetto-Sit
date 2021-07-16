@@ -23,6 +23,7 @@ if (!isset($_SESSION['loggedin'])) {
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+      <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.6.1/build/ol.js"></script>
     <!-- <script src="https://unpkg.com/elm-pep"></script> -->
     <style>
         .map {
