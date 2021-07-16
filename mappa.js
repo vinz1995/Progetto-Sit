@@ -44,11 +44,11 @@ const vector = new VectorLayer({
 const mappaWMS = new ImageLayer({
     source: new ImageWMS({
         ratio: 1,
-        url: 'http://localhost:8080/geoserver/Strade/wms',
+        url: 'http://localhost:8080/geoserver/SegnalazioniUtente/wms',
         params: {
             'VERSION': '1.1.1',
             "STYLES": '',
-            "LAYERS": 'Strade:Strade',
+            "LAYERS": 'SegnalazioniUtente:segnalazioni',
             "exceptions": 'application/vnd.ogc.se_inimage',
         }
     })
@@ -56,7 +56,7 @@ const mappaWMS = new ImageLayer({
 
 
 var map = new Map({
-    layers: [mappa, vector],
+    layers: [mappa, vector,mappaWMS],
     target: 'map',
     view: view,
 });
@@ -189,6 +189,7 @@ function addInteraction() {
             console.log(format.writeFeature(e.feature));
 
             document.getElementById("geometriaPoly").value = format.writeFeature(e.feature);
+            console.log(map.getProjection);
         });
         map.addInteraction(draw);
 
