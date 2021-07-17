@@ -56,7 +56,7 @@ const mappaWMS = new ImageLayer({
 
 
 var map = new Map({
-    layers: [mappa, vector,mappaWMS],
+    layers: [mappa, vector],
     target: 'map',
     view: view,
 });

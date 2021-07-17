@@ -6,6 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
+
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
@@ -25,10 +26,10 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
     <!-- <script src="https://unpkg.com/elm-pep"></script> -->
     <style>
-        .map {
+    .map {
         height: 400px;
         width: 100%;
-      }
+    }
     </style>
 </head>
 
@@ -68,10 +69,21 @@ if (!isset($_SESSION['loggedin'])) {
                             // make a database connection
                             $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
                             if ($pdo) {
-                                $stmt = $pdo->prepare("SELECT id FROM segnalazioni WHERE email=:email");
+                                $stmt = $pdo->prepare("SELECT * FROM segnalazioni WHERE email=:email");
                                 $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
                                 $stmt->execute();
-                                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                                $stmt->bindColumn('id', $id_segnalazione);
+                                $stmt->bindColumn('lat', $latitudine);
+                                $stmt->bindColumn('lon', $longitudine);
+                                $stmt->bindColumn('descrizione', $descrizione);
+                                $stmt->bindColumn('dim', $dimensione);
+                                $stmt->bindColumn('data', $data);
+                                // $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                                echo "<pre>";
+                                print_r($user);
+                                
+                                
+
                                 
                             }
                         } catch (PDOException $e) {
@@ -81,6 +93,32 @@ if (!isset($_SESSION['loggedin'])) {
                         }
 
                 ?>
+                <table class="table">
+                    <thead class="thead-dark">
+                       
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">lat</th>
+                            <th scope="col">lon</th>
+                            <th scope="col">dimensione</th>
+                            <th scope="col">descrizione</th>
+                            <th scope="col">data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)){?>
+                        <tr>
+                            <th scope="row"><?php  echo $id_segnalazione; ?></th>
+                            <td><?php  echo $latitudine; ?></td>
+                            <td><?php  echo $longitudine; ?></td>
+                            <td><?php  echo $dimensione; ?></td>
+                            <td><?php  echo $descrizione; ?></td>
+                            <td><?php  echo $data; ?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                        <?php echo $id_segnalazione ?>
+                </table>
             </div>
         </div>
     </main>
