@@ -32,20 +32,6 @@ echo $_POST['geometriaPoint'];
 //   }
 // }
 
-$uploaddir = '/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/';
-$uploadfile = $uploaddir . basename($_FILES['fileCaricato']['name']);
-
-echo '<pre>';
-if (move_uploaded_file($_FILES['fileCaricato']['tmp_name'], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
-    $foto=true;
-} else {
-    echo "Possible file upload attack!\n";
-    $foto=false;
-}
-
-echo 'Here is some more debugging info:';
-print_r($_FILES);
 
 print "</pre>";
 
@@ -78,7 +64,31 @@ try {
         }
 
         $stmt->execute();
+        //prova
+        $stmt = $pdo->prepare("SELECT email, id FROM segnalazioni WHERE email=:email");
+        $stmt->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+        $stmt->execute(); 
+        $stmt->bindColumn('id', $id_se);
+        $user = $stmt->fetchall(PDO::FETCH_ASSOC);
         $_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
+        $uploaddir = '/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/';
+        $ext=  pathinfo($_FILES['fileCaricato']['name'], PATHINFO_EXTENSION);
+        $uploadfile = $uploaddir . basename($id_se.'.'.$ext);
+
+        echo '<pre>';
+        if (move_uploaded_file($_FILES['fileCaricato']['tmp_name'], $uploadfile)) {
+            echo $id_se;
+
+            $stmt = $pdo->prepare("UPDATE segnalazioni SET foto=true where id=:id");
+            $stmt->bindParam(':id', $id_se, PDO::PARAM_STR);
+            $stmt->execute();
+        } else {
+            echo "Possible file upload attack!\n";
+        }
+
+        echo 'Here is some more debugging info:';
+        print_r($_FILES);
+
         
     }
 } catch (PDOException $e) {

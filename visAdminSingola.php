@@ -19,9 +19,8 @@ if (!isset($_SESSION['loggedin'])) {
                                 $stmt->bindColumn('geomwkt', $geomwkt);
                                 $stmt->bindColumn('foto', $fotoDB);
                                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                                $pathF='img/';
-                                $nomef='1.png';
-                                // echo "<span>".$pathF.$nomef."</span>";
+                                $pathF='fileup/';
+                                $nomef=$_POST['id_segnalazione'].'.jpg';
                                 
                             }
                         } catch (PDOException $e) {
