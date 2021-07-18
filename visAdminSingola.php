@@ -1,11 +1,33 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
+require_once 'configDB.php';
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
+
+                    try {
+                            $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
+                            // make a database connection
+                            $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+                            if ($pdo) {
+                                $stmt = $pdo->prepare("SELECT st_astext(geometry) as geomwkt,foto FROM segnalazioni where id=:id");
+                                $stmt->bindParam(':id', $_POST['id_segnalazione'], PDO::PARAM_STR);
+                                $stmt->execute();
+                                $stmt->bindColumn('geomwkt', $geomwkt);
+                                $stmt->bindColumn('foto', $fotoDB);
+                                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                                echo "<span>".$geomwkt."</span>";
+                                
+                            }
+                        } catch (PDOException $e) {
+                            die($e->getMessage());
+                        } finally {
+                            $pdo=null;
+                        }
+
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
@@ -63,23 +85,19 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="container mt-auto">
                 <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
                     <div class="col mt-1">
-                        <h3>Segnalazione utente</h3>
-
+                        <h5>Segnalazione effettuata da <?php echo $_POST['email'];?></h3>
                         <div class="card" style="width: 30rem;">
                           <img class="card-img-top" src="img/1.png" alt="Card image cap">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">ID <?php echo $_POST['id_segnalazione'];  ?></h5>
+                            <p class="card-text"><?php echo $_POST['descrizione'];  ?></p>
                           </div>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item">Latitudine: <?php echo $_POST['lat'];  ?></li>
+                            <li class="list-group-item">Longitudine: <?php echo $_POST['lon'];  ?></li>
+                            <li class="list-group-item">Dimensione: <?php echo $_POST['dim'];  ?></li>
+                            <li class="list-group-item">Data: <?php echo $_POST['data'];  ?></li>
                           </ul>
-                          <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                          </div>
                         </div>
                     </div>
                     <div class="col mt-1">

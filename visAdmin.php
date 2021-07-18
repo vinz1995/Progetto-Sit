@@ -1,11 +1,37 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
+require_once 'configDB.php';
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
+
+                    try {
+                            $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
+                            // make a database connection
+                            $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+                            if ($pdo) {
+                                $stmt = $pdo->prepare("SELECT * FROM segnalazioni order by data DESC");
+
+                                $stmt->execute();
+                                $stmt->bindColumn('id', $id_segnalazione);
+                                $stmt->bindColumn('email', $email);
+                                $stmt->bindColumn('lat', $latitudine);
+                                $stmt->bindColumn('lon', $longitudine);
+                                $stmt->bindColumn('descrizione', $descrizione);
+                                $stmt->bindColumn('dim', $dimensione);
+                                $stmt->bindColumn('data', $data);
+                                // $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+                                
+                            }
+                        } catch (PDOException $e) {
+                            die($e->getMessage());
+                        } finally {
+                            $pdo=null;
+                        }
 
 ?>
 <!doctype html>
@@ -63,34 +89,7 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="container ">
 
             <div class="table table-responsive ">
-                <?php 
-                    require_once 'configDB.php';
-                    try {
-                            $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
-                            // make a database connection
-                            $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-                            if ($pdo) {
-                                $stmt = $pdo->prepare("SELECT * FROM segnalazioni order by data DESC");
 
-                                $stmt->execute();
-                                $stmt->bindColumn('id', $id_segnalazione);
-                                $stmt->bindColumn('email', $email);
-                                $stmt->bindColumn('lat', $latitudine);
-                                $stmt->bindColumn('lon', $longitudine);
-                                $stmt->bindColumn('descrizione', $descrizione);
-                                $stmt->bindColumn('dim', $dimensione);
-                                $stmt->bindColumn('data', $data);
-                                // $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-                                
-                            }
-                        } catch (PDOException $e) {
-                            die($e->getMessage());
-                        } finally {
-                            $pdo=null;
-                        }
-
-                ?>
                 <table class="table">
                     <thead class="thead-dark">
                        
@@ -107,13 +106,16 @@ if (!isset($_SESSION['loggedin'])) {
                     <tbody>
                          <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)){?>
                         <tr>
-                            <th scope="row"><?php  echo $id_segnalazione; ?></th>
-                            <td><?php  echo $email; ?></td>
-                            <td><?php  echo $latitudine; ?></td>
-                            <td><?php  echo $longitudine; ?></td>
-                            <td><?php  echo $dimensione; ?></td>
-                            <td><?php  echo $descrizione; ?></td>
-                            <td><?php  echo $data; ?></td>
+                            <form method="POST" action="visAdminsingola.php">
+                            <th scope="row"><input type="hidden" value="<?php  echo $id_segnalazione; ?>" name="id_segnalazione"> <?php  echo $id_segnalazione; ?></th>
+                            <td><input type="hidden" value="<?php  echo $email; ?>" name="email"> <?php  echo $email; ?></td>
+                            <td><input type="hidden" value="<?php  echo $latitudine; ?>" name="lat"><?php  echo $latitudine; ?></td>
+                            <td><input type="hidden" value="<?php  echo $longitudine; ?>" name="lon"><?php  echo $longitudine; ?></td>
+                            <td><input type="hidden" value="<?php  echo $dimensione; ?>" name="dim"><?php  echo $dimensione; ?></td>
+                            <td><input type="hidden" value="<?php  echo $descrizione; ?>" name="descrizione"><?php  echo $descrizione; ?></td>
+                            <td><input type="hidden" value="<?php  echo $data; ?>" name="data"><?php  echo $data; ?></td>
+                            <td><button type="submit" name="array" value="submit"> Visualizza</button></td>
+                            </form>
                         </tr>
                     <?php } ?>
                     </tbody>
