@@ -6,34 +6,7 @@ if ($_POST['geometriaPoint']==='NULL') {
     header('Location: segnalazione.php');
     exit;
 }
-echo $_POST['lat'];
-echo $_POST['lon'];
-echo $_POST['dimensioneBuca'];
-echo $_POST['descrizione'];
-echo date("d/m/y");
-echo $_SESSION['nome'];
-echo $_POST['geometriaPoly'];
-echo $_POST['geometriaPoint'];
 
-// echo sizeof($_POST['Cfeature']);
-// $target_dir = "/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/";
-// $target_file = $target_dir . basename($_FILES["fileCaricato"]["name"]);
-// $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// // Check if image file is a actual image or fake image
-// if(isset($_POST["inviaSegnalazione"])) {
-//   $check = getimagesize($_FILES["fileCaricato"]["tmp_name"]);
-//   if($check !== false) {
-//     echo "File is an image - " . $check["mime"] . ".";
-//     $uploadOk = 1;
-//   } else {
-//     echo "File is not an image.";
-//     $uploadOk = 0;
-//   }
-// }
-
-
-print "</pre>";
 
 try {
     $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
@@ -75,7 +48,7 @@ try {
         $ext=  pathinfo($_FILES['fileCaricato']['name'], PATHINFO_EXTENSION);
         $uploadfile = $uploaddir . basename($id_se.'.'.$ext);
 
-        echo '<pre>';
+
         if (move_uploaded_file($_FILES['fileCaricato']['tmp_name'], $uploadfile)) {
             echo $id_se;
 
@@ -95,6 +68,7 @@ try {
     die($e->getMessage());
 } finally {
     $pdo=null;
+     header('Location: visualizzaSegnalazione.php');
 }
 
 ?>

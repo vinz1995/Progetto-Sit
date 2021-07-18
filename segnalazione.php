@@ -116,11 +116,8 @@ if (!isset($_SESSION['loggedin'])) {
                         
                         <p>
                             position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
-                            <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
-                            heading : <code id="heading"></code>&nbsp;&nbsp;
-                            speed : <code id="speed"></code> -->
                         </p>
-                        <script src="mappa.js"></script>
+                        <script src="mappaSegnalazione.js"></script>
                     </div>
                 </div>
             </div>
