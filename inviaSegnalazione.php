@@ -60,7 +60,7 @@ try {
             $stmt->bindParam(':descrizione', $_POST['descrizione'], PDO::PARAM_STR);
             $stmt->bindParam(':dim', $_POST['dimensioneBuca'], PDO::PARAM_STR);
             $stmt->bindParam(':geometry', $_POST['geometriaPoint'], PDO::PARAM_STR);
-            $stmt->bindParam(':data', date("d/m/y"), PDO::PARAM_STR);
+            $stmt->bindParam(':data', date("Y/m/d"), PDO::PARAM_STR);
             $stmt->bindParam(':lat', $_POST['lat'], PDO::PARAM_STR);
             $stmt->bindParam(':lon', $_POST['lon'], PDO::PARAM_STR);
             // $stmt->bindParam(':foto', $foto, PDO::PARAM_STR);

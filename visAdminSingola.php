@@ -19,7 +19,9 @@ if (!isset($_SESSION['loggedin'])) {
                                 $stmt->bindColumn('geomwkt', $geomwkt);
                                 $stmt->bindColumn('foto', $fotoDB);
                                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                                echo "<span>".$geomwkt."</span>";
+                                $pathF='img/';
+                                $nomef='1.png';
+                                // echo "<span>".$pathF.$nomef."</span>";
                                 
                             }
                         } catch (PDOException $e) {
@@ -87,7 +89,9 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="col mt-1">
                         <h5>Segnalazione effettuata da <?php echo $_POST['email'];?></h3>
                         <div class="card" style="width: 30rem;">
-                          <img class="card-img-top" src="img/1.png" alt="Card image cap">
+                            <?php if($fotoDB==='1') {?>
+                          <img class="card-img-top" src="<?php echo $pathF.$nomef; ?>" alt="Card image cap"/>
+                            <?php }?>
                           <div class="card-body">
                             <h5 class="card-title">ID <?php echo $_POST['id_segnalazione'];  ?></h5>
                             <p class="card-text"><?php echo $_POST['descrizione'];  ?></p>
@@ -97,33 +101,13 @@ if (!isset($_SESSION['loggedin'])) {
                             <li class="list-group-item">Longitudine: <?php echo $_POST['lon'];  ?></li>
                             <li class="list-group-item">Dimensione: <?php echo $_POST['dim'];  ?></li>
                             <li class="list-group-item">Data: <?php echo $_POST['data'];  ?></li>
+                            <input type="hidden" value="<?php echo $geomwkt; ?>" name="geomwkt1", id="geomwkt">
                           </ul>
                         </div>
                     </div>
                     <div class="col mt-1">
-                                 <span class="text-center" style="color: red;"> <?php echo $_SESSION['erroreGeomPoint']; unset($_SESSION['erroreGeomPoint']); ?></span>
                         <div id="map" class="map"></div>
-                        <form class="form-inline" method="POST">
-                            <div id="info" style="display: none;"></div>
-                        <label for="track">
-                            track position
-                            <input id="track" type="checkbox" />
-                        </label>
-                            <label class="ms-3" for="type">Geometry type &nbsp;</label>
-                            <select id="type">
-                                <option >Scegli</option>
-                                <option  value="Point">Scegli la posizione</option>
-                                <option value="Polygon">Polygon</option>
-                            </select>
-                        </form>
-                        
-                        <p>
-                            position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
-                            <!-- altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
-                            heading : <code id="heading"></code>&nbsp;&nbsp;
-                            speed : <code id="speed"></code> -->
-                        </p>
-                        <script src="mappa.js"></script>
+                        <script src="visSing.js"></script>
                     </div>
                 </div>
             </div>
