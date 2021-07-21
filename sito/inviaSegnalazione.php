@@ -44,7 +44,7 @@ try {
         $stmt->bindColumn('id', $id_se);
         $user = $stmt->fetchall(PDO::FETCH_ASSOC);
         $_SESSION['RegistrazioneRiuscita']='Complimenti ti sei registrato adesso puoi accedere';
-        $uploaddir = '/Applications/XAMPP/xamppfiles/htdocs/SitoSit/fileup/';
+        $uploaddir = '/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/sito/fileup/';
         $ext=  pathinfo($_FILES['fileCaricato']['name'], PATHINFO_EXTENSION);
         $uploadfile = $uploaddir . basename($id_se.'.'.$ext);
 
