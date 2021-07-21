@@ -8,7 +8,8 @@ public class lan {
 		param[0] ="-default-plugins";
 		param[1] ="/Users/vincenzo/Desktop/OpenJUMP 1.16 rev.6669 CORE.app/bin/default-plugins.xml";
 		param[2] ="-properties";
-		param[3] ="/Users/vincenzo/Documents/Unipd LM/sit/Openj/Start/src/paperino.xml";
+		param[3] ="/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/Start/src/paperino.xml";
+		
 		
 		
 		com.vividsolutions.jump.workbench.JUMPWorkbench.main( param );
