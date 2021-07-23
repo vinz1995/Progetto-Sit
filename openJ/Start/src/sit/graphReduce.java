@@ -112,6 +112,7 @@ public class graphReduce extends AbstractPlugIn {
 		context.addLayer("Result", "punti",fc);
 	}
 
+
     @Override
 	public void initialize(PlugInContext arg0) throws Exception {
 		FeatureInstaller featureInstaller = new FeatureInstaller(arg0.getWorkbenchContext());
