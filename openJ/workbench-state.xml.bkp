@@ -124,8 +124,8 @@
     <mapping>
       <key class="java.lang.String">org.openjump.core.ui.plugin.file.OpenRecentPlugIn.FILES</key>
       <value class="java.util.LinkedHashSet">
-        <item class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857/Strade3857.shp</item>
         <item class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857/Rimessa3857.shp</item>
+        <item class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857/Strade3857.shp</item>
       </value>
     </mapping>
     <mapping>

@@ -33,6 +33,7 @@ public class lett extends AbstractPlugIn{
 		// TODO Auto-generated method stub
 		return "Start generatore punti random";
 	}
+
 	public void caricamentoSegnalazioni(PlugInContext arg0) {
 		DbConnect DbManager=new DbConnect();
 		Alert alert=new Alert();
@@ -80,7 +81,6 @@ public class lett extends AbstractPlugIn{
 					
 				}
 				else{
-
 					f.setAttribute( 0, id );
 					f.setAttribute( 1, g );
 					fc.add(f);
@@ -153,11 +153,6 @@ public class lett extends AbstractPlugIn{
 		caricamentoSegnalazioni(arg0);
 		//LineString(arg0);
 		return false;
-	}
-	
-	
-
-	
-	
+	}	
 	
 }
