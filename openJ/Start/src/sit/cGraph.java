@@ -141,6 +141,31 @@ public class cGraph extends AbstractPlugIn{
 
 			}
 			map_nodi.put(sV, lista_nodi);
+
+			lista_nodi=new ArrayList<>();
+			if (hm.get(eV) != null) {
+				int incre=hm.get(eV);
+				incre++;
+				hm.replace(eV, incre);
+				id++;
+				id_ver++;
+				lista_nodi=map_nodi.get(sV);
+				lista_nodi.add(new Node(id_ver));
+				map_nodi.remove(sV);
+			}else{
+				hm.put(eV, 1);
+				Feature ff=new BasicFeature(fs);
+				id++;
+				id_ver++;
+				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(1, id);
+				ff.setAttribute(2, 1);
+				fc.add(ff);
+				// lista_collegamenti.add(id);
+				lista_nodi.add(new Node(id_ver));
+			}
+			map_nodi.put(eV, lista_nodi);
+			
 			// map_collegamenti.put(sV, lista_collegamenti);
 			// lista_collegamenti=new ArrayList<>();
 			// if (hm.get(eV) != null) {
@@ -168,7 +193,7 @@ public class cGraph extends AbstractPlugIn{
 			List<Node> value=new ArrayList<>();
 			Coordinate key=pair.getKey();
 			value=pair.getValue();
-			System.out.println("size: "+value.get(value.size()-1).getName());;
+			
 			for (Node node : value) {
 				System.out.println("key: "+key+" value: "+node.getName());
 			}

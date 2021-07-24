@@ -11316,3 +11316,37 @@ java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
 [INFO] 2021-07-24_21:47:48.851 In esecuzione cGraph
 [INFO] 2021-07-24_21:47:48.869 Completato. Memoria assegnata:41 MB
 [INFO] 2021-07-24_21:47:59.009 Attivando Disegna linea
+[INFO] 2021-07-24_21:55:25.434 Attivando Disegna linea
+[INFO] 2021-07-24_21:55:28.914 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_21:55:28.916 Completato. Memoria assegnata:61 MB
+[INFO] 2021-07-24_21:55:32.722 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_21:55:32.793 Completato. Memoria assegnata:24 MB
+[INFO] 2021-07-24_21:55:34.980 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:55:38.629 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:55:38.630 In esecuzione cGraph
+[INFO] 2021-07-24_21:55:38.642 Completato. Memoria assegnata:48 MB
+[INFO] 2021-07-24_21:55:44.187 Attivando Disegna linea
+[INFO] 2021-07-24_21:55:47.100 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_21:55:47.103 Completato. Memoria assegnata:52 MB
+[INFO] 2021-07-24_21:55:49.324 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_21:55:49.371 Completato. Memoria assegnata:24 MB
+[INFO] 2021-07-24_21:55:50.829 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:55:52.660 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:55:52.660 In esecuzione cGraph
+[INFO] 2021-07-24_21:55:52.665 Completato. Memoria assegnata:46 MB
+[INFO] 2021-07-24_21:56:11.080 Attivando Disegna linea
+[WARN] 2021-07-24_21:56:15.809 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:56:15.810 In esecuzione cGraph
+[INFO] 2021-07-24_21:56:15.821 Completato. Memoria assegnata:48 MB
+[INFO] 2021-07-24_21:56:23.807 Attivando Disegna linea
+[INFO] 2021-07-24_21:56:26.158 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:56:28.112 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:56:28.112 In esecuzione cGraph
+[INFO] 2021-07-24_21:56:28.120 Completato. Memoria assegnata:60 MB
+[INFO] 2021-07-24_21:57:47.052 Attivando Disegna linea
+[INFO] 2021-07-24_21:57:51.552 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_21:57:51.608 Completato. Memoria assegnata:24 MB
+[WARN] 2021-07-24_21:57:53.382 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:57:53.383 In esecuzione cGraph
+[INFO] 2021-07-24_21:57:53.392 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_21:58:09.818 Attivando Disegna linea
