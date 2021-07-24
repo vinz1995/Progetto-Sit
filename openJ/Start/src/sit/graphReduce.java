@@ -119,7 +119,7 @@ public class graphReduce extends AbstractPlugIn {
 		featureInstaller.addMainMenuPlugin(
 			this, //the plugin to execute on click
 			new String[] {"Esame" }, //menu path
-			"GR", //name
+			"riduzione", //name
 			false, //checkbox
 			null, //icon
 			null );
