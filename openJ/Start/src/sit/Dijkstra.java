@@ -9,7 +9,7 @@ public class Dijkstra {
 
     public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
 
-        source.setDistance(0);
+        source.setDistance(0.0);
 
         Set<Node> settledNodes = new HashSet<>();
         Set<Node> unsettledNodes = new HashSet<>();
@@ -18,9 +18,9 @@ public class Dijkstra {
         while (unsettledNodes.size() != 0) {
             Node currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
-            for (Entry<Node, Integer> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
+            for (Entry<Node, Double> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
-                Integer edgeWeigh = adjacencyPair.getValue();
+                Double edgeWeigh = adjacencyPair.getValue();
 
                 if (!settledNodes.contains(adjacentNode)) {
                     CalculateMinimumDistance(adjacentNode, edgeWeigh, currentNode);
@@ -32,8 +32,8 @@ public class Dijkstra {
         return graph;
     }
 
-    private static void CalculateMinimumDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
-        Integer sourceDistance = sourceNode.getDistance();
+    private static void CalculateMinimumDistance(Node evaluationNode, Double edgeWeigh, Node sourceNode) {
+        Double sourceDistance = sourceNode.getDistance();
         if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
             evaluationNode.setDistance(sourceDistance + edgeWeigh);
             LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
@@ -44,9 +44,9 @@ public class Dijkstra {
 
     private static Node getLowestDistanceNode(Set<Node> unsettledNodes) {
         Node lowestDistanceNode = null;
-        int lowestDistance = Integer.MAX_VALUE;
+        Double lowestDistance = Double.MAX_VALUE;
         for (Node node : unsettledNodes) {
-            int nodeDistance = node.getDistance();
+            Double nodeDistance = node.getDistance();
             if (nodeDistance < lowestDistance) {
                 lowestDistance = nodeDistance;
                 lowestDistanceNode = node;
