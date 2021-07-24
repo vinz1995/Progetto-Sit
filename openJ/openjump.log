@@ -9793,3 +9793,129 @@ java.lang.NoClassDefFoundError: it/geosolutions/imageio/gdalframework/GDALImageR
 [WARN] 2021-07-24_12:21:10.597 Can't find resource for bundle java.util.PropertyResourceBundle, key Utility.Select no default value, the resource key is used: Select
 [INFO] 2021-07-24_12:21:26.849 Completato. Memoria assegnata:81 MB
 [INFO] 2021-07-24_12:21:33.098 Attivando Disegna punto
+[INFO] 2021-07-24_12:22:29.226 Attivando Disegna punto
+[INFO] 2021-07-24_12:22:29.600 Attivando Disegna punto
+[INFO] 2021-07-24_12:22:32.095 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_12:22:32.414 Completato. Memoria assegnata:148 MB
+[INFO] 2021-07-24_12:22:36.691 Attivando Disegna punto
+[INFO] 2021-07-24_12:24:28.811 Attivando Disegna punto
+[WARN] 2021-07-24_12:24:33.381 No translation for key 'sit.cGraph' in bundle 'language/jump'.
+[WARN] 2021-07-24_12:24:33.382 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:24:33.382 In esecuzione cGraph
+[ERROR] 2021-07-24_12:24:33.391 'void sit.Node.<init>(java.lang.String)'
+java.lang.NoSuchMethodError: 'void sit.Node.<init>(java.lang.String)'
+	at sit.cGraph.execute(cGraph.java:34)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_12:25:37.132 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:25:37.132 In esecuzione cGraph
+[ERROR] 2021-07-24_12:25:37.133 'void sit.Node.<init>(java.lang.String)'
+java.lang.NoSuchMethodError: 'void sit.Node.<init>(java.lang.String)'
+	at sit.cGraph.execute(cGraph.java:34)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_12:26:41.270 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:26:41.278 In esecuzione cGraph
+[ERROR] 2021-07-24_12:26:41.281 Unresolved compilation problem: 
+	Syntax error on token "s", invalid Modifiers
+
+java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "s", invalid Modifiers
+
+	at sit.Node.<init>(Node.java:10)
+	at sit.cGraph.execute(cGraph.java:34)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_12:27:08.059 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:27:08.061 In esecuzione cGraph
+[INFO] 2021-07-24_12:27:08.064 Completato. Memoria assegnata:56 MB
+[WARN] 2021-07-24_12:27:24.955 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:27:24.955 In esecuzione cGraph
+[INFO] 2021-07-24_12:27:24.956 Completato. Memoria assegnata:58 MB
+[WARN] 2021-07-24_12:28:06.504 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:28:06.513 In esecuzione cGraph
+[INFO] 2021-07-24_12:28:06.520 Completato. Memoria assegnata:60 MB
+[WARN] 2021-07-24_12:29:00.481 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:29:00.491 In esecuzione cGraph
+[INFO] 2021-07-24_12:29:00.496 Completato. Memoria assegnata:63 MB
+[WARN] 2021-07-24_12:30:13.851 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_12:30:13.851 In esecuzione cGraph
+[INFO] 2021-07-24_12:30:13.852 Completato. Memoria assegnata:66 MB

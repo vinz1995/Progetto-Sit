@@ -31,12 +31,12 @@ public class cGraph extends AbstractPlugIn{
 	@Override
 	public boolean execute(PlugInContext arg0) throws Exception {
 		//newLayer(arg0);
-		Node nodeA = new Node("A");
-		Node nodeB = new Node("B");
-		Node nodeC = new Node("C");
-		Node nodeD = new Node("D"); 
-		Node nodeE = new Node("E");
-		Node nodeF = new Node("F");
+		Node nodeA = new Node(0);
+		Node nodeB = new Node(1);
+		Node nodeC = new Node(2);
+		Node nodeD = new Node(3); 
+		Node nodeE = new Node(4);
+		Node nodeF = new Node(5);
 
 		nodeA.addDestination(nodeB, 10);
 		nodeA.addDestination(nodeC, 15);
@@ -63,7 +63,8 @@ public class cGraph extends AbstractPlugIn{
 
 		graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
         for (Node n : graph.getNodes()) {
-			if(n.getName()=="E"){
+			
+			if(n.getName()==4){
 				System.out.println(n.getName()+" dist: "+n.getDistance());
 				for (Node sp : n.getShortestPath()) {
 					System.out.println("sp:"+ sp.getName());

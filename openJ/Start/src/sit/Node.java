@@ -7,8 +7,7 @@ import java.util.Map;
 
 
 public class Node {
-
-    private String name;
+    private int name;
 
     private LinkedList<Node> shortestPath = new LinkedList<>();
 
@@ -16,7 +15,7 @@ public class Node {
 
     private Map<Node, Integer> adjacentNodes = new HashMap<>();
 
-    public Node(String name) {
+    public Node(int name) {
         this.name = name;
     }
 
@@ -24,11 +23,11 @@ public class Node {
         adjacentNodes.put(destination, distance);
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
