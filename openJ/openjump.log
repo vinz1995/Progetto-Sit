@@ -10558,3 +10558,761 @@ java.lang.NullPointerException: Cannot invoke "com.vividsolutions.jump.workbench
 [INFO] 2021-07-24_20:16:33.421 In esecuzione cGraph
 [INFO] 2021-07-24_20:16:33.453 Completato. Memoria assegnata:74 MB
 [INFO] 2021-07-24_20:19:41.079 Attivando Disegna linea
+[INFO] 2021-07-24_20:20:01.661 Attivando Disegna linea
+[INFO] 2021-07-24_20:37:20.244 Attivando Disegna linea
+[WARN] 2021-07-24_20:37:22.545 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:37:22.545 In esecuzione cGraph
+[INFO] 2021-07-24_20:37:22.554 Completato. Memoria assegnata:77 MB
+[INFO] 2021-07-24_20:37:35.400 Attivando Disegna linea
+[INFO] 2021-07-24_20:37:39.159 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_20:37:39.236 Completato. Memoria assegnata:29 MB
+[INFO] 2021-07-24_20:37:42.560 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_20:37:42.560 Completato. Memoria assegnata:47 MB
+[INFO] 2021-07-24_20:37:44.578 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:37:45.461 Attivando Seleziona elementi
+[INFO] 2021-07-24_20:37:45.860 Attivando Disegna linea
+[WARN] 2021-07-24_20:37:48.561 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:37:48.561 In esecuzione cGraph
+[INFO] 2021-07-24_20:37:48.568 Completato. Memoria assegnata:66 MB
+[INFO] 2021-07-24_20:38:17.451 Attivando Disegna linea
+[INFO] 2021-07-24_20:38:19.199 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:38:19.300 Completato. Memoria assegnata:69 MB
+[INFO] 2021-07-24_20:38:22.317 Attivando Disegna linea
+[INFO] 2021-07-24_20:38:24.437 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:38:24.531 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_20:38:26.965 Attivando Disegna linea
+[INFO] 2021-07-24_20:38:29.753 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:38:32.937 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_20:38:33.001 Completato. Memoria assegnata:29 MB
+[WARN] 2021-07-24_20:38:36.490 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:38:36.491 In esecuzione cGraph
+[INFO] 2021-07-24_20:38:36.499 Completato. Memoria assegnata:45 MB
+[INFO] 2021-07-24_20:38:38.467 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:38:38.564 Completato. Memoria assegnata:49 MB
+[INFO] 2021-07-24_20:38:55.643 Attivando Disegna linea
+[INFO] 2021-07-24_20:39:00.105 Attivando Disegna linea
+[INFO] 2021-07-24_20:39:39.625 Attivando Disegna linea
+[WARN] 2021-07-24_20:39:41.605 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:39:41.606 In esecuzione cGraph
+[INFO] 2021-07-24_20:39:41.614 Completato. Memoria assegnata:56 MB
+[INFO] 2021-07-24_20:39:43.173 Attivando Disegna linea
+[INFO] 2021-07-24_20:39:44.873 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:39:44.970 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_20:39:50.682 Attivando Disegna linea
+[INFO] 2021-07-24_20:40:05.874 Attivando Disegna linea
+[WARN] 2021-07-24_20:40:08.044 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:40:08.045 In esecuzione cGraph
+[INFO] 2021-07-24_20:40:08.055 Completato. Memoria assegnata:42 MB
+[INFO] 2021-07-24_20:40:09.298 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:40:09.399 Completato. Memoria assegnata:45 MB
+[INFO] 2021-07-24_20:40:26.586 Attivando Disegna linea
+[INFO] 2021-07-24_20:40:29.045 Attivando Disegna linea
+[INFO] 2021-07-24_20:40:29.057 Attivando Disegna linea
+[INFO] 2021-07-24_20:41:19.321 Attivando Disegna linea
+[WARN] 2021-07-24_20:41:21.243 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:41:21.244 In esecuzione cGraph
+[INFO] 2021-07-24_20:41:21.251 Completato. Memoria assegnata:50 MB
+[INFO] 2021-07-24_20:41:23.778 Attivando Disegna linea
+[INFO] 2021-07-24_20:41:25.176 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:41:25.273 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_20:41:33.598 Attivando Disegna linea
+[INFO] 2021-07-24_20:41:40.498 Attivando Disegna linea
+[INFO] 2021-07-24_20:41:44.531 Attivando Disegna linea
+[WARN] 2021-07-24_20:42:47.518 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:42:47.519 In esecuzione cGraph
+[INFO] 2021-07-24_20:42:47.532 Completato. Memoria assegnata:52 MB
+[INFO] 2021-07-24_20:42:48.389 Attivando Disegna linea
+[INFO] 2021-07-24_20:42:48.479 Attivando Disegna linea
+[INFO] 2021-07-24_20:42:50.057 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_20:42:50.150 Completato. Memoria assegnata:57 MB
+[INFO] 2021-07-24_20:43:17.083 Attivando Disegna linea
+[WARN] 2021-07-24_20:43:19.200 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:43:19.200 In esecuzione cGraph
+[INFO] 2021-07-24_20:43:19.212 Completato. Memoria assegnata:60 MB
+[INFO] 2021-07-24_20:45:02.933 Attivando Disegna linea
+[INFO] 2021-07-24_20:45:07.666 Attivando Disegna linea
+[INFO] 2021-07-24_20:45:11.336 Attivando Disegna linea
+[INFO] 2021-07-24_20:45:53.900 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_20:45:53.902 Completato. Memoria assegnata:47 MB
+[INFO] 2021-07-24_20:45:57.593 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:46:00.081 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:46:02.059 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:46:04.171 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_20:46:06.401 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:46:06.401 In esecuzione cGraph
+[INFO] 2021-07-24_20:46:06.412 Completato. Memoria assegnata:77 MB
+[INFO] 2021-07-24_20:57:49.792 Attivando Disegna linea
+[WARN] 2021-07-24_20:57:52.922 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:57:52.923 In esecuzione cGraph
+[INFO] 2021-07-24_20:57:52.932 Completato. Memoria assegnata:66 MB
+[INFO] 2021-07-24_20:58:00.130 Attivando Disegna linea
+[INFO] 2021-07-24_20:58:05.044 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_20:58:05.120 Completato. Memoria assegnata:30 MB
+[INFO] 2021-07-24_20:58:07.745 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_20:58:07.746 Completato. Memoria assegnata:49 MB
+[INFO] 2021-07-24_20:58:10.001 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:58:12.050 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:58:14.267 Comportamento finito:: Disegna linea
+[INFO] 2021-07-24_20:58:16.687 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_20:58:18.841 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:58:18.842 In esecuzione cGraph
+[INFO] 2021-07-24_20:58:18.847 Completato. Memoria assegnata:94 MB
+[INFO] 2021-07-24_20:58:51.938 Attivando Disegna linea
+[WARN] 2021-07-24_20:58:56.875 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_20:58:56.875 In esecuzione cGraph
+[INFO] 2021-07-24_20:58:56.883 Completato. Memoria assegnata:96 MB
+[INFO] 2021-07-24_21:01:47.211 Attivando Disegna linea
+[WARN] 2021-07-24_21:01:50.525 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:01:50.525 In esecuzione cGraph
+[INFO] 2021-07-24_21:01:50.530 Completato. Memoria assegnata:61 MB
+[INFO] 2021-07-24_21:04:02.716 Attivando Disegna linea
+[INFO] 2021-07-24_21:04:06.284 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_21:04:06.285 Completato. Memoria assegnata:70 MB
+[INFO] 2021-07-24_21:04:08.022 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:04:10.475 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:04:10.475 In esecuzione cGraph
+[INFO] 2021-07-24_21:04:10.482 Completato. Memoria assegnata:58 MB
+[INFO] 2021-07-24_21:04:22.413 Attivando Disegna linea
+[INFO] 2021-07-24_21:04:24.712 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:04:27.213 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:04:27.215 In esecuzione cGraph
+[INFO] 2021-07-24_21:04:27.225 Completato. Memoria assegnata:70 MB
+[INFO] 2021-07-24_21:05:20.478 Attivando Disegna linea
+[INFO] 2021-07-24_21:05:22.705 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:05:24.639 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:05:24.640 In esecuzione cGraph
+[INFO] 2021-07-24_21:05:24.649 Completato. Memoria assegnata:80 MB
+[INFO] 2021-07-24_21:06:49.641 Attivando Disegna linea
+[WARN] 2021-07-24_21:06:51.827 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:06:51.828 In esecuzione cGraph
+[INFO] 2021-07-24_21:06:51.837 Completato. Memoria assegnata:85 MB
+[INFO] 2021-07-24_21:06:58.767 Attivando Disegna linea
+[INFO] 2021-07-24_21:07:18.230 Attivando Disegna linea
+[WARN] 2021-07-24_21:07:20.595 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:07:20.596 In esecuzione cGraph
+[INFO] 2021-07-24_21:07:20.605 Completato. Memoria assegnata:96 MB
+[INFO] 2021-07-24_21:08:41.375 Attivando Disegna linea
+[WARN] 2021-07-24_21:08:46.696 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:08:46.697 In esecuzione cGraph
+[INFO] 2021-07-24_21:08:46.706 Completato. Memoria assegnata:101 MB
+[INFO] 2021-07-24_21:08:54.050 Attivando Disegna linea
+[INFO] 2021-07-24_21:09:06.577 Attivando Disegna linea
+[INFO] 2021-07-24_21:09:22.769 Attivando Disegna linea
+[INFO] 2021-07-24_21:09:45.387 Attivando Disegna linea
+[INFO] 2021-07-24_21:11:01.832 Attivando Disegna linea
+[WARN] 2021-07-24_21:11:04.637 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:11:04.638 In esecuzione cGraph
+[INFO] 2021-07-24_21:11:04.656 Completato. Memoria assegnata:70 MB
+[INFO] 2021-07-24_21:11:16.774 Attivando Disegna linea
+[INFO] 2021-07-24_21:11:28.208 Attivando Disegna linea
+[INFO] 2021-07-24_21:11:31.723 In esecuzione Elimina livelli selezionati
+[INFO] 2021-07-24_21:11:31.800 Completato. Memoria assegnata:30 MB
+[WARN] 2021-07-24_21:11:35.553 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:11:35.554 In esecuzione cGraph
+[INFO] 2021-07-24_21:11:35.560 Completato. Memoria assegnata:46 MB
+[INFO] 2021-07-24_21:11:46.255 Attivando Disegna linea
+[INFO] 2021-07-24_21:11:50.045 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_21:11:50.150 Completato. Memoria assegnata:52 MB
+[INFO] 2021-07-24_21:12:13.078 Attivando Disegna linea
+[ERROR] 2021-07-24_21:34:56.124 Extensions directory does not exist: lib/ext where homedir = [/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ]
+[INFO] 2021-07-24_21:34:56.229 Restore state from /Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/./workbench-state.xml
+[ERROR] 2021-07-24_21:34:56.617 class com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1 cannot access class com.sun.java.swing.plaf.motif.MotifLookAndFeel (in module java.desktop) because module java.desktop does not export com.sun.java.swing.plaf.motif to unnamed module @68f7aae2
+java.lang.IllegalAccessException: class com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1 cannot access class com.sun.java.swing.plaf.motif.MotifLookAndFeel (in module java.desktop) because module java.desktop does not export com.sun.java.swing.plaf.motif to unnamed module @68f7aae2
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:687)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:489)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:350)
+	at java.base/java.lang.Class.newInstance(Class.java:642)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1.getLookAndFeel(InstallSkinsPlugIn.java:67)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.SkinOptionsPanel.<init>(SkinOptionsPanel.java:98)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn.initialize(InstallSkinsPlugIn.java:99)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:466)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:411)
+	at lan.main(lan.java:15)
+[ERROR] 2021-07-24_21:34:56.632 Cannot invoke "Object.getClass()" because the return value of "com.vividsolutions.jump.workbench.ui.plugin.skin.LookAndFeelProxy.getLookAndFeel()" is null
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because the return value of "com.vividsolutions.jump.workbench.ui.plugin.skin.LookAndFeelProxy.getLookAndFeel()" is null
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.SkinOptionsPanel.<init>(SkinOptionsPanel.java:98)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn.initialize(InstallSkinsPlugIn.java:99)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:466)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:411)
+	at lan.main(lan.java:15)
+[ERROR] 2021-07-24_21:34:56.633 class com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1 cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @68f7aae2
+java.lang.IllegalAccessException: class com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1 cannot access class com.apple.laf.AquaLookAndFeel (in module java.desktop) because module java.desktop does not export com.apple.laf to unnamed module @68f7aae2
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:687)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:489)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:128)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:350)
+	at java.base/java.lang.Class.newInstance(Class.java:642)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn$1.getLookAndFeel(InstallSkinsPlugIn.java:67)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.SkinOptionsPanel.<init>(SkinOptionsPanel.java:98)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn.initialize(InstallSkinsPlugIn.java:99)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:466)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:411)
+	at lan.main(lan.java:15)
+[ERROR] 2021-07-24_21:34:56.639 Cannot invoke "Object.getClass()" because the return value of "com.vividsolutions.jump.workbench.ui.plugin.skin.LookAndFeelProxy.getLookAndFeel()" is null
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because the return value of "com.vividsolutions.jump.workbench.ui.plugin.skin.LookAndFeelProxy.getLookAndFeel()" is null
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.SkinOptionsPanel.<init>(SkinOptionsPanel.java:98)
+	at com.vividsolutions.jump.workbench.ui.plugin.skin.InstallSkinsPlugIn.initialize(InstallSkinsPlugIn.java:99)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:466)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:411)
+	at lan.main(lan.java:15)
+[INFO] 2021-07-24_21:34:57.373 Loading Plugin com.vividsolutions.jump.workbench.datasource.InstallStandardDataSourceQueryChoosersPlugIn took 0,04s 
+[INFO] 2021-07-24_21:34:57.395 Loading Plugin org.openjump.core.ui.plugin.file.OpenFilePlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:57.397 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.FirstTaskFramePlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:57.407 Loading Plugin org.openjump.core.ui.plugin.file.FileDragDropPlugin took 0,01s 
+[INFO] 2021-07-24_21:34:57.410 Loading Plugin org.openjump.core.ui.plugin.view.InstallKeyPanPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:57.436 Loading Plugin org.openjump.core.ui.plugin.view.MapToolTipPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:57.448 Loading Plugin org.openjump.core.ui.plugin.view.ShowFullPathPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.474 Loading Plugin org.openjump.core.ui.plugin.datastore.postgis.SaveToPostGISPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:57.485 Loading Plugin org.openjump.core.ccordsys.srid.EnsureAllLayersHaveSRIDStylePlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:57.497 Loading Plugin org.openjump.core.ui.plugin.view.helpclassescale.InstallShowScalePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.505 Loading Plugin org.openjump.core.ui.plugin.view.NorthArrowInstallRenderer took 0,00s 
+[INFO] 2021-07-24_21:34:57.510 Loading Plugin org.openjump.core.ui.plugin.view.showcenter.ShowViewCenterInstallRenderer took 0,00s 
+[INFO] 2021-07-24_21:34:57.522 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.InstallStandardFeatureTextWritersPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.536 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.datastore.InstallDatastoreLayerRendererHintsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.543 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.scalebar.InstallScaleBarPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:57.582 Loading Plugin com.vividsolutions.jump.workbench.ui.snap.InstallGridPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:57.598 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.InstallZoomBarPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.694 Loading Plugin org.openjump.core.ui.plugin.datastore.postgis2.SaveToPostGIS2PlugIn took 0,09s 
+[INFO] 2021-07-24_21:34:57.732 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.NewTaskPlugIn took 0,04s 
+[INFO] 2021-07-24_21:34:57.740 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.AddNewLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.768 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.AddNewCategoryPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:57.783 Loading Plugin org.openjump.core.ui.plugin.file.OpenWizardPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.819 Loading Plugin org.openjump.core.ui.plugin.file.OpenProjectPlugIn took 0,04s 
+[INFO] 2021-07-24_21:34:57.835 Loading Plugin org.openjump.core.ui.plugin.file.OpenRecentPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:57.854 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.datastore.RunDatastoreQueryPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:57.924 Loading Plugin org.openjump.core.ui.plugin.file.SaveLayersWithoutDataSourcePlugIn took 0,07s 
+[INFO] 2021-07-24_21:34:57.939 Loading Plugin org.openjump.core.ui.plugin.mousemenu.SaveDatasetsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.022 Loading Plugin com.vividsolutions.jump.workbench.datasource.SaveDatasetAsPlugIn took 0,08s 
+[WARN] 2021-07-24_21:34:58.025 No translation for key 'org.openjump.core.ui.plugin.file.SaveWizardPlugIn' in bundle 'language/jump'.
+[WARN] 2021-07-24_21:34:58.025 Can't find resource for bundle java.util.PropertyResourceBundle, key org.openjump.core.ui.plugin.file.SaveWizardPlugIn no default value, the resource key is used: SaveWizardPlugIn
+[INFO] 2021-07-24_21:34:58.099 Loading Plugin org.openjump.core.ui.plugin.file.SaveWizardPlugIn took 0,08s 
+[INFO] 2021-07-24_21:34:58.178 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.SaveProjectPlugIn took 0,08s 
+[INFO] 2021-07-24_21:34:58.213 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.SaveProjectAsPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:58.229 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.SaveImageAsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.232 org.openjump.core.ui.plugin.file.SaveImageAsSVGPlugIn not initialized because batik is missing.
+[INFO] 2021-07-24_21:34:58.233 Loading Plugin org.openjump.core.ui.plugin.file.SaveImageAsSVGPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.246 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopyImagePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.268 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.UndoPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.275 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.RedoPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.300 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CutSelectedItemsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.319 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopySelectedItemsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.338 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.PasteItemsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.355 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.DeleteSelectedItemsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.372 Loading Plugin org.openjump.core.ui.plugin.edit.SelectAllLayerItemsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.381 Loading Plugin org.openjump.core.ui.plugin.edit.SelectAllModifiedFeaturesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.385 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.SelectFeaturesInFencePlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.392 Loading Plugin org.openjump.core.ui.plugin.edit.SelectItemsByFenceFromSelectedLayersPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.402 Loading Plugin org.openjump.core.ui.plugin.edit.SelectItemsByCircleFromSelectedLayersPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.408 Loading Plugin org.openjump.core.ui.plugin.edit.SelectByTypePlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.415 Loading Plugin org.openjump.core.ui.plugin.edit.SelectGeometryCollectionsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.424 Loading Plugin org.openjump.core.ui.plugin.edit.SelectLayersWithSelectedItemsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.432 Loading Plugin org.openjump.core.ui.plugin.edit.InvertSelectionPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.438 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ClearSelectionPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.454 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.AddNewFeaturesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.471 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.EditSelectedFeaturePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.481 Loading Plugin org.openjump.core.ui.plugin.edit.ReplicateSelectedItemsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.491 Loading Plugin org.openjump.core.ui.plugin.mousemenu.MeasureSelectedPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.509 Loading Plugin org.openjump.core.ui.plugin.layer.ExtractLayersByGeometry took 0,01s 
+[INFO] 2021-07-24_21:34:58.525 Loading Plugin org.openjump.core.ui.plugin.layer.ExtractLayerInFence took 0,01s 
+[INFO] 2021-07-24_21:34:58.538 Loading Plugin org.openjump.core.ui.plugin.layer.ExtractLayersByAttribute took 0,01s 
+[INFO] 2021-07-24_21:34:58.547 Loading Plugin org.openjump.core.ui.plugin.edit.ClipToFencePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.569 Loading Plugin org.openjump.core.ui.plugin.task.TaskPropertiesPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.591 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomPreviousPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.598 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomNextPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.619 Loading Plugin com.vividsolutions.jump.workbench.ui.cursortool.editing.EditingPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.622 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.MapToolTipsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.629 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomBarPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.639 Loading Plugin org.openjump.core.ui.plugin.view.ShowScalePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.654 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.scalebar.ScaleBarPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.661 Loading Plugin org.openjump.core.ui.plugin.view.NorthArrowPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.773 Loading Plugin org.openjump.core.ui.plugin.view.showcenter.ShowViewCenterPlugIn took 0,11s 
+[INFO] 2021-07-24_21:34:58.779 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomToFullExtentPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.796 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomToFencePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.806 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomToSelectedItemsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.812 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomToCoordinatePlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:58.838 Loading Plugin org.openjump.core.ui.plugin.wms.ZoomToWMSLayerPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.846 Loading Plugin org.openjump.core.ui.plugin.view.ZoomToScalePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.866 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.FeatureInfoPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.879 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.VerticesInFencePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.888 Loading Plugin org.openjump.core.ui.plugin.edit.CopyBBoxPlugin took 0,00s 
+[INFO] 2021-07-24_21:34:58.923 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CutSelectedLayersPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:58.962 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopySelectedLayersPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:58.976 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.PasteLayersPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:58.992 Loading Plugin org.openjump.core.ui.plugin.layer.CombineSelectedLayersPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.014 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.DisposeSelectedLayersPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.046 Loading Plugin org.openjump.core.ui.plugin.layer.SortCategoryByFeaturesPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:59.078 Loading Plugin org.openjump.core.ui.plugin.layer.SortCategoryByNamePlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:59.090 Loading Plugin org.openjump.core.ui.plugin.layer.SortCategoryRestorePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.100 Loading Plugin org.openjump.core.ui.plugin.layer.SortCategorySavePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.116 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.RemoveSelectedCategoriesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.130 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.imagery.AddImageLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.150 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.imagery.ImageLayerManagerPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.173 Loading Plugin de.latlon.deejump.plugin.style.DeeChangeStylesPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.193 Loading Plugin com.vividsolutions.jump.workbench.ui.style.CopyStylesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.209 Loading Plugin com.vividsolutions.jump.workbench.ui.style.PasteStylesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.219 Loading Plugin org.openjump.core.ui.plugin.style.SaveStylePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.232 Loading Plugin com.vividsolutions.jump.workbench.ui.style.LegendPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.242 Loading Plugin org.openjump.core.ui.plugin.style.ImportArcMapStylePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.252 Loading Plugin org.openjump.core.ui.plugin.style.LoadStylePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.269 Loading Plugin org.openjump.core.ui.plugin.cts.CTSPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.273 Loading Plugin org.openjump.core.ui.plugin.layer.ChangeSRIDPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:59.290 Loading Plugin org.openjump.core.ui.plugin.layer.ExportLayerableEnvelopeAsGeometryPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.403 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.OptionsPlugIn took 0,11s 
+[INFO] 2021-07-24_21:34:59.417 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.BeanShellPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.433 Loading Plugin org.openjump.core.ui.plugin.customize.BeanToolsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.454 Loading Plugin org.openjump.core.ui.plugin.customize.PythonToolsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.469 Loading Plugin org.openjump.core.ui.plugin.view.EasyButtonsPlugin took 0,01s 
+[INFO] 2021-07-24_21:34:59.500 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.SpatialQueryPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:59.531 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.AttributeQueryPlugIn took 0,03s 
+[INFO] 2021-07-24_21:34:59.539 Loading Plugin org.openjump.core.ui.plugin.queries.SimpleQueryPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.558 Loading Plugin org.openjump.core.ui.plugin.queries.SearchAllAttributes took 0,02s 
+[INFO] 2021-07-24_21:34:59.577 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.BufferPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.588 Loading Plugin org.openjump.core.ui.plugin.tools.MultiRingBufferSelectedPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.596 Loading Plugin org.openjump.core.ui.plugin.tools.PlumePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.605 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.OffsetCurvePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.616 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.ConvexHullPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.624 Loading Plugin org.openjump.core.ui.plugin.tools.ConvexHullPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.637 Loading Plugin org.openjump.core.ui.plugin.tools.UnionByAttributePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.649 Loading Plugin org.openjump.core.ui.plugin.tools.DissolvePlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.672 Loading Plugin org.openjump.core.ui.plugin.tools.Dissolve2PlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.723 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.GeometryFunctionPlugIn took 0,05s 
+[INFO] 2021-07-24_21:34:59.750 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.OverlayPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.773 Loading Plugin org.openjump.core.ui.plugin.tools.IntersectPolygonLayersPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.790 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.SpatialJoinPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.807 Loading Plugin org.openjump.core.ui.plugin.tools.JoinAttributesSpatiallyPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.831 Loading Plugin org.openjump.core.ui.plugin.tools.analysis.twolayers.CalculateDistancesPlugIn took 0,02s 
+[INFO] 2021-07-24_21:34:59.890 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.CreateScatterPlotPlugIn took 0,04s 
+[INFO] 2021-07-24_21:34:59.906 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.CreateBarPlotPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.922 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.CreateHistogramPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.936 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.ClassifyAttributesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.942 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.CalcVarianceAndMeanPerClassPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:59.951 Loading Plugin org.openjump.core.ui.plugin.tools.statistics.StatisticOverViewPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.955 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.LayerStatisticsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:59.963 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.FeatureStatisticsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.973 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.test.RandomTrianglesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.978 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.test.RandomArrowsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:34:59.987 Loading Plugin org.openjump.core.ui.plugin.tools.generate.CreateGridPlugIn took 0,01s 
+[INFO] 2021-07-24_21:34:59.995 Loading Plugin org.openjump.core.ui.plugin.tools.TriangulationPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.001 Loading Plugin org.openjump.core.ui.plugin.tools.VoronoiDiagramPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.013 Loading Plugin org.openjump.core.ui.plugin.tools.generate.PointLayerFromAttributeTablePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.029 Loading Plugin org.openjump.core.ui.plugin.tools.generate.LinearReferencingOnLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.039 Loading Plugin org.openjump.core.ui.plugin.tools.generate.LinearReferencingOnSelectionPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.052 Loading Plugin com.vividsolutions.jump.workbench.ui.warp.WarpingPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.065 Loading Plugin com.vividsolutions.jump.workbench.ui.warp.AffineTransformPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.166 Loading Plugin com.vividsolutions.jump.plugin.edit.AffineTransformationPlugIn took 0,10s 
+[INFO] 2021-07-24_21:35:00.189 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ValidateSelectedLayersPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:00.197 Loading Plugin com.vividsolutions.jump.plugin.qa.DiffGeometryPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.201 Loading Plugin org.openjump.core.ui.plugin.tools.DeleteEmptyGeometriesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.206 Loading Plugin org.openjump.core.ui.plugin.tools.DeleteDuplicateGeometriesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.217 Loading Plugin org.openjump.core.ui.plugin.tools.MakeValidPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.227 Loading Plugin org.openjump.core.ui.plugin.tools.RemoveSpikePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.243 Loading Plugin org.openjump.core.ui.plugin.tools.geometrychange.ExtractPointsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.255 Loading Plugin org.openjump.core.ui.plugin.tools.geometrychange.PointsToPathsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.263 Loading Plugin org.openjump.core.ui.plugin.tools.geometrychange.ExtractCommonBoundaryBetweenPolysPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.271 Loading Plugin com.vividsolutions.jump.plugin.edit.ExtractSegmentsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.279 Loading Plugin com.vividsolutions.jump.plugin.edit.PolygonizerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.285 Loading Plugin org.openjump.core.ui.plugin.tools.PlanarGraphPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.399 Loading Plugin de.soldin.jumpcore.geomconv.GCPlugin took 0,11s 
+[INFO] 2021-07-24_21:35:00.433 Loading Plugin org.openjump.core.ui.plugin.tools.EraseLayerAWithLayerBPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:00.436 Loading Plugin com.vividsolutions.jump.plugin.edit.LineNoderPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.452 Loading Plugin com.vividsolutions.jump.plugin.edit.NoderPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:00.459 Loading Plugin com.vividsolutions.jump.plugin.edit.PrecisionReducerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.469 Loading Plugin org.openjump.core.ui.plugin.tools.analysis.onelayer.IntersectPolygonsOneLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.475 Loading Plugin org.openjump.core.ui.plugin.tools.JoinWithArcPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.484 Loading Plugin org.openjump.core.ui.plugin.tools.BlendLineStringsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.490 Loading Plugin org.openjump.core.ui.plugin.tools.MergeTwoSelectedPolygonsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.496 Loading Plugin org.openjump.core.ui.plugin.tools.analysis.onelayer.MergePolygonsWithNeighbourPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.503 Loading Plugin org.openjump.core.ui.plugin.tools.SplitPolygonPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.517 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.analysis.CalculateAreasAndLengthsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.527 Loading Plugin org.openjump.core.ui.plugin.tools.AutoAssignAttributePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.540 Loading Plugin org.openjump.core.ui.plugin.tools.GenerateRandomNumberPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.551 Loading Plugin org.openjump.core.ui.plugin.tools.GenerateRandomStringPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.557 Loading Plugin org.openjump.core.ui.plugin.tools.GenerateUniqueRandomIdPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.603 Loading Plugin de.fho.jump.pirol.plugins.EditAttributeByFormula.EditAttributeByFormulaPlugIn took 0,04s 
+[INFO] 2021-07-24_21:35:00.617 Loading Plugin org.openjump.core.ui.plugin.tools.AddGeometryAttributesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.623 Loading Plugin org.openjump.core.ui.plugin.tools.Add3DGeometryAttributesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.629 Loading Plugin org.openjump.core.ui.plugin.tools.JoinTableFromExistingLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.644 Loading Plugin org.openjump.core.ui.plugin.tools.UpdateWithJoinPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.680 Loading Plugin org.openjump.core.ui.plugin.tools.JoinTablePlugIn took 0,04s 
+[INFO] 2021-07-24_21:35:00.692 Loading Plugin org.openjump.core.ui.plugin.tools.BeanshellAttributeCalculatorPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.702 Loading Plugin org.openjump.core.ui.plugin.tools.SimplifyWithJTSAlgorithmPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.710 Loading Plugin org.openjump.core.ui.plugin.tools.ReducePointsISAPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:00.722 Loading Plugin org.openjump.core.ui.plugin.tools.generalization.SimplifyPolygonCoveragePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.751 Loading Plugin org.openjump.core.ui.plugin.tools.MeasureM_FPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:00.802 Loading Plugin org.openjump.core.ui.plugin.tools.generate.RasterizePlugIn took 0,05s 
+[INFO] 2021-07-24_21:35:00.839 Loading Plugin org.openjump.core.ui.plugin.raster.CreateLatticeFromSelectedImageLayerPlugIn took 0,04s 
+[INFO] 2021-07-24_21:35:00.853 Loading Plugin org.openjump.core.ui.plugin.raster.CreatePolygonGridFromSelectedImageLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.875 Loading Plugin org.openjump.core.ui.plugin.raster.VectorizeToPolygonsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:00.889 Loading Plugin org.openjump.core.ui.plugin.raster.VectorizeToContoursPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:00.935 Loading Plugin org.openjump.core.ui.plugin.raster.ManageDataPlugIn took 0,05s 
+[INFO] 2021-07-24_21:35:00.968 Loading Plugin org.openjump.core.ui.plugin.raster.KernelAnalysisPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.004 Loading Plugin org.openjump.core.ui.plugin.raster.CropWarpPlugIn took 0,04s 
+[INFO] 2021-07-24_21:35:01.010 Loading Plugin org.openjump.core.ui.plugin.raster.color.RasterColorEditorPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.023 Loading Plugin org.openjump.core.ui.plugin.raster.statistics.DEMStatisticsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.039 Loading Plugin org.openjump.core.ui.plugin.raster.ProfileGraphPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.069 Loading Plugin org.openjump.core.ui.plugin.raster.HistogramPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.085 Loading Plugin org.openjump.core.ui.plugin.raster.RasterQueryPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.103 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.OutputWindowPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.111 Loading Plugin org.openjump.sextante.gui.additionalResults.AdditionalResultsPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.119 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.GenerateLogPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.136 Loading Plugin org.openjump.core.ui.plugin.window.ArrangeViewsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.143 Loading Plugin org.openjump.core.ui.plugin.window.MosaicInternalFramesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.154 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.CloneWindowPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.172 Loading Plugin org.openjump.core.ui.plugin.window.SynchronizationPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.201 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ShortcutKeysPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.207 Loading Plugin org.openjump.core.ui.plugin.help.SearchCommandPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.216 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.AboutPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.222 Loading Plugin org.openjump.core.ui.plugin.mousemenu.category.SetCategoryVisibilityPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.228 Loading Plugin com.vividsolutions.jump.workbench.datasource.LoadDatasetPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.235 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.datastore.AddDatastoreLayerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.242 Loading Plugin org.openjump.core.ui.plugin.mousemenu.category.MoveCategoryToTop took 0,01s 
+[INFO] 2021-07-24_21:35:01.251 Loading Plugin org.openjump.core.ui.plugin.mousemenu.category.MoveCategoryOneUp took 0,01s 
+[INFO] 2021-07-24_21:35:01.258 Loading Plugin org.openjump.core.ui.plugin.mousemenu.category.MoveCategoryOneDown took 0,01s 
+[INFO] 2021-07-24_21:35:01.265 Loading Plugin org.openjump.core.ui.plugin.mousemenu.category.MoveCategoryToBottom took 0,01s 
+[INFO] 2021-07-24_21:35:01.274 Loading Plugin org.openjump.core.ui.plugin.layer.ToggleVisibilityPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.286 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.EditablePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.313 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.SelectablePlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.318 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.DeleteAllFeaturesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.322 Loading Plugin com.vividsolutions.jump.workbench.ui.zoom.ZoomToLayerPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.337 Loading Plugin org.openjump.core.ui.plugin.layer.NewLayerPropertiesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.353 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ViewAttributesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.378 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ViewSchemaPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.394 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.CopySchemaPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.401 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.PasteSchemaPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.403 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.AddNewLayerViewPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.414 Loading Plugin org.openjump.core.ui.plugin.datastore.EditDataStoreQueryPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.420 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.datastore.RefreshDataStoreLayerPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:01.424 Loading Plugin org.openjump.core.ui.plugin.layer.LayerPropertiesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.434 Loading Plugin org.openjump.core.ui.plugin.datastore.RefreshDataStoreQueryPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.454 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.MoveLayerablePlugIn$MoveLayerableUpPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.473 Loading Plugin org.openjump.core.ui.plugin.layer.MoveSelectedLayersPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.485 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.MoveLayerablePlugIn$MoveLayerableDownPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.492 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.wms.EditWMSQueryPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.507 Loading Plugin org.openjump.core.ui.plugin.wms.WMSStylePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.551 Loading Plugin org.openjump.core.ui.plugin.wms.WMSLegendPlugIn took 0,04s 
+[INFO] 2021-07-24_21:35:01.559 Loading Plugin org.openjump.core.ui.plugin.raster.RasterImageLayerPropertiesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.578 Loading Plugin org.openjump.core.ui.plugin.layer.pirolraster.ChangeRasterImagePropertiesPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.608 Loading Plugin org.openjump.core.ui.plugin.layer.pirolraster.ExtractSelectedPartOfImage took 0,03s 
+[INFO] 2021-07-24_21:35:01.614 Loading Plugin org.openjump.core.ui.plugin.layer.pirolraster.SaveRasterImageAsImagePlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.617 Loading Plugin org.openjump.core.ui.plugin.layer.pirolraster.ZoomToRasterImagePlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.623 Loading Plugin org.openjump.core.ui.plugin.layer.pirolraster.WarpImageToFencePlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.632 Loading Plugin org.openjump.core.ui.plugin.mousemenu.PasteItemsAtPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.638 Loading Plugin org.openjump.core.ui.plugin.mousemenu.ZoomInPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.644 Loading Plugin org.openjump.core.ui.plugin.mousemenu.ZoomOutPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.659 Loading Plugin org.openjump.core.ui.plugin.mousemenu.CenterZoomPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.665 Loading Plugin org.openjump.core.ui.plugin.mousemenu.DuplicateItemPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.673 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.CombineSelectedFeaturesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.687 Loading Plugin org.openjump.core.ui.plugin.mousemenu.MergeSelectedFeaturesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.701 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.ExplodeSelectedFeaturesPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.708 Loading Plugin org.openjump.core.ui.plugin.mousemenu.ReverseOrientationPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.714 Loading Plugin org.openjump.core.ui.plugin.mousemenu.NodeFeaturesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.720 Loading Plugin org.openjump.core.ui.plugin.mousemenu.NodeLinesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.724 Loading Plugin org.openjump.core.ui.plugin.mousemenu.NodePolygonsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.730 Loading Plugin org.openjump.core.ui.plugin.mousemenu.SplitFeaturesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.735 Loading Plugin org.openjump.core.ui.plugin.mousemenu.SplitLinesNodePolygonsPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.739 Loading Plugin org.openjump.core.ui.plugin.mousemenu.SplitPolygonsNodeLinesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.753 Loading Plugin org.openjump.core.ui.plugin.mousemenu.RotatePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.756 Loading Plugin org.openjump.core.ui.plugin.mousemenu.MoveAlongAnglePlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.763 Loading Plugin org.openjump.core.ui.plugin.mousemenu.EditSelectedSidePlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.795 Loading Plugin com.vividsolutions.jump.workbench.ui.plugin.clipboard.CopyThisCoordinatePlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.816 Loading Plugin org.openjump.core.ui.plugin.mousemenu.SelectAllOrderedFeaturesFromAttributeTablePlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.844 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.DrawConstrainedPolygonPlugIn took 0,03s 
+[INFO] 2021-07-24_21:35:01.846 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.DrawConstrainedLineStringPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.850 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.DrawConstrainedCirclePlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.853 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.DrawConstrainedArcPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.857 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.ConstrainedMoveVertexPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.861 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.SelectOneItemPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.867 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.DrawCircleWithGivenRadiusPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.872 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.NoteToolPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.882 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.CutPolygonSIGLEPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.885 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.CutFeaturesPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.888 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.AutoCompletePolygonPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.889 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.FillPolygonPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.895 Loading Plugin org.openjump.core.ui.plugin.edittoolbox.RemodelerPlugIn took 0,00s 
+[INFO] 2021-07-24_21:35:01.922 Loading Plugin org.openjump.core.ui.plugin.view.ViewOptionsPlugIn took 0,02s 
+[INFO] 2021-07-24_21:35:01.936 Loading Plugin org.openjump.core.ui.plugin.datastore.transaction.DataStoreTransactionManagerPlugIn took 0,01s 
+[INFO] 2021-07-24_21:35:01.969 Loading Plugin Lab02.ciaoMondo took 0,03s 
+[INFO] 2021-07-24_21:35:01.976 Loading Plugin esempi.DescribeLayerPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:01.991 Loading Plugin esempi.copyLayerPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:02.002 Loading Plugin esempi.addAttri took 0,01s 
+[INFO] 2021-07-24_21:35:02.011 Loading Plugin lab3.GetGeometryTypePlugin took 0,01s 
+[INFO] 2021-07-24_21:35:02.022 Loading Plugin lab3.RandomPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:02.028 Loading Plugin Utility.EsempioEnvelope took 0,00s 
+[INFO] 2021-07-24_21:35:02.036 Loading Plugin Funzioni.LunghezzaTotale took 0,01s 
+[INFO] 2021-07-24_21:35:02.040 Loading Plugin Funzioni.IntersezioneG1_2 took 0,00s 
+[INFO] 2021-07-24_21:35:02.047 Loading Plugin Utility.EsempioBuffer took 0,01s 
+[INFO] 2021-07-24_21:35:02.052 Loading Plugin Esercizi.Poly took 0,00s 
+[INFO] 2021-07-24_21:35:02.060 Loading Plugin Lab05.TestQueryPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:02.072 Loading Plugin sit.lett took 0,01s 
+[INFO] 2021-07-24_21:35:02.077 Loading Plugin sit.calcoloPercorsoEsame took 0,00s 
+[INFO] 2021-07-24_21:35:02.085 Loading Plugin Lab04.MapProjectPlugin took 0,01s 
+[INFO] 2021-07-24_21:35:02.093 Loading Plugin sit.graphReduce took 0,01s 
+[INFO] 2021-07-24_21:35:02.100 Loading Plugin sit.cGraph took 0,00s 
+[WARN] 2021-07-24_21:35:02.124 Base dati 'Oracle Spatial Datastore Extension' disabilitata: Mancano librerie jar dipendenti gt2-oracle-spatial-2.x.jar, ojdbc6.jar
+[INFO] 2021-07-24_21:35:02.124 Loading Config Oracle Spatial Datastore Extension rev.6669(03.01.2021) took 0,00s
+[WARN] 2021-07-24_21:35:02.127 Base dati 'MariaDB/MySQL Spatial Datastore Extension' disabilitata: Mancano librerie jar dipendenti mariadb-java-client-<version>.jar
+[INFO] 2021-07-24_21:35:02.129 Loading Config MariaDB/MySQL Spatial Datastore Extension rev.6669(03.01.2021) took 0,00s
+[WARN] 2021-07-24_21:35:02.131 Base dati 'MySQL Spatial Datastore Extension' disabilitata: Mancano librerie jar dipendenti mysql-connector-java-<version>.jar
+[INFO] 2021-07-24_21:35:02.133 Loading Config MySQL Spatial Datastore Extension rev.6669(03.01.2021) took 0,00s
+[WARN] 2021-07-24_21:35:02.136 Base dati 'Spatialite Datastore Extension' disabilitata: Mancano librerie jar dipendenti sqlite-jdbc-<version>.jar
+[INFO] 2021-07-24_21:35:02.137 Loading Config Spatialite Datastore Extension rev.6669(03.01.2021) took 0,00s
+[WARN] 2021-07-24_21:35:02.139 Base dati 'H2GIS Datastore Extension' disabilitata: Mancano librerie jar dipendenti h2-<version>.jar
+[INFO] 2021-07-24_21:35:02.140 Loading Config H2GIS Datastore Extension rev.6669(03.01.2021) took 0,00s
+[INFO] 2021-07-24_21:35:02.147 Loading Config Postgis Datastore Extension rev.6669(03.01.2021) took 0,01s
+[INFO] 2021-07-24_21:35:02.150 Disabled because deegree2-core is missing. Try OJ PLUS!
+[INFO] 2021-07-24_21:35:02.152 Loading Config WFS(-T) 1.0/1.1 Extension (Lat/Lon) 1.2 rev.6669(03.01.2021) took 0,00s
+[INFO] 2021-07-24_21:35:02.181 Loading Config Raster Styles (org.openjump.core.rasterimage.styler)  took 0,03s
+[INFO] 2021-07-24_21:35:02.181 Loading all OJ extensions took 0,06s
+[INFO] 2021-07-24_21:35:02.638 ECW/JP2 loader class com.ermapper.ecw.JNCSRenderer non installato.
+[INFO] 2021-07-24_21:35:02.638 ECW/JP2 SDK loader will be unavailable.
+[INFO] 2021-07-24_21:35:02.677 mrsidgeodecode non installato. - os not supported.
+[ERROR] 2021-07-24_21:35:02.783 Can't register JP2GDAL readers.
+java.lang.NoClassDefFoundError: it/geosolutions/imageio/gdalframework/GDALImageReaderSpi
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1010)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:512)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:420)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:414)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:413)
+	at com.vividsolutions.jump.workbench.plugin.PlugInClassLoader.loadClass(PlugInClassLoader.java:71)
+	at com.vividsolutions.jump.workbench.imagery.geoimg.GeoImageFactory.<init>(GeoImageFactory.java:85)
+	at com.vividsolutions.jump.workbench.imagery.geoimg.GeoImageFactoryFileLayerLoader.register(GeoImageFactoryFileLayerLoader.java:43)
+	at org.openjump.OpenJumpConfiguration.postExtensionInitialization(OpenJumpConfiguration.java:207)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:487)
+	at com.vividsolutions.jump.workbench.JUMPWorkbench.main(JUMPWorkbench.java:411)
+	at lan.main(lan.java:15)
+[INFO] 2021-07-24_21:35:03.192 OJ start took 9,00s alltogether.
+[WARN] 2021-07-24_21:35:03.363 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.374 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.391 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.406 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.415 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.428 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.430 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.446 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.450 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.453 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.456 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.459 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.470 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.478 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.485 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.490 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="4"]
+[WARN] 2021-07-24_21:35:03.495 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.498 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.506 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.509 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.516 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.519 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.525 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.529 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="1"]
+[WARN] 2021-07-24_21:35:03.540 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="2"]
+[WARN] 2021-07-24_21:35:03.545 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="2"]
+[WARN] 2021-07-24_21:35:03.548 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="2"]
+[WARN] 2021-07-24_21:35:03.557 Expected 'interior' attribute but found none. Tag = line; Attributes = [Attribute: enabled="true"], [Attribute: width="2"]
+[INFO] 2021-07-24_21:35:04.014 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:04.014 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:04.014 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:04.016 Task added : Progetto 1
+[INFO] 2021-07-24_21:35:04.112 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:27.453 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:27.545 In esecuzione Aggiungi un nuovo livello
+[INFO] 2021-07-24_21:35:27.634 Completato. Memoria assegnata:55 MB
+[INFO] 2021-07-24_21:35:27.968 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:30.217 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:32.121 Attivando Ruota elemento
+[INFO] 2021-07-24_21:35:32.265 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:32.297 Attivando Inserisci vertice
+[INFO] 2021-07-24_21:35:32.425 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:32.609 Attivando Inserisci vertice
+[INFO] 2021-07-24_21:35:32.673 Attivando Seleziona elementi
+[INFO] 2021-07-24_21:35:38.702 Attivando Disegna linea
+[INFO] 2021-07-24_21:35:38.713 Attivando Disegna linea
+[INFO] 2021-07-24_21:35:39.477 Attivando Disegna linea
+[INFO] 2021-07-24_21:35:40.604 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:35:43.861 No translation for key 'sit.cGraph' in bundle 'language/jump'.
+[WARN] 2021-07-24_21:35:43.862 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:35:43.862 In esecuzione cGraph
+[INFO] 2021-07-24_21:35:43.889 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_21:36:06.458 Attivando Disegna linea
+[WARN] 2021-07-24_21:36:08.263 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:36:08.263 In esecuzione cGraph
+[INFO] 2021-07-24_21:36:08.272 Completato. Memoria assegnata:45 MB
+[INFO] 2021-07-24_21:37:02.490 Attivando Disegna linea
+[INFO] 2021-07-24_21:37:05.062 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:37:07.128 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:37:07.129 In esecuzione cGraph
+[INFO] 2021-07-24_21:37:07.142 Completato. Memoria assegnata:55 MB
+[INFO] 2021-07-24_21:37:16.609 Attivando Disegna linea
+[INFO] 2021-07-24_21:37:23.740 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:37:26.900 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:37:26.901 In esecuzione cGraph
+[ERROR] 2021-07-24_21:37:26.902 Cannot invoke "java.util.List.add(Object)" because "lista_collegamenti" is null
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "lista_collegamenti" is null
+	at sit.cGraph.creaPunti(cGraph.java:127)
+	at sit.cGraph.execute(cGraph.java:93)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_21:37:57.098 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:37:57.099 In esecuzione cGraph
+[INFO] 2021-07-24_21:37:57.115 Completato. Memoria assegnata:70 MB
+[WARN] 2021-07-24_21:42:04.724 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:42:04.724 In esecuzione cGraph
+[INFO] 2021-07-24_21:42:04.746 Completato. Memoria assegnata:40 MB
+[INFO] 2021-07-24_21:42:16.933 Attivando Disegna linea
+[INFO] 2021-07-24_21:42:18.138 In esecuzione Cancella tutti gli elementi
+[INFO] 2021-07-24_21:42:18.142 Completato. Memoria assegnata:55 MB
+[INFO] 2021-07-24_21:42:19.458 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:42:21.460 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:42:21.461 In esecuzione cGraph
+[INFO] 2021-07-24_21:42:21.475 Completato. Memoria assegnata:60 MB
+[INFO] 2021-07-24_21:42:30.341 Attivando Disegna linea
+[INFO] 2021-07-24_21:42:34.684 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:42:36.982 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:42:36.983 In esecuzione cGraph
+[INFO] 2021-07-24_21:42:36.992 Completato. Memoria assegnata:73 MB
+[INFO] 2021-07-24_21:42:40.058 In esecuzione Visualizza/modifica attributi
+[INFO] 2021-07-24_21:42:40.271 Completato. Memoria assegnata:79 MB
+[INFO] 2021-07-24_21:42:42.495 Attivando Disegna linea
+[INFO] 2021-07-24_21:43:45.686 Attivando Disegna linea
+[WARN] 2021-07-24_21:43:50.017 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:43:50.019 In esecuzione cGraph
+[ERROR] 2021-07-24_21:43:50.019 Unresolved compilation problems: 
+	Syntax error on token "value", delete this token
+	The method get(int) is undefined for the type String
+
+java.lang.Error: Unresolved compilation problems: 
+	Syntax error on token "value", delete this token
+	The method get(int) is undefined for the type String
+
+	at sit.cGraph.creaPunti(cGraph.java:171)
+	at sit.cGraph.execute(cGraph.java:93)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_21:44:02.503 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:44:02.504 In esecuzione cGraph
+[ERROR] 2021-07-24_21:44:02.508 Index 2 out of bounds for length 2
+java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at sit.cGraph.creaPunti(cGraph.java:171)
+	at sit.cGraph.execute(cGraph.java:93)
+	at com.vividsolutions.jump.workbench.plugin.AbstractPlugIn$1.actionPerformed(AbstractPlugIn.java:354)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/com.apple.laf.ScreenMenuItem.actionPerformed(ScreenMenuItem.java:129)
+	at java.desktop/java.awt.MenuItem.processActionEvent(MenuItem.java:690)
+	at java.desktop/java.awt.MenuItem.processEvent(MenuItem.java:649)
+	at java.desktop/java.awt.MenuComponent.dispatchEventImpl(MenuComponent.java:375)
+	at java.desktop/java.awt.MenuComponent.dispatchEvent(MenuComponent.java:363)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+[WARN] 2021-07-24_21:44:17.967 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:44:17.968 In esecuzione cGraph
+[INFO] 2021-07-24_21:44:17.985 Completato. Memoria assegnata:41 MB
+[WARN] 2021-07-24_21:44:31.829 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:44:31.829 In esecuzione cGraph
+[INFO] 2021-07-24_21:44:31.845 Completato. Memoria assegnata:43 MB
+[INFO] 2021-07-24_21:44:41.389 Attivando Disegna linea
+[INFO] 2021-07-24_21:44:42.788 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:44:44.605 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:44:44.606 In esecuzione cGraph
+[INFO] 2021-07-24_21:44:44.619 Completato. Memoria assegnata:55 MB
+[INFO] 2021-07-24_21:44:50.153 Attivando Disegna linea
+[WARN] 2021-07-24_21:44:52.236 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:44:52.237 In esecuzione cGraph
+[INFO] 2021-07-24_21:44:52.251 Completato. Memoria assegnata:56 MB
+[INFO] 2021-07-24_21:45:05.260 Attivando Disegna linea
+[INFO] 2021-07-24_21:45:06.924 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:45:08.742 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:45:08.743 In esecuzione cGraph
+[INFO] 2021-07-24_21:45:08.761 Completato. Memoria assegnata:62 MB
+[INFO] 2021-07-24_21:45:39.211 Attivando Disegna linea
+[INFO] 2021-07-24_21:45:41.817 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:45:43.700 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:45:43.701 In esecuzione cGraph
+[INFO] 2021-07-24_21:45:43.727 Completato. Memoria assegnata:71 MB
+[INFO] 2021-07-24_21:47:42.468 Attivando Disegna linea
+[INFO] 2021-07-24_21:47:46.089 Comportamento finito:: Disegna linea
+[WARN] 2021-07-24_21:47:48.850 Can't find resource for bundle java.util.PropertyResourceBundle, key sit.cGraph no default value, the resource key is used: cGraph
+[INFO] 2021-07-24_21:47:48.851 In esecuzione cGraph
+[INFO] 2021-07-24_21:47:48.869 Completato. Memoria assegnata:41 MB
+[INFO] 2021-07-24_21:47:59.009 Attivando Disegna linea

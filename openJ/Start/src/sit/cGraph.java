@@ -97,9 +97,11 @@ public class cGraph extends AbstractPlugIn{
 
 	public void creaPunti(PlugInContext context, Layer layer) {
 		HashMap<Coordinate,Integer> hm=new HashMap<>();
-		HashMap<Coordinate,List<Coordinate>> map_collegamenti=new HashMap<>();
-		HashMap<Coordinate,List<Coordinate>> map_distanze=new HashMap<>();
+		HashMap<Coordinate,List<Integer>> map_collegamenti=new HashMap<>();
+		HashMap<Coordinate,List<Node>> map_nodi=new HashMap<>();
+		// HashMap<Coordinate,List<Coordinate>> map_distanze=new HashMap<>();
 		int id=0;
+		int id_ver=0;
 		FeatureSchema fs= new FeatureSchema();
 		fs.addAttribute("geometry", AttributeType.GEOMETRY);
 		fs.addAttribute("id", AttributeType.INTEGER);
@@ -111,49 +113,66 @@ public class cGraph extends AbstractPlugIn{
 			Coordinate[] coordinate=f.getGeometry().getCoordinates();
 			Coordinate sV=new Coordinate(coordinate[0].x,coordinate[0].y);
 			Coordinate eV=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
-			List<Coordinate> lista_collegamenti_sV=new ArrayList<>();
-			List<Coordinate> lista_collegamenti_eV=new ArrayList<>();
+			List<Integer> lista_collegamenti=new ArrayList<>();
+			List<Node> lista_nodi=new ArrayList<>();
 			//controllo null
 			if(hm.get(sV) != null){
+				id++;
 				int incre=hm.get(sV);
 				incre++;
+				id_ver++;
 				hm.replace(sV, incre);
-				lista_collegamenti_sV.add(eV);
+				// lista_collegamenti=map_collegamenti.get(sV);
+				lista_nodi=map_nodi.get(sV);
+				lista_nodi.add(new Node(id_ver));
+				map_nodi.remove(sV);
+				// lista_collegamenti.add(id_ver);
 			}else{
 				hm.put(sV, 1);
 				Feature ff=new BasicFeature(fs);
 				id++;
+				id_ver++;
 				ff.setAttribute(0, gf.createPoint(sV));
 				ff.setAttribute(1, id);
 				ff.setAttribute(2, 1);
 				fc.add(ff);
-				lista_collegamenti_sV.add(eV);
-			}
-			map_collegamenti.put(sV, lista_collegamenti_sV);
+				lista_nodi.add(new Node(id_ver));
+				// lista_collegamenti.add(id);
 
-			if (hm.get(eV) != null) {
-				int incre=hm.get(eV);
-				incre++;
-				hm.replace(eV, incre);
-				lista_collegamenti_eV.add(sV);
-			}else{
-				hm.put(eV, 1);
-				Feature ff=new BasicFeature(fs);
-				id++;
-				ff.setAttribute(0, gf.createPoint(eV));
-				ff.setAttribute(1, id);
-				ff.setAttribute(2, 1);
-				fc.add(ff);
-				lista_collegamenti_eV.add(sV);
 			}
-			map_collegamenti.put(sV, lista_collegamenti_sV);
+			map_nodi.put(sV, lista_nodi);
+			// map_collegamenti.put(sV, lista_collegamenti);
+			// lista_collegamenti=new ArrayList<>();
+			// if (hm.get(eV) != null) {
+			// 	int incre=hm.get(eV);
+			// 	incre++;
+			// 	hm.replace(eV, incre);
+			// 	id++;
+			// 	lista_collegamenti=map_collegamenti.get(eV);
+			// 	map_collegamenti.remove(eV);
+			// 	lista_collegamenti.add(id);
+			// }else{
+			// 	hm.put(eV, 1);
+			// 	Feature ff=new BasicFeature(fs);
+			// 	id++;
+			// 	ff.setAttribute(0, gf.createPoint(eV));
+			// 	ff.setAttribute(1, id);
+			// 	ff.setAttribute(2, 1);
+			// 	fc.add(ff);
+			// 	lista_collegamenti.add(id);
+			// }
+			// map_collegamenti.put(eV, lista_collegamenti);
         }
 
-		for (Entry<Coordinate, List<Coordinate>> pair : map_collegamenti.entrySet()) {
-			List<Coordinate> value=new ArrayList<>();
+		for (Entry<Coordinate, List<Node>> pair : map_nodi.entrySet()) {
+			List<Node> value=new ArrayList<>();
 			Coordinate key=pair.getKey();
 			value=pair.getValue();
-			System.out.println("key: "+key+" value: "+value);
+			System.out.println("size: "+value.get(value.size()-1).getName());;
+			for (Node node : value) {
+				System.out.println("key: "+key+" value: "+node.getName());
+			}
+			
 		}
 		context.addLayer("Result", "puntiCreati", fc);
 	}
