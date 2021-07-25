@@ -119,6 +119,8 @@ public class cGraph extends AbstractPlugIn{
 			Coordinate eV=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
 			List<Integer> lista_collegamenti=new ArrayList<>();
 			List<Node> lista_nodi=new ArrayList<>();
+			Double d=f.getGeometry().getLength();
+			System.out.println("len: "+d);
 			//controllo null
 			// if(hm.containsKey(sV)){
 			// 	System.out.println("if: "+hm.containsKey(sV));
@@ -161,7 +163,7 @@ public class cGraph extends AbstractPlugIn{
 				Node end=new Node(id);
 				map_nodi.put(eV,end);
 				graph.removeNode(start);
-				start.addDestination(end, id);
+				start.addDestination(end, d);
 				graph.addNode(start);
 				graph.addNode(end);
 				
@@ -174,7 +176,7 @@ public class cGraph extends AbstractPlugIn{
 					map_nodi.put(sV,start);
 					Node end=map_nodi.get(eV);
 					
-					start.addDestination(end, id);
+					start.addDestination(end, d);
 					graph.addNode(start);
 				}
 				else{
@@ -183,8 +185,7 @@ public class cGraph extends AbstractPlugIn{
 					id++;
 					Node end=new Node(id);
 					map_nodi.put(eV,end);
-					Double d=f.getGeometry().getLength();
-					System.out.println("len: "+d);
+					
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
@@ -197,7 +198,7 @@ public class cGraph extends AbstractPlugIn{
 				id++;
 				Node end=map_nodi.get(sV);
 				// map_nodi.put(sV,end);
-				start.addDestination(end, id);
+				start.addDestination(end, d);
 				graph.removeNode(start);
 				graph.addNode(start);
 			}
