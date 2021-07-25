@@ -167,6 +167,11 @@ public class cGraph extends AbstractPlugIn{
 				start.addDestination(end, d);
 				graph.addNode(start);
 				graph.addNode(end);
+				Feature ff=new BasicFeature(fs);
+				ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(1, id);
+				fc.add(ff);
 				
 			}
 			else{
@@ -176,9 +181,13 @@ public class cGraph extends AbstractPlugIn{
 					Node start=new Node(id);
 					map_nodi.put(sV,start);
 					Node end=map_nodi.get(eV);
-					
 					start.addDestination(end, d);
 					graph.addNode(start);
+					Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, id);
+					fc.add(ff);
+
 				}
 				else{
 					Node start=new Node(id);
@@ -186,14 +195,21 @@ public class cGraph extends AbstractPlugIn{
 					id++;
 					Node end=new Node(id);
 					map_nodi.put(eV,end);
-					
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
+					Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, id);
+					fc.add(ff);
+					id++;
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, id);
+					fc.add(ff);
 				}
 				
 			}
-
 			if(map_nodi.containsKey(eV)){
 				Node start=map_nodi.get(eV);
 				id++;
@@ -202,6 +218,11 @@ public class cGraph extends AbstractPlugIn{
 				start.addDestination(end, d);
 				graph.removeNode(start);
 				graph.addNode(start);
+				Feature ff=new BasicFeature(fs);
+				ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, id);
+					fc.add(ff);
 			}
 			// else{
 			// 	System.out.println("mai");
@@ -344,15 +365,14 @@ public class cGraph extends AbstractPlugIn{
 		Coordinate[] coordinate=start_geom.getGeometry().getCoordinates();
 		Coordinate eV2=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
 		Node s_p=map_nodi.get(eV2);
-		// System.out.println("Coordinate:" + eV2);
-		// System.out.println("Node get :" + s_p.getName());
+		System.out.println("Coordinate:" + eV2);
+		System.out.println("Node source name :" + s_p.getName());
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
         for (Node n : graph.getNodes()) {
-
-			// System.out.println(n.getName()+" dist: "+n.getDistance());
+			System.out.println("nome: "+n.getName()+" adj: "+ n.getAdjacentNodes());
 				for (Node short_pt : n.getShortestPath()) {
-					System.out.println("sp:"+ short_pt.getName());
+					System.out.println("nome: "+n.getName()+" sp: "+ short_pt.getName());
 
 			
 		}
