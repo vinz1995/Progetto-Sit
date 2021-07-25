@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.Map.*;
 
 import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.Geometry;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.planargraph.PlanarGraph;
 import com.vividsolutions.jump.feature.AttributeType;
@@ -120,7 +121,7 @@ public class cGraph extends AbstractPlugIn{
 			List<Integer> lista_collegamenti=new ArrayList<>();
 			List<Node> lista_nodi=new ArrayList<>();
 			Double d=f.getGeometry().getLength();
-			System.out.println("len: "+d);
+			// System.out.println("len: "+d);
 			//controllo null
 			// if(hm.containsKey(sV)){
 			// 	System.out.println("if: "+hm.containsKey(sV));
@@ -334,8 +335,31 @@ public class cGraph extends AbstractPlugIn{
 		// 	System.out.println("map: "+"key: "+key+" value: "+node.getName());
 		// }
 		for (Node n : graph.getNodes()) {
-			System.out.println("graph: "+"node: "+n+" adj:"+n.getAdjacentNodes());
+			System.out.println("graph: "+"node: "+n.getName()+" adj:"+n.getAdjacentNodes());
 		}
+		Layer start_layer=context.getLayerManager().getLayer("start");
+		Layer segna_layer=context.getLayerManager().getLayer("segna");
+		Feature start_geom = start_layer.getFeatureCollectionWrapper().getFeatures().get(0);
+		
+		Coordinate[] coordinate=start_geom.getGeometry().getCoordinates();
+		Coordinate eV2=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
+		Node s_p=map_nodi.get(eV2);
+		// System.out.println("Coordinate:" + eV2);
+		// System.out.println("Node get :" + s_p.getName());
+		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
+		Dijkstra.calculateShortestPathFromSource(graph, s_p);
+        for (Node n : graph.getNodes()) {
+
+			// System.out.println(n.getName()+" dist: "+n.getDistance());
+				for (Node short_pt : n.getShortestPath()) {
+					System.out.println("sp:"+ short_pt.getName());
+
+			
+		}
+		System.out.println("*****************");
+		}
+
+
 		context.addLayer("Result", "puntiCreati", fc);
 	}
 
