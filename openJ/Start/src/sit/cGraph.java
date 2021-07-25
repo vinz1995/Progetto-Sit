@@ -173,6 +173,7 @@ public class cGraph extends AbstractPlugIn{
 					Node start=new Node(id);
 					map_nodi.put(sV,start);
 					Node end=map_nodi.get(eV);
+					
 					start.addDestination(end, id);
 					graph.addNode(start);
 				}
@@ -182,7 +183,9 @@ public class cGraph extends AbstractPlugIn{
 					id++;
 					Node end=new Node(id);
 					map_nodi.put(eV,end);
-					start.addDestination(end, id);
+					Double d=f.getGeometry().getLength();
+					System.out.println("len: "+d);
+					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
 				}
