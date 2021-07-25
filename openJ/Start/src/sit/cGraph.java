@@ -23,6 +23,7 @@ import com.vividsolutions.jump.workbench.model.Layer;
 import com.vividsolutions.jump.workbench.plugin.AbstractPlugIn;
 import com.vividsolutions.jump.workbench.plugin.PlugInContext;
 import com.vividsolutions.jump.workbench.ui.plugin.FeatureInstaller;
+import com.vividsolutions.jump.workbench.ui.renderer.style.CircleLineStringEndpointStyle.Start;
 
 import Utility.Select;
 import sit.Graph;
@@ -119,82 +120,99 @@ public class cGraph extends AbstractPlugIn{
 			List<Integer> lista_collegamenti=new ArrayList<>();
 			List<Node> lista_nodi=new ArrayList<>();
 			//controllo null
-			if(hm.containsKey(sV)){
-				System.out.println("if: "+hm.containsKey(sV));
-				int incre=hm.get(sV);
-				incre++;
-				hm.replace(sV, incre);
-				Node nodeB=map_nodi.get(sV);
-				System.out.println("if");
-				id++;
-				Node nodeD=new Node(id);
-				// graph.removeNode(nodeB);
-				nodeB.addDestination(nodeD, id);
-				nodeD.addDestination(nodeB, id);
-				map_nodi.put(eV, nodeD);
-				
-				graph.addNode(nodeB);
-				graph.addNode(nodeD);
+			// if(hm.containsKey(sV)){
+			// 	System.out.println("if: "+hm.containsKey(sV));
+			// 	int incre=hm.get(sV);
+			// 	incre++;
+			// 	hm.replace(sV, incre);
+			// 	Node nodeB=map_nodi.get(sV);
+			// 	System.out.println("if");
+			// 	id++;
+			// 	Node nodeD=new Node(id);
+			// 	// graph.removeNode(nodeB);
+			// 	nodeB.addDestination(nodeD, id);
+			// 	nodeD.addDestination(nodeB, id);
+			// 	map_nodi.put(eV, nodeD);
+			// 	graph.addNode(nodeB);
+			// 	graph.addNode(nodeD);
 
+			// }else{
+			// 	System.out.println("else: "+ hm.containsKey(sV));
+			// 	hm.put(sV, 1);
+			// 	Feature ff=new BasicFeature(fs);
+			// 	id++;
+			// 	ff.setAttribute(0, gf.createPoint(sV));
+			// 	ff.setAttribute(1, id);
+			// 	ff.setAttribute(2, 1);
+			// 	fc.add(ff);
+			// 	Node nodeB=new Node(id);
+			// 	id++;
+			// 	Node nodeD=new Node(id);
+			// 	nodeB.addDestination(nodeD, id);
+			// 	nodeD.addDestination(nodeB, id);
+			// 	graph.addNode(nodeB);
+			// 	graph.addNode(nodeD);
+			// 	map_nodi.put(sV, nodeB);
+			// 	map_nodi.put(eV, nodeD);
+			// }
+			if(map_nodi.containsKey(sV)){
+				Node start=map_nodi.get(sV);
+				id++;
+				Node end=new Node(id);
+				map_nodi.put(eV,end);
+				graph.removeNode(start);
+				start.addDestination(end, id);
+				graph.addNode(start);
+				graph.addNode(end);
 				
-
-			}else{
-				System.out.println("else: "+ hm.containsKey(sV));
-				hm.put(sV, 1);
-				Feature ff=new BasicFeature(fs);
-				id++;
-				ff.setAttribute(0, gf.createPoint(sV));
-				ff.setAttribute(1, id);
-				ff.setAttribute(2, 1);
-				fc.add(ff);
-				Node nodeB=new Node(id);
-				id++;
-				Node nodeD=new Node(id);
-				nodeB.addDestination(nodeD, id);
-				nodeD.addDestination(nodeB, id);
-				graph.addNode(nodeB);
-				graph.addNode(nodeD);
-				map_nodi.put(sV, nodeB);
-				map_nodi.put(eV, nodeD);
 			}
-			if(hm.containsKey(eV)){
-				System.out.println("if: "+hm.containsKey(eV));
-				int incre=hm.get(eV);
-				incre++;
-				hm.replace(eV, incre);
-				Node nodeB=map_nodi.get(eV);
-				System.out.println("if");
+			else{
+				//sx a dx
 				id++;
-				Node nodeD=new Node(id);
-				// graph.removeNode(nodeB);
-				nodeB.addDestination(nodeD, id);
-				nodeD.addDestination(nodeB, id);
-				map_nodi.put(sV, nodeD);
+				if(map_nodi.containsKey(eV)){
+					Node start=new Node(id);
+					map_nodi.put(sV,start);
+					Node end=map_nodi.get(eV);
+					start.addDestination(end, id);
+					graph.addNode(start);
+				}
+				else{
+					Node start=new Node(id);
+					map_nodi.put(sV,start);
+					id++;
+					Node end=new Node(id);
+					map_nodi.put(eV,end);
+					start.addDestination(end, id);
+					graph.addNode(start);
+					graph.addNode(end);
+				}
 				
-				graph.addNode(nodeB);
-				graph.addNode(nodeD);
-
-				
-
-			}else{
-				System.out.println("else: "+ hm.containsKey(eV));
-				hm.put(eV, 1);
-				Feature ff=new BasicFeature(fs);
-				id++;
-				ff.setAttribute(0, gf.createPoint(eV));
-				ff.setAttribute(1, id);
-				ff.setAttribute(2, 1);
-				fc.add(ff);
-				Node nodeB=new Node(id);
-				id++;
-				Node nodeD=new Node(id);
-				nodeB.addDestination(nodeD, id);
-				nodeD.addDestination(nodeB, id);
-				graph.addNode(nodeB);
-				graph.addNode(nodeD);
-				map_nodi.put(eV, nodeB);
-				map_nodi.put(sV, nodeD);
 			}
+
+			if(map_nodi.containsKey(eV)){
+				Node start=map_nodi.get(eV);
+				id++;
+				Node end=map_nodi.get(sV);
+				// map_nodi.put(sV,end);
+				start.addDestination(end, id);
+				graph.removeNode(start);
+				graph.addNode(start);
+			}
+			// else{
+			// 	System.out.println("mai");
+			// 	Node start=new Node(id);
+			// 	id++;
+			// 	Node end=new Node(id);
+			// 	map_nodi.put(eV,start);
+			// 	map_nodi.put(sV,end);
+			// 	start.addDestination(end, id);
+			// 	graph.addNode(start);
+			// 	graph.addNode(end);
+			// 	System.out.println("name:"+start.getName());
+			// }
+			
+
+			
 
 			// if (hm.get(eV) != null) {
 			// 	int incre=hm.get(eV);
@@ -312,7 +330,7 @@ public class cGraph extends AbstractPlugIn{
 		// 	System.out.println("map: "+"key: "+key+" value: "+node.getName());
 		// }
 		for (Node n : graph.getNodes()) {
-			System.out.println("graph: "+"node: "+n.getName()+" adj:"+n.getAdjacentNodes());
+			System.out.println("graph: "+"node: "+n+" adj:"+n.getAdjacentNodes());
 		}
 		context.addLayer("Result", "puntiCreati", fc);
 	}
