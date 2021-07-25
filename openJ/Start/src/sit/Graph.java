@@ -11,6 +11,10 @@ public class Graph {
         nodes.add(nodeA);
     }
 
+    public void removeNode(Node nodeA) {
+        nodes.remove(nodeA);
+    }
+
     public Set<Node> getNodes() {
         return nodes;
     }
