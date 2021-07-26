@@ -110,7 +110,7 @@ public class cGraph extends AbstractPlugIn{
 		FeatureSchema fs= new FeatureSchema();
 		fs.addAttribute("geometry", AttributeType.GEOMETRY);
 		fs.addAttribute("id", AttributeType.INTEGER);
-		fs.addAttribute("grado", AttributeType.INTEGER);
+		fs.addAttribute("dist", AttributeType.DOUBLE);
 		GeometryFactory gf=new GeometryFactory();
 		FeatureCollection fc=new FeatureDataset(fs);
 
@@ -168,19 +168,21 @@ public class cGraph extends AbstractPlugIn{
 				graph.addNode(start);
 				graph.addNode(end);
 				Feature ff=new BasicFeature(fs);
-				ff.setAttribute(0, gf.createPoint(sV));
-				ff.setAttribute(1, start.getName());
-				fc.add(ff);
-				ff=new BasicFeature(fs);
 				ff.setAttribute(0, gf.createPoint(eV));
-				ff.setAttribute(1, id);
+				ff.setAttribute(1, start.getName());
+				ff.setAttribute(2, d);
 				fc.add(ff);
+				// ff=new BasicFeature(fs);
+				// ff.setAttribute(0, gf.createPoint(eV));
+				// ff.setAttribute(1, id);
+				// ff.setAttribute(2, d);
+				// fc.add(ff);
 				
 			}
 			else{
 				//sx a dx
-				id++;
 				if(map_nodi.containsKey(eV)){
+					id++;
 					Node start=new Node(id);
 					map_nodi.put(sV,start);
 					Node end=map_nodi.get(eV);
@@ -189,11 +191,13 @@ public class cGraph extends AbstractPlugIn{
 					Feature ff=new BasicFeature(fs);
 					ff.setAttribute(0, gf.createPoint(sV));
 					ff.setAttribute(1, start.getName());
+					ff.setAttribute(2, d);
 					fc.add(ff);
-					 ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(eV));
-					ff.setAttribute(1, end.getName());
-					fc.add(ff);
+					//  ff=new BasicFeature(fs);
+					// ff.setAttribute(0, gf.createPoint(eV));
+					// ff.setAttribute(1, end.getName());
+					// ff.setAttribute(2, d);
+					// fc.add(ff);
 				}
 				else{
 					Node start=new Node(id);
@@ -208,15 +212,16 @@ public class cGraph extends AbstractPlugIn{
 					Feature ff=new BasicFeature(fs);
 					ff.setAttribute(0, gf.createPoint(sV));
 					ff.setAttribute(1, start.getName());
+					ff.setAttribute(2, d);
 					fc.add(ff);
-					 ff=new BasicFeature(fs);
+					ff=new BasicFeature(fs);
 					ff.setAttribute(0, gf.createPoint(eV));
 					ff.setAttribute(1, end.getName());
+					ff.setAttribute(2, d);
 					fc.add(ff);
 				}
 				
 			}
-
 			if(map_nodi.containsKey(eV)){
 				Node start=map_nodi.get(eV);
 				id++;
@@ -225,6 +230,16 @@ public class cGraph extends AbstractPlugIn{
 				start.addDestination(end, d);
 				graph.removeNode(start);
 				graph.addNode(start);
+				Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, start.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
 			}
 			// else{
 			// 	System.out.println("mai");
@@ -367,17 +382,20 @@ public class cGraph extends AbstractPlugIn{
 		Coordinate[] coordinate=start_geom.getGeometry().getCoordinates();
 		Coordinate eV2=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
 		Node s_p=map_nodi.get(eV2);
+		// Node s_p=new Node(0);
+		// s_p.addDestination(s_p_l, 1);
+		// graph.addNode(s_p);
 		// System.out.println("Coordinate:" + eV2);
 		System.out.println("Node source :" + s_p.getName());
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
         for (Node n : graph.getNodes()) {
-			System.out.println("nome nodo: "+n.getName());
-				for (Node short_pt : n.getShortestPath()) {
-					System.out.println("p: "+n.getName()+"sp :"+ short_pt.getName()+"dist: "+short_pt.getDistance());
-				}
+			// System.out.println("nome nodo: "+n.getName()+" d "+n.getDistance()+"st: "+n.getShortestPath()+" adj"+n.getAdjacentNodes());
+			System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
+			for (Node short_pt : n.getShortestPath()) {
+					System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
+			}
 		}
-
 
 		context.addLayer("Result", "puntiCreati", fc);
 	}
