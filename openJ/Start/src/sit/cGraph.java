@@ -378,53 +378,6 @@ public class cGraph extends AbstractPlugIn{
 		context.addLayer("Result", "puntiCreati", fc);
 	}
 
-
-	public void ve(){
-		Node nodeA = new Node(0);
-		Node nodeB = new Node(1);
-		Node nodeC = new Node(2);
-		Node nodeD = new Node(3); 
-		Node nodeE = new Node(4);
-		Node nodeF = new Node(5);
-
-		nodeA.addDestination(nodeB, 10.0);
-		nodeA.addDestination(nodeC, 15);
-
-		nodeB.addDestination(nodeD, 12);
-		nodeB.addDestination(nodeF, 15);
-
-		nodeC.addDestination(nodeE, 10);
-
-		nodeD.addDestination(nodeE, 2);
-		nodeD.addDestination(nodeF, 1);
-
-		nodeF.addDestination(nodeE, 5);
-
-		
-
-		graph.addNode(nodeA);
-		graph.addNode(nodeB);
-		graph.addNode(nodeC);
-		graph.addNode(nodeD);
-		graph.addNode(nodeE);
-		graph.addNode(nodeF);
-
-
-		graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
-        for (Node n : graph.getNodes()) {
-			
-			if(n.getName()==4){
-				System.out.println(n.getName()+" dist: "+n.getDistance());
-				for (Node sp : n.getShortestPath()) {
-					System.out.println("sp:"+ sp.getName());
-				}
-			}
-
-		}
-		//LineString(arg0);
-
-	}
-
 }
 
 
