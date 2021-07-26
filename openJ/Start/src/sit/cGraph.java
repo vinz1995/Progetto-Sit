@@ -106,7 +106,7 @@ public class cGraph extends AbstractPlugIn{
 		HashMap<Coordinate,Node> map_nodi=new HashMap<>();
 		Graph graph = new Graph();
 		//HashMap<Coordinate,List<Coordinate>> map_distanze=new HashMap<>();
-		int id=1;
+		int id=0;
 		FeatureSchema fs= new FeatureSchema();
 		fs.addAttribute("geometry", AttributeType.GEOMETRY);
 		fs.addAttribute("id", AttributeType.INTEGER);
@@ -121,87 +121,127 @@ public class cGraph extends AbstractPlugIn{
 			List<Integer> lista_collegamenti=new ArrayList<>();
 			List<Node> lista_nodi=new ArrayList<>();
 			Double d=f.getGeometry().getLength();
-			
+
 			if(map_nodi.containsKey(sV)){
-				Node start=map_nodi.get(sV);
-				id++;
-				Node end=new Node(id);
-				map_nodi.put(eV,end);
-				graph.removeNode(start);
-				start.addDestination(end, d);
-				graph.addNode(start);
-				graph.addNode(end);
-				Feature ff=new BasicFeature(fs);
-				ff.setAttribute(0, gf.createPoint(eV));
-				ff.setAttribute(1, end.getName());
-				ff.setAttribute(2, d);
-				fc.add(ff);
-				ff=new BasicFeature(fs);
-				ff.setAttribute(0, gf.createPoint(sV));
-				ff.setAttribute(1, start.getName());
-				ff.setAttribute(2, d);
-				fc.add(ff);
+					if(map_nodi.containsKey(eV)){
+						Node start=map_nodi.get(sV);
+						Node end=map_nodi.get(eV);
+						graph.removeNode(start);
+						graph.removeNode(end);
+						start.addDestination(end, d);
+						graph.addNode(start);
+						graph.addNode(end);
+					}
+					else{
+						Node start=map_nodi.get(sV);
+						id++;
+						Node end=new Node(id);
+						map_nodi.put(eV,end);
+						graph.removeNode(start);
+						start.addDestination(end, d);
+						graph.addNode(start);
+						graph.addNode(end);
+						Feature ff=new BasicFeature(fs);
+						ff.setAttribute(0, gf.createPoint(eV));
+						ff.setAttribute(1, end.getName());
+						ff.setAttribute(2, d);
+						fc.add(ff);
+						ff=new BasicFeature(fs);
+						ff.setAttribute(0, gf.createPoint(sV));
+						ff.setAttribute(1, start.getName());
+						ff.setAttribute(2, d);
+						fc.add(ff);
+					}
+				
 			}
-			else{
-				//sx a dx
-				if(map_nodi.containsKey(eV)){
-					id++;
-					Node start=new Node(id);
-					map_nodi.put(sV,start);
-					Node end=map_nodi.get(eV);
+			else if(map_nodi.containsKey(eV)){
+				if(map_nodi.containsKey(sV)){
+					Node start=map_nodi.get(eV);
+					Node end=map_nodi.get(sV);
+					graph.removeNode(start);
+					graph.removeNode(end);
 					start.addDestination(end, d);
 					graph.addNode(start);
-					Feature ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(sV));
-					ff.setAttribute(1, start.getName());
-					ff.setAttribute(2, d);
-					fc.add(ff);
-					ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(eV));
-					ff.setAttribute(1, end.getName());
-					ff.setAttribute(2, d);
-					fc.add(ff);
+					graph.addNode(end);
 				}
 				else{
-					Node start=new Node(id);
-					map_nodi.put(sV,start);
 					id++;
-					Node end=new Node(id);
-					map_nodi.put(eV,end);
-					
+					Node start=new Node(id);
+					Node end=map_nodi.get(eV);
+					map_nodi.put(sV,start);
+					graph.removeNode(end);
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
 					Feature ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(sV));
-					ff.setAttribute(1, start.getName());
-					ff.setAttribute(2, d);
-					fc.add(ff);
-					ff=new BasicFeature(fs);
 					ff.setAttribute(0, gf.createPoint(eV));
 					ff.setAttribute(1, end.getName());
 					ff.setAttribute(2, d);
 					fc.add(ff);
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, start.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
 				}
-				
 			}
-			if(map_nodi.containsKey(eV)){
-				Node start=map_nodi.get(eV);
-				Node end=map_nodi.get(sV);
+			
+			// else if (map_nodi.containsKey(eV)) {
+			// 	id++;
+			// 		Node start=new Node(id);
+			// 		map_nodi.put(sV,start);
+			// 		Node end=map_nodi.get(eV);
+			// 		start.addDestination(end, d);
+			// 		graph.addNode(start);
+			// 		Feature ff=new BasicFeature(fs);
+			// 		ff.setAttribute(0, gf.createPoint(sV));
+			// 		ff.setAttribute(1, start.getName());
+			// 		ff.setAttribute(2, d);
+			// 		fc.add(ff);
+			// 		ff=new BasicFeature(fs);
+			// 		ff.setAttribute(0, gf.createPoint(eV));
+			// 		ff.setAttribute(1, end.getName());
+			// 		ff.setAttribute(2, d);
+			// 		fc.add(ff);
+			// }
+			else{
+				id++;
+				Node start=new Node(id);
+				map_nodi.put(sV,start);
+				id++;
+				Node end=new Node(id);
+				map_nodi.put(eV,end);
 				start.addDestination(end, d);
-				graph.removeNode(start);
 				graph.addNode(start);
+				graph.addNode(end);
 				Feature ff=new BasicFeature(fs);
-				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(0, gf.createPoint(sV));
 				ff.setAttribute(1, start.getName());
 				ff.setAttribute(2, d);
 				fc.add(ff);
 				ff=new BasicFeature(fs);
-				ff.setAttribute(0, gf.createPoint(sV));
+				ff.setAttribute(0, gf.createPoint(eV));
 				ff.setAttribute(1, end.getName());
 				ff.setAttribute(2, d);
 				fc.add(ff);
 			}
+			// if(map_nodi.containsKey(eV)){
+			// 	Node start=map_nodi.get(eV);
+			// 	Node end=map_nodi.get(sV);
+			// 	start.addDestination(end, d);
+			// 	graph.removeNode(start);
+			// 	graph.addNode(start);
+			// 	Feature ff=new BasicFeature(fs);
+			// 	ff.setAttribute(0, gf.createPoint(eV));
+			// 	ff.setAttribute(1, start.getName());
+			// 	ff.setAttribute(2, d);
+			// 	fc.add(ff);
+			// 	ff=new BasicFeature(fs);
+			// 	ff.setAttribute(0, gf.createPoint(sV));
+			// 	ff.setAttribute(1, end.getName());
+			// 	ff.setAttribute(2, d);
+			// 	fc.add(ff);
+			// }
 			// else{
 			// 	System.out.println("mai");
 			// 	Node start=new Node(id);
@@ -351,9 +391,11 @@ public class cGraph extends AbstractPlugIn{
 		// s_p.addDestination(s_p_l, 1);
 		// graph.addNode(s_p);
 		// System.out.println("Coordinate:" + eV2);
-		System.out.println("Node source :" + s_p.getName());
+		
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
+		System.out.println("Node source :" + s_p.getName());
+		System.out.println("Nodo destinazione: "+e_p.getName());
 
         for (Node n : graph.getNodes()) {
 			
@@ -364,14 +406,14 @@ public class cGraph extends AbstractPlugIn{
 			// 	System.out.println("fino name: "+n.getDistance());
 			// }
 			// System.out.println("nome nodo: "+n.getName()+" d "+n.getDistance()+"st: "+n.getShortestPath()+" adj"+n.getAdjacentNodes());
-			System.out.println("e_p: "+e_p.getName());
+			
 			System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
 			for (Node short_pt : n.getShortestPath()) {
 				
 				if(e_p.getName()==n.getName()){
-					System.out.println("e_p: "+n.getDistance()+" percorso: "+short_pt.getName());
+					System.out.println(" percorso: "+short_pt.getName());
 				}
-					System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
+					// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			}
 		}
 
