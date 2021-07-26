@@ -106,7 +106,7 @@ public class cGraph extends AbstractPlugIn{
 		HashMap<Coordinate,Node> map_nodi=new HashMap<>();
 		Graph graph = new Graph();
 		//HashMap<Coordinate,List<Coordinate>> map_distanze=new HashMap<>();
-		int id=0;
+		int id=1;
 		FeatureSchema fs= new FeatureSchema();
 		fs.addAttribute("geometry", AttributeType.GEOMETRY);
 		fs.addAttribute("id", AttributeType.INTEGER);
@@ -169,14 +169,14 @@ public class cGraph extends AbstractPlugIn{
 				graph.addNode(end);
 				Feature ff=new BasicFeature(fs);
 				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(1, end.getName());
+				ff.setAttribute(2, d);
+				fc.add(ff);
+				ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(sV));
 				ff.setAttribute(1, start.getName());
 				ff.setAttribute(2, d);
 				fc.add(ff);
-				// ff=new BasicFeature(fs);
-				// ff.setAttribute(0, gf.createPoint(eV));
-				// ff.setAttribute(1, id);
-				// ff.setAttribute(2, d);
-				// fc.add(ff);
 				
 			}
 			else{
@@ -193,11 +193,11 @@ public class cGraph extends AbstractPlugIn{
 					ff.setAttribute(1, start.getName());
 					ff.setAttribute(2, d);
 					fc.add(ff);
-					//  ff=new BasicFeature(fs);
-					// ff.setAttribute(0, gf.createPoint(eV));
-					// ff.setAttribute(1, end.getName());
-					// ff.setAttribute(2, d);
-					// fc.add(ff);
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
 				}
 				else{
 					Node start=new Node(id);
