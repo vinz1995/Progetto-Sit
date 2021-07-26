@@ -91,7 +91,7 @@
     </mapping>
     <mapping>
       <key class="java.lang.String">com.vividsolutions.jump.workbench.ui.plugin.SaveProjectAsPlugIn - FILE CHOOSER DIRECTORY</key>
-      <value class="java.lang.String">/Users/vincenzo</value>
+      <value class="java.lang.String">/Users/vincenzo/Documents</value>
     </mapping>
     <mapping>
       <key class="java.lang.String">com.vividsolutions.jump.workbench.ui.snap.SnapToGridPolicy - ENABLED</key>
@@ -211,7 +211,7 @@
     </mapping>
     <mapping>
       <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser - FILE CHOOSER DIRECTORY</key>
-      <value class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857</value>
+      <value class="java.lang.String">/Users/vincenzo</value>
     </mapping>
     <mapping>
       <key class="java.lang.String">org.openjump.core.ui.plugin.tools.AdvancedMeasureOptionsPanel - VERTEX_FIRST_COLOR</key>

@@ -167,6 +167,14 @@ public class cGraph extends AbstractPlugIn{
 				start.addDestination(end, d);
 				graph.addNode(start);
 				graph.addNode(end);
+				Feature ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(sV));
+				ff.setAttribute(1, start.getName());
+				fc.add(ff);
+				ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(1, id);
+				fc.add(ff);
 				
 			}
 			else{
@@ -176,9 +184,16 @@ public class cGraph extends AbstractPlugIn{
 					Node start=new Node(id);
 					map_nodi.put(sV,start);
 					Node end=map_nodi.get(eV);
-					
 					start.addDestination(end, d);
 					graph.addNode(start);
+					Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, start.getName());
+					fc.add(ff);
+					 ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					fc.add(ff);
 				}
 				else{
 					Node start=new Node(id);
@@ -190,6 +205,14 @@ public class cGraph extends AbstractPlugIn{
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
+					Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, start.getName());
+					fc.add(ff);
+					 ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					fc.add(ff);
 				}
 				
 			}
@@ -334,9 +357,9 @@ public class cGraph extends AbstractPlugIn{
 
 		// 	System.out.println("map: "+"key: "+key+" value: "+node.getName());
 		// }
-		for (Node n : graph.getNodes()) {
-			System.out.println("graph: "+"node: "+n.getName()+" adj:"+n.getAdjacentNodes());
-		}
+		// for (Node n : graph.getNodes()) {
+		// 	System.out.println("graph: "+"node: "+n.getName()+" adj:"+n.getAdjacentNodes());
+		// }
 		Layer start_layer=context.getLayerManager().getLayer("start");
 		Layer segna_layer=context.getLayerManager().getLayer("segna");
 		Feature start_geom = start_layer.getFeatureCollectionWrapper().getFeatures().get(0);
@@ -345,18 +368,14 @@ public class cGraph extends AbstractPlugIn{
 		Coordinate eV2=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
 		Node s_p=map_nodi.get(eV2);
 		// System.out.println("Coordinate:" + eV2);
-		// System.out.println("Node get :" + s_p.getName());
+		System.out.println("Node source :" + s_p.getName());
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
         for (Node n : graph.getNodes()) {
-
-			// System.out.println(n.getName()+" dist: "+n.getDistance());
+			System.out.println("nome nodo: "+n.getName());
 				for (Node short_pt : n.getShortestPath()) {
-					System.out.println("sp:"+ short_pt.getName());
-
-			
-		}
-		System.out.println("*****************");
+					System.out.println("p: "+n.getName()+"sp :"+ short_pt.getName()+"dist: "+short_pt.getDistance());
+				}
 		}
 
 
