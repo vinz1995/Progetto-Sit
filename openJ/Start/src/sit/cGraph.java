@@ -192,15 +192,15 @@ public class cGraph extends AbstractPlugIn{
 				graph.removeNode(start);
 				graph.addNode(start);
 				Feature ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(sV));
-					ff.setAttribute(1, start.getName());
-					ff.setAttribute(2, d);
-					fc.add(ff);
-					ff=new BasicFeature(fs);
-					ff.setAttribute(0, gf.createPoint(eV));
-					ff.setAttribute(1, end.getName());
-					ff.setAttribute(2, d);
-					fc.add(ff);
+				ff.setAttribute(0, gf.createPoint(eV));
+				ff.setAttribute(1, start.getName());
+				ff.setAttribute(2, d);
+				fc.add(ff);
+				ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(sV));
+				ff.setAttribute(1, end.getName());
+				ff.setAttribute(2, d);
+				fc.add(ff);
 			}
 			// else{
 			// 	System.out.println("mai");
@@ -339,10 +339,14 @@ public class cGraph extends AbstractPlugIn{
 		Layer start_layer=context.getLayerManager().getLayer("start");
 		Layer segna_layer=context.getLayerManager().getLayer("segna");
 		Feature start_geom = start_layer.getFeatureCollectionWrapper().getFeatures().get(0);
+		Feature end_geom = segna_layer.getFeatureCollectionWrapper().getFeatures().get(0);
 		
 		Coordinate[] coordinate=start_geom.getGeometry().getCoordinates();
 		Coordinate eV2=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
 		Node s_p=map_nodi.get(eV2);
+		Coordinate[] coordinate_e=end_geom.getGeometry().getCoordinates();
+		Coordinate eV3=new Coordinate(coordinate_e[coordinate_e.length-1].x,coordinate_e[coordinate_e.length-1].y);
+		Node e_p=map_nodi.get(eV3);
 		// Node s_p=new Node(0);
 		// s_p.addDestination(s_p_l, 1);
 		// graph.addNode(s_p);
@@ -350,10 +354,23 @@ public class cGraph extends AbstractPlugIn{
 		System.out.println("Node source :" + s_p.getName());
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
+
         for (Node n : graph.getNodes()) {
+			
+			// if(e_p==n){
+			// 	System.out.println("fino dist: "+n.getDistance());
+			// }
+			// if(e_p.getName()==n.getName()){
+			// 	System.out.println("fino name: "+n.getDistance());
+			// }
 			// System.out.println("nome nodo: "+n.getName()+" d "+n.getDistance()+"st: "+n.getShortestPath()+" adj"+n.getAdjacentNodes());
+			System.out.println("e_p: "+e_p.getName());
 			System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
 			for (Node short_pt : n.getShortestPath()) {
+				
+				if(e_p.getName()==n.getName()){
+					System.out.println("e_p: "+n.getDistance()+" percorso: "+short_pt.getName());
+				}
 					System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			}
 		}
