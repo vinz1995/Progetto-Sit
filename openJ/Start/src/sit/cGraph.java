@@ -121,43 +121,7 @@ public class cGraph extends AbstractPlugIn{
 			List<Integer> lista_collegamenti=new ArrayList<>();
 			List<Node> lista_nodi=new ArrayList<>();
 			Double d=f.getGeometry().getLength();
-			// System.out.println("len: "+d);
-			//controllo null
-			// if(hm.containsKey(sV)){
-			// 	System.out.println("if: "+hm.containsKey(sV));
-			// 	int incre=hm.get(sV);
-			// 	incre++;
-			// 	hm.replace(sV, incre);
-			// 	Node nodeB=map_nodi.get(sV);
-			// 	System.out.println("if");
-			// 	id++;
-			// 	Node nodeD=new Node(id);
-			// 	// graph.removeNode(nodeB);
-			// 	nodeB.addDestination(nodeD, id);
-			// 	nodeD.addDestination(nodeB, id);
-			// 	map_nodi.put(eV, nodeD);
-			// 	graph.addNode(nodeB);
-			// 	graph.addNode(nodeD);
-
-			// }else{
-			// 	System.out.println("else: "+ hm.containsKey(sV));
-			// 	hm.put(sV, 1);
-			// 	Feature ff=new BasicFeature(fs);
-			// 	id++;
-			// 	ff.setAttribute(0, gf.createPoint(sV));
-			// 	ff.setAttribute(1, id);
-			// 	ff.setAttribute(2, 1);
-			// 	fc.add(ff);
-			// 	Node nodeB=new Node(id);
-			// 	id++;
-			// 	Node nodeD=new Node(id);
-			// 	nodeB.addDestination(nodeD, id);
-			// 	nodeD.addDestination(nodeB, id);
-			// 	graph.addNode(nodeB);
-			// 	graph.addNode(nodeD);
-			// 	map_nodi.put(sV, nodeB);
-			// 	map_nodi.put(eV, nodeD);
-			// }
+			
 			if(map_nodi.containsKey(sV)){
 				Node start=map_nodi.get(sV);
 				id++;
@@ -223,7 +187,6 @@ public class cGraph extends AbstractPlugIn{
 			}
 			if(map_nodi.containsKey(eV)){
 				Node start=map_nodi.get(eV);
-				id++;
 				Node end=map_nodi.get(sV);
 				start.addDestination(end, d);
 				graph.removeNode(start);
