@@ -172,12 +172,11 @@ public class cGraph extends AbstractPlugIn{
 				ff.setAttribute(1, end.getName());
 				ff.setAttribute(2, d);
 				fc.add(ff);
-				// ff=new BasicFeature(fs);
-				// ff.setAttribute(0, gf.createPoint(sV));
-				// ff.setAttribute(1, start.getName());
-				// ff.setAttribute(2, d);
-				// fc.add(ff);
-				
+				ff=new BasicFeature(fs);
+				ff.setAttribute(0, gf.createPoint(sV));
+				ff.setAttribute(1, start.getName());
+				ff.setAttribute(2, d);
+				fc.add(ff);
 			}
 			else{
 				//sx a dx
@@ -193,11 +192,11 @@ public class cGraph extends AbstractPlugIn{
 					ff.setAttribute(1, start.getName());
 					ff.setAttribute(2, d);
 					fc.add(ff);
-					// ff=new BasicFeature(fs);
-					// ff.setAttribute(0, gf.createPoint(eV));
-					// ff.setAttribute(1, end.getName());
-					// ff.setAttribute(2, d);
-					// fc.add(ff);
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
 				}
 				else{
 					Node start=new Node(id);
@@ -226,20 +225,19 @@ public class cGraph extends AbstractPlugIn{
 				Node start=map_nodi.get(eV);
 				id++;
 				Node end=map_nodi.get(sV);
-				// map_nodi.put(sV,end);
 				start.addDestination(end, d);
 				graph.removeNode(start);
 				graph.addNode(start);
-				// Feature ff=new BasicFeature(fs);
-				// 	ff.setAttribute(0, gf.createPoint(sV));
-				// 	ff.setAttribute(1, start.getName());
-				// 	ff.setAttribute(2, d);
-				// 	fc.add(ff);
-				// 	ff=new BasicFeature(fs);
-				// 	ff.setAttribute(0, gf.createPoint(eV));
-				// 	ff.setAttribute(1, end.getName());
-				// 	ff.setAttribute(2, d);
-				// 	fc.add(ff);
+				Feature ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(sV));
+					ff.setAttribute(1, start.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
+					ff=new BasicFeature(fs);
+					ff.setAttribute(0, gf.createPoint(eV));
+					ff.setAttribute(1, end.getName());
+					ff.setAttribute(2, d);
+					fc.add(ff);
 			}
 			// else{
 			// 	System.out.println("mai");
