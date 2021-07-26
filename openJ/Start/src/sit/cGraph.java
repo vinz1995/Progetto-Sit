@@ -102,7 +102,7 @@ public class cGraph extends AbstractPlugIn{
 	}
 
 	public void creaPunti(PlugInContext context, Layer layer) {
-		HashMap<Coordinate,Integer> hm=new HashMap<>();
+		HashMap<Node,List<Feature>> map_nodi_feature=new HashMap<>();
 		HashMap<Coordinate,Node> map_nodi=new HashMap<>();
 		Graph graph = new Graph();
 		//HashMap<Coordinate,List<Coordinate>> map_distanze=new HashMap<>();
@@ -118,8 +118,7 @@ public class cGraph extends AbstractPlugIn{
 			Coordinate[] coordinate=f.getGeometry().getCoordinates();
 			Coordinate sV=new Coordinate(coordinate[0].x,coordinate[0].y);
 			Coordinate eV=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
-			List<Integer> lista_collegamenti=new ArrayList<>();
-			List<Node> lista_nodi=new ArrayList<>();
+			List<Feature> lista_feature=new ArrayList<>();
 			Double d=f.getGeometry().getLength();
 
 			if(map_nodi.containsKey(sV)){
@@ -131,6 +130,12 @@ public class cGraph extends AbstractPlugIn{
 						start.addDestination(end, d);
 						graph.addNode(start);
 						graph.addNode(end);
+						if(map_nodi_feature.get(start) != null){
+							lista_feature=map_nodi_feature.get(start);
+							// System.out.println("size1: "+map_nodi_feature.get(start).size());
+						}
+						lista_feature.add(f);
+						map_nodi_feature.replace(start, lista_feature);
 					}
 					else{
 						Node start=map_nodi.get(sV);
@@ -151,8 +156,17 @@ public class cGraph extends AbstractPlugIn{
 						ff.setAttribute(1, start.getName());
 						ff.setAttribute(2, d);
 						fc.add(ff);
+						if(map_nodi_feature.get(start)!= null){
+							lista_feature=map_nodi_feature.get(start);
+							// System.out.println("size2: "+map_nodi_feature.get(start).size());
+							lista_feature.add(f);
+							map_nodi_feature.replace(start, lista_feature);
+						}
+						
+						lista_feature.add(f);
+						map_nodi_feature.put(start, lista_feature);
 					}
-				
+					
 			}
 			else if(map_nodi.containsKey(eV)){
 				if(map_nodi.containsKey(sV)){
@@ -163,6 +177,14 @@ public class cGraph extends AbstractPlugIn{
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
+					if(map_nodi_feature.get(start)!= null){
+						lista_feature=map_nodi_feature.get(start);
+						// System.out.println("size3: "+map_nodi_feature.get(start).size());
+						lista_feature.add(f);
+						map_nodi_feature.replace(start, lista_feature);
+					}
+						lista_feature.add(f);
+						map_nodi_feature.put(start, lista_feature);
 				}
 				else{
 					id++;
@@ -183,27 +205,15 @@ public class cGraph extends AbstractPlugIn{
 					ff.setAttribute(1, start.getName());
 					ff.setAttribute(2, d);
 					fc.add(ff);
+					if(map_nodi_feature.get(start)!= null){
+						lista_feature=map_nodi_feature.get(start);
+						lista_feature.add(f);
+						map_nodi_feature.replace(start, lista_feature);
+					}
+						lista_feature.add(f);
+						map_nodi_feature.put(start, lista_feature);
 				}
 			}
-			
-			// else if (map_nodi.containsKey(eV)) {
-			// 	id++;
-			// 		Node start=new Node(id);
-			// 		map_nodi.put(sV,start);
-			// 		Node end=map_nodi.get(eV);
-			// 		start.addDestination(end, d);
-			// 		graph.addNode(start);
-			// 		Feature ff=new BasicFeature(fs);
-			// 		ff.setAttribute(0, gf.createPoint(sV));
-			// 		ff.setAttribute(1, start.getName());
-			// 		ff.setAttribute(2, d);
-			// 		fc.add(ff);
-			// 		ff=new BasicFeature(fs);
-			// 		ff.setAttribute(0, gf.createPoint(eV));
-			// 		ff.setAttribute(1, end.getName());
-			// 		ff.setAttribute(2, d);
-			// 		fc.add(ff);
-			// }
 			else{
 				id++;
 				Node start=new Node(id);
@@ -224,147 +234,10 @@ public class cGraph extends AbstractPlugIn{
 				ff.setAttribute(1, end.getName());
 				ff.setAttribute(2, d);
 				fc.add(ff);
+				lista_feature.add(f);
+				map_nodi_feature.put(start, lista_feature);
+				
 			}
-			// if(map_nodi.containsKey(eV)){
-			// 	Node start=map_nodi.get(eV);
-			// 	Node end=map_nodi.get(sV);
-			// 	start.addDestination(end, d);
-			// 	graph.removeNode(start);
-			// 	graph.addNode(start);
-			// 	Feature ff=new BasicFeature(fs);
-			// 	ff.setAttribute(0, gf.createPoint(eV));
-			// 	ff.setAttribute(1, start.getName());
-			// 	ff.setAttribute(2, d);
-			// 	fc.add(ff);
-			// 	ff=new BasicFeature(fs);
-			// 	ff.setAttribute(0, gf.createPoint(sV));
-			// 	ff.setAttribute(1, end.getName());
-			// 	ff.setAttribute(2, d);
-			// 	fc.add(ff);
-			// }
-			// else{
-			// 	System.out.println("mai");
-			// 	Node start=new Node(id);
-			// 	id++;
-			// 	Node end=new Node(id);
-			// 	map_nodi.put(eV,start);
-			// 	map_nodi.put(sV,end);
-			// 	start.addDestination(end, id);
-			// 	graph.addNode(start);
-			// 	graph.addNode(end);
-			// 	System.out.println("name:"+start.getName());
-			// }
-			
-
-			
-
-			// if (hm.get(eV) != null) {
-			// 	int incre=hm.get(eV);
-			// 	incre++;
-			// 	hm.replace(eV, incre);
-			// 	id++;
-
-			// 	lista_nodi=map_nodi.get(sV);
-			// 	lista_nodi.add(new Node(id));
-			// 	map_nodi.remove(sV);
-			// }else{
-			// 	hm.put(eV, 1);
-			// 	Feature ff=new BasicFeature(fs);
-			// 	id++;
-
-			// 	ff.setAttribute(0, gf.createPoint(eV));
-			// 	ff.setAttribute(1, id);
-			// 	ff.setAttribute(2, 1);
-			// 	fc.add(ff);
-			// 	// lista_collegamenti.add(id);
-			// 	lista_nodi.add(new Node(id));
-			// }
-			// map_nodi.put(eV, lista_nodi);
-
-
-
-		//mez funz
-		//1352
-        // for (Feature f : layer.getFeatureCollectionWrapper().getFeatures()) {
-		// 	Coordinate[] coordinate=f.getGeometry().getCoordinates();
-		// 	Coordinate sV=new Coordinate(coordinate[0].x,coordinate[0].y);
-		// 	Coordinate eV=new Coordinate(coordinate[coordinate.length-1].x,coordinate[coordinate.length-1].y);
-		// 	List<Integer> lista_collegamenti=new ArrayList<>();
-		// 	List<Node> lista_nodi=new ArrayList<>();
-		// 	//controllo null
-		// 	if(hm.get(sV) != null){
-		// 		id++;
-		// 		int incre=hm.get(sV);
-		// 		incre++;
-		// 		id_ver++;
-		// 		hm.replace(sV, incre);
-		// 		// lista_collegamenti=map_collegamenti.get(sV);
-		// 		lista_nodi=map_nodi.get(sV);
-		// 		lista_nodi.add(new Node(id_ver));
-		// 		map_nodi.remove(sV);
-		// 		// lista_collegamenti.add(id_ver);
-		// 	}else{
-		// 		hm.put(sV, 1);
-		// 		Feature ff=new BasicFeature(fs);
-		// 		id++;
-		// 		id_ver++;
-		// 		ff.setAttribute(0, gf.createPoint(sV));
-		// 		ff.setAttribute(1, id);
-		// 		ff.setAttribute(2, 1);
-		// 		fc.add(ff);
-		// 		lista_nodi.add(new Node(id_ver));
-		// 		// lista_collegamenti.add(id);
-
-		// 	}
-		// 	map_nodi.put(sV, lista_nodi);
-
-		// 	lista_nodi=new ArrayList<>();
-		// 	if (hm.get(eV) != null) {
-		// 		int incre=hm.get(eV);
-		// 		incre++;
-		// 		hm.replace(eV, incre);
-		// 		id++;
-		// 		id_ver++;
-		// 		lista_nodi=map_nodi.get(sV);
-		// 		lista_nodi.add(new Node(id_ver));
-		// 		map_nodi.remove(sV);
-		// 	}else{
-		// 		hm.put(eV, 1);
-		// 		Feature ff=new BasicFeature(fs);
-		// 		id++;
-		// 		id_ver++;
-		// 		ff.setAttribute(0, gf.createPoint(eV));
-		// 		ff.setAttribute(1, id);
-		// 		ff.setAttribute(2, 1);
-		// 		fc.add(ff);
-		// 		// lista_collegamenti.add(id);
-		// 		lista_nodi.add(new Node(id_ver));
-		// 	}
-		// 	map_nodi.put(eV, lista_nodi);
-
-
-			//BOH
-			// map_collegamenti.put(sV, lista_collegamenti);
-			// lista_collegamenti=new ArrayList<>();
-			// if (hm.get(eV) != null) {
-			// 	int incre=hm.get(eV);
-			// 	incre++;
-			// 	hm.replace(eV, incre);
-			// 	id++;
-			// 	lista_collegamenti=map_collegamenti.get(eV);
-			// 	map_collegamenti.remove(eV);
-			// 	lista_collegamenti.add(id);
-			// }else{
-			// 	hm.put(eV, 1);
-			// 	Feature ff=new BasicFeature(fs);
-			// 	id++;
-			// 	ff.setAttribute(0, gf.createPoint(eV));
-			// 	ff.setAttribute(1, id);
-			// 	ff.setAttribute(2, 1);
-			// 	fc.add(ff);
-			// 	lista_collegamenti.add(id);
-			// }
-			// map_collegamenti.put(eV, lista_collegamenti);
         }
 
 		// for (Entry<Coordinate, Node> pair : map_nodi.entrySet()) {
@@ -396,26 +269,30 @@ public class cGraph extends AbstractPlugIn{
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
 		System.out.println("Node source :" + s_p.getName());
 		System.out.println("Nodo destinazione: "+e_p.getName());
-
         for (Node n : graph.getNodes()) {
+
 			
-			// if(e_p==n){
-			// 	System.out.println("fino dist: "+n.getDistance());
-			// }
-			// if(e_p.getName()==n.getName()){
-			// 	System.out.println("fino name: "+n.getDistance());
-			// }
-			// System.out.println("nome nodo: "+n.getName()+" d "+n.getDistance()+"st: "+n.getShortestPath()+" adj"+n.getAdjacentNodes());
-			
-			System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
+			// System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
 			for (Node short_pt : n.getShortestPath()) {
-				
 				if(e_p.getName()==n.getName()){
 					System.out.println("Percorso minimo: "+short_pt.getName());
+					List<Feature> pp=map_nodi_feature.get(short_pt);
+					for (Feature f_stampa : pp) {
+						
+						Feature ff=new BasicFeature(fs);
+						ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
+						fc.add(ff);
+					}
+					// for (Feature fa : pp) {
+					// 	System.out.println(fa.getGeometry());
+					// }
 				}
 					// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			}
 		}
+		// for (Entry<Node,List<Feature>> pair : map_nodi_feature.entrySet()) {
+		// 	System.out.println("Node: "+pair.getKey().getName()+" value"+pair.getValue());
+		// }
 
 		context.addLayer("Result", "puntiCreati", fc);
 	}
