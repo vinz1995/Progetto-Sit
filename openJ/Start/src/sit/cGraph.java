@@ -411,7 +411,7 @@ public class cGraph extends AbstractPlugIn{
 			for (Node short_pt : n.getShortestPath()) {
 				
 				if(e_p.getName()==n.getName()){
-					System.out.println(" percorso: "+short_pt.getName());
+					System.out.println("Percorso minimo: "+short_pt.getName());
 				}
 					// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			}
