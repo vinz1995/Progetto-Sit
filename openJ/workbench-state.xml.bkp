@@ -211,7 +211,7 @@
     </mapping>
     <mapping>
       <key class="java.lang.String">com.vividsolutions.jump.workbench.datasource.LoadFileDataSourceQueryChooser - FILE CHOOSER DIRECTORY</key>
-      <value class="java.lang.String">/Users/vincenzo</value>
+      <value class="java.lang.String">/Users/vincenzo/Downloads</value>
     </mapping>
     <mapping>
       <key class="java.lang.String">org.openjump.core.ui.plugin.tools.AdvancedMeasureOptionsPanel - VERTEX_FIRST_COLOR</key>
@@ -296,6 +296,7 @@
       <value class="java.util.LinkedHashSet">
         <item class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857/Rimessa3857.shp</item>
         <item class="java.lang.String">/Applications/XAMPP/xamppfiles/htdocs/Progetto-Sit/openJ/3857/Strade3857.shp</item>
+        <item class="java.lang.String">/Users/vincenzo/Downloads/Strade3857prova.jml</item>
       </value>
     </mapping>
     <mapping>

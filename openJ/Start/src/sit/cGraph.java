@@ -133,9 +133,13 @@ public class cGraph extends AbstractPlugIn{
 						if(map_nodi_feature.get(start) != null){
 							lista_feature=map_nodi_feature.get(start);
 							// System.out.println("size1: "+map_nodi_feature.get(start).size());
-						}
-						lista_feature.add(f);
+							lista_feature.add(f);
 						map_nodi_feature.replace(start, lista_feature);
+						}else{
+							lista_feature.add(f);
+						map_nodi_feature.put(start, lista_feature);
+						}
+						
 					}
 					else{
 						Node start=map_nodi.get(sV);
@@ -156,15 +160,15 @@ public class cGraph extends AbstractPlugIn{
 						ff.setAttribute(1, start.getName());
 						ff.setAttribute(2, d);
 						fc.add(ff);
-						if(map_nodi_feature.get(start)!= null){
+						if(map_nodi_feature.get(start) != null){
 							lista_feature=map_nodi_feature.get(start);
-							// System.out.println("size2: "+map_nodi_feature.get(start).size());
+							// System.out.println("size1: "+map_nodi_feature.get(start).size());
 							lista_feature.add(f);
-							map_nodi_feature.replace(start, lista_feature);
-						}
-						
-						lista_feature.add(f);
+						map_nodi_feature.replace(start, lista_feature);
+						}else{
+							lista_feature.add(f);
 						map_nodi_feature.put(start, lista_feature);
+						}
 					}
 					
 			}
@@ -177,14 +181,15 @@ public class cGraph extends AbstractPlugIn{
 					start.addDestination(end, d);
 					graph.addNode(start);
 					graph.addNode(end);
-					if(map_nodi_feature.get(start)!= null){
+					if(map_nodi_feature.get(start) != null){
 						lista_feature=map_nodi_feature.get(start);
-						// System.out.println("size3: "+map_nodi_feature.get(start).size());
+						// System.out.println("size1: "+map_nodi_feature.get(start).size());
 						lista_feature.add(f);
-						map_nodi_feature.replace(start, lista_feature);
+					map_nodi_feature.replace(start, lista_feature);
+					}else{
+						lista_feature.add(f);
+					map_nodi_feature.put(start, lista_feature);
 					}
-						lista_feature.add(f);
-						map_nodi_feature.put(start, lista_feature);
 				}
 				else{
 					id++;
@@ -205,13 +210,15 @@ public class cGraph extends AbstractPlugIn{
 					ff.setAttribute(1, start.getName());
 					ff.setAttribute(2, d);
 					fc.add(ff);
-					if(map_nodi_feature.get(start)!= null){
+					if(map_nodi_feature.get(start) != null){
 						lista_feature=map_nodi_feature.get(start);
+						// System.out.println("size1: "+map_nodi_feature.get(start).size());
 						lista_feature.add(f);
-						map_nodi_feature.replace(start, lista_feature);
+					map_nodi_feature.replace(start, lista_feature);
+					}else{
+						lista_feature.add(f);
+					map_nodi_feature.put(start, lista_feature);
 					}
-						lista_feature.add(f);
-						map_nodi_feature.put(start, lista_feature);
 				}
 			}
 			else{
@@ -269,6 +276,7 @@ public class cGraph extends AbstractPlugIn{
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
 		System.out.println("Node source :" + s_p.getName());
 		System.out.println("Nodo destinazione: "+e_p.getName());
+		List<Feature> comune=new ArrayList<>();
         for (Node n : graph.getNodes()) {
 
 			
@@ -278,7 +286,6 @@ public class cGraph extends AbstractPlugIn{
 					System.out.println("Percorso minimo: "+short_pt.getName());
 					List<Feature> pp=map_nodi_feature.get(short_pt);
 					for (Feature f_stampa : pp) {
-						
 						Feature ff=new BasicFeature(fs);
 						ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
 						fc.add(ff);
