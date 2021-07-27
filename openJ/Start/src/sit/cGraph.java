@@ -128,6 +128,7 @@ public class cGraph extends AbstractPlugIn{
 						graph.removeNode(start);
 						graph.removeNode(end);
 						start.addDestination(end, d);
+						end.addDestination(start, d);
 						graph.addNode(start);
 						graph.addNode(end);
 						if(map_nodi_feature.get(start) != null){
@@ -147,6 +148,7 @@ public class cGraph extends AbstractPlugIn{
 						Node end=new Node(id);
 						map_nodi.put(eV,end);
 						graph.removeNode(start);
+						graph.removeNode(end);
 						start.addDestination(end, d);
 						end.addDestination(start, d);
 						graph.addNode(start);
@@ -189,6 +191,7 @@ public class cGraph extends AbstractPlugIn{
 					graph.removeNode(start);
 					graph.removeNode(end);
 					start.addDestination(end, d);
+					end.addDestination(start, d);
 					graph.addNode(start);
 					graph.addNode(end);
 					if(map_nodi_feature.get(start) != null){
@@ -228,7 +231,7 @@ public class cGraph extends AbstractPlugIn{
 					map_nodi_feature.replace(start, lista_feature);
 					}else{
 						lista_feature.add(f);
-					map_nodi_feature.put(start, lista_feature);
+						map_nodi_feature.put(start, lista_feature);
 					}
 					if(map_nodi_feature.get(end) != null){
 						lista_feature=map_nodi_feature.get(end);
