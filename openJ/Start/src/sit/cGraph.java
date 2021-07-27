@@ -134,10 +134,10 @@ public class cGraph extends AbstractPlugIn{
 							lista_feature=map_nodi_feature.get(start);
 							// System.out.println("size1: "+map_nodi_feature.get(start).size());
 							lista_feature.add(f);
-						map_nodi_feature.replace(start, lista_feature);
+							map_nodi_feature.replace(start, lista_feature);
 						}else{
 							lista_feature.add(f);
-						map_nodi_feature.put(start, lista_feature);
+							map_nodi_feature.put(start, lista_feature);
 						}
 						
 					}
@@ -148,6 +148,7 @@ public class cGraph extends AbstractPlugIn{
 						map_nodi.put(eV,end);
 						graph.removeNode(start);
 						start.addDestination(end, d);
+						end.addDestination(start, d);
 						graph.addNode(start);
 						graph.addNode(end);
 						Feature ff=new BasicFeature(fs);
@@ -168,6 +169,15 @@ public class cGraph extends AbstractPlugIn{
 						}else{
 							lista_feature.add(f);
 						map_nodi_feature.put(start, lista_feature);
+						}
+						if(map_nodi_feature.get(end) != null){
+							lista_feature=map_nodi_feature.get(end);
+							// System.out.println("size1: "+map_nodi_feature.get(start).size());
+							lista_feature.add(f);
+						map_nodi_feature.replace(end, lista_feature);
+						}else{
+							lista_feature.add(f);
+						map_nodi_feature.put(end, lista_feature);
 						}
 					}
 					
@@ -198,6 +208,7 @@ public class cGraph extends AbstractPlugIn{
 					map_nodi.put(sV,start);
 					graph.removeNode(end);
 					start.addDestination(end, d);
+					end.addDestination(start, d);
 					graph.addNode(start);
 					graph.addNode(end);
 					Feature ff=new BasicFeature(fs);
@@ -219,6 +230,15 @@ public class cGraph extends AbstractPlugIn{
 						lista_feature.add(f);
 					map_nodi_feature.put(start, lista_feature);
 					}
+					if(map_nodi_feature.get(end) != null){
+						lista_feature=map_nodi_feature.get(end);
+						// System.out.println("size1: "+map_nodi_feature.get(start).size());
+						lista_feature.add(f);
+					map_nodi_feature.replace(end, lista_feature);
+					}else{
+						lista_feature.add(f);
+					map_nodi_feature.put(end, lista_feature);
+					}
 				}
 			}
 			else{
@@ -229,6 +249,7 @@ public class cGraph extends AbstractPlugIn{
 				Node end=new Node(id);
 				map_nodi.put(eV,end);
 				start.addDestination(end, d);
+				end.addDestination(start, d);
 				graph.addNode(start);
 				graph.addNode(end);
 				Feature ff=new BasicFeature(fs);
@@ -243,6 +264,7 @@ public class cGraph extends AbstractPlugIn{
 				fc.add(ff);
 				lista_feature.add(f);
 				map_nodi_feature.put(start, lista_feature);
+				map_nodi_feature.put(end, lista_feature);
 				
 			}
         }
@@ -275,28 +297,19 @@ public class cGraph extends AbstractPlugIn{
 		// System.out.println("Node get adj:" + s_p.getAdjacentNodes());
 		Dijkstra.calculateShortestPathFromSource(graph, s_p);
 		System.out.println("Node source :" + s_p.getName());
-		System.out.println("Nodo destinazione: "+e_p.getName());
+		System.out.println("Nodo destinazione: "+e_p.getName()+" dis: "+e_p.getDistance());
 		List<Feature> comune=new ArrayList<>();
+		List<Feature> uno=new ArrayList<>();
         for (Node n : graph.getNodes()) {
-
-			
-			// System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
-			for (Node short_pt : n.getShortestPath()) {
-				if(e_p.getName()==n.getName()){
-					System.out.println("Percorso minimo: "+short_pt.getName());
-					List<Feature> pp=map_nodi_feature.get(short_pt);
-					for (Feature f_stampa : pp) {
-						Feature ff=new BasicFeature(fs);
-						ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
-						fc.add(ff);
-					}
-					// for (Feature fa : pp) {
-					// 	System.out.println(fa.getGeometry());
-					// }
+			if(e_p.getName()==n.getName()){
+				for (Node nn : n.getShortestPath()) {
+					System.out.println("Percorso minimo: "+nn.getName());
+					
 				}
-					// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			}
+
 		}
+
 		// for (Entry<Node,List<Feature>> pair : map_nodi_feature.entrySet()) {
 		// 	System.out.println("Node: "+pair.getKey().getName()+" value"+pair.getValue());
 		// }
