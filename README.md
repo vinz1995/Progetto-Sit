@@ -22,5 +22,5 @@ data DATE,
 Foto BOOLEAN DEFAULT FALSE
 );
 
-#Modifica file config 
+# Modifica file config 
 È necessario modificare il file configDB.php
