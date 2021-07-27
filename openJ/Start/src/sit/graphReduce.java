@@ -132,7 +132,7 @@ public class graphReduce extends AbstractPlugIn {
 		Layer layer_strade=s.get(1);
 		Layer layer_segnalazioni=s.get(2);
 		VisBuffer(layer_rimessa.getFeatureCollectionWrapper().getFeatures().get(0).getGeometry(), distanzaMassima(arg0, layer_rimessa, layer_segnalazioni), arg0);
-		addPointStrade(arg0, ResSpatialQ(layer_rimessa.getFeatureCollectionWrapper().getFeatures().get(0).getGeometry(), layer_strade, arg0, distanzaMassima(arg0, layer_rimessa, layer_segnalazioni)));
+		// addPointStrade(arg0, ResSpatialQ(layer_rimessa.getFeatureCollectionWrapper().getFeatures().get(0).getGeometry(), layer_strade, arg0, distanzaMassima(arg0, layer_rimessa, layer_segnalazioni)));
 		return false;
 	}
     
