@@ -323,37 +323,38 @@ public class cGraph extends AbstractPlugIn{
 
         for (Node n : graph.getNodes()) {
 			// System.out.println("nome node: "+n.getName()+" distanza: "+n.getDistance());	
-			for (Node short_pt : n.getShortestPath()) {
-				if(e_p.getName()==n.getName()){
-					System.out.println("Percorso minimo: "+short_pt.getName());
-					List<Feature> pp=map_nodi_feature.get(short_pt);
-					for (Feature f_stampa : pp) {
-						Feature ff=new BasicFeature(fs);
-						ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
-						fc.add(ff);
-					}
-					// for (Feature fa : pp) {
-					// 	System.out.println(fa.getGeometry());
-					// }
-				}
-					// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
-			}
-			// if(e_p.getName()==n.getName()){
-			// 	for (Node nn : n.getShortestPath()) {
-			// 		System.out.println("Percorso minimo: "+nn.getName());
-			// 		for (Feature f_stampa : map_nodi_feature.get(nn)) {
-			// 						Feature ff=new BasicFeature(fs);
-			// 						ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
-			// 						fc.add(ff);
+			// for (Node short_pt : n.getShortestPath()) {
+			// 	if(e_p.getName()==n.getName()){
+			// 		System.out.println("Percorso minimo: "+short_pt.getName());
+			// 		List<Feature> pp=map_nodi_feature.get(short_pt);
+			// 		for (Feature f_stampa : pp) {
+			// 			Feature ff=new BasicFeature(fs);
+			// 			ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
+			// 			fc.add(ff);
 			// 		}
+			// 		// for (Feature fa : pp) {
+			// 		// 	System.out.println(fa.getGeometry());
+			// 		// }
 			// 	}
+			// 		// System.out.println("p: "+n.getName()+" sp :"+ short_pt.getName()+"dist: "+n.getDistance());
 			// }
+			if(e_p.getName()==n.getName()){
+				for (Node nn : n.getShortestPath()) {
+					System.out.println("Percorso minimo: "+nn.getName());
+					for (Feature f_stampa : map_nodi_feature.get(nn)) {
+									Feature ff=new BasicFeature(fs);
+									ff.setAttribute(0, gf.createLineString(f_stampa.getGeometry().getCoordinates()));
+									fc.add(ff);
+					}
+				}
+			}
 
 		}
 
 		// for (Entry<Node,List<Feature>> pair : map_nodi_feature.entrySet()) {
 		// 	System.out.println("Node: "+pair.getKey().getName()+" value"+pair.getValue());
 		// }
+
 
 		context.addLayer("Result", "puntiCreati", fc);
 	}
