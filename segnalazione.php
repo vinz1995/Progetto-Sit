@@ -70,17 +70,21 @@ if (!isset($_SESSION['loggedin'])) {
   	<div class="container mt-auto">
   <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
     <div class="col mt-1">
-      <h3>utente</h3>
+      <h3>Compila i seguenti campi </h3>
      <!--  echo $_COOKIE['profile_viewer_uid'];  -->
 
       <form>
-      <div class="form-floating">
+    <div class="form-floating">
       <input type="text" class="form-control" id="lat" >
       <label for="floatingPassword">lat</label>
     </div>
     <div class="form-floating">
       <input type="text" class="form-control" id="lon" >
       <label for="floatingPassword">lon</label>
+    </div>
+    <div class="form-floating">
+      <input type="textarea" class="form-control" id="inserisci_descizione" >
+      <label for="floatingPassword">inserisci descrizione</label>
     </div>
       </form>
     </div>
