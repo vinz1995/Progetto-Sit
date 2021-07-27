@@ -140,6 +140,15 @@ public class cGraph extends AbstractPlugIn{
 							lista_feature.add(f);
 							map_nodi_feature.put(start, lista_feature);
 						}
+						if(map_nodi_feature.get(end) != null){
+							lista_feature=map_nodi_feature.get(end);
+							// System.out.println("size1: "+map_nodi_feature.get(start).size());
+							lista_feature.add(f);
+						map_nodi_feature.replace(end, lista_feature);
+						}else{
+							lista_feature.add(f);
+						map_nodi_feature.put(end, lista_feature);
+						}
 						
 					}
 					else{
@@ -202,6 +211,15 @@ public class cGraph extends AbstractPlugIn{
 					}else{
 						lista_feature.add(f);
 					map_nodi_feature.put(start, lista_feature);
+					}
+					if(map_nodi_feature.get(end) != null){
+						lista_feature=map_nodi_feature.get(end);
+						// System.out.println("size1: "+map_nodi_feature.get(start).size());
+						lista_feature.add(f);
+					map_nodi_feature.replace(end, lista_feature);
+					}else{
+						lista_feature.add(f);
+					map_nodi_feature.put(end, lista_feature);
 					}
 				}
 				else{
