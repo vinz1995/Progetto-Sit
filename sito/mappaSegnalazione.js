@@ -85,6 +85,8 @@ geolocation.on('change', function() {
 
     document.getElementById('lat').value = coo[1];
     document.getElementById('lon').value = coo[0];
+    document.getElementById('lat1').value = coo[1];
+    document.getElementById('lon1').value = coo[0];
     //document.cookie="profile_viewer_uid="+geolocation.getPosition();
     // el('altitudeAccuracy').innerText = geolocation.getAltitudeAccuracy() + ' [m]';
     // el('heading').innerText = geolocation.getHeading() + ' [rad]';
@@ -210,6 +212,8 @@ function addInteraction() {
             var cooClick = toStringXY(toLonLat(e.feature.getGeometry().getCoordinates()), 10).split(',');
             document.getElementById('lat').value = cooClick[1];
             document.getElementById('lon').value = cooClick[0];
+            document.getElementById('lat1').value = cooClick[1];
+            document.getElementById('lon1').value = cooClick[0];
 
             var format = new ol.format.WKT();
             console.log(format.writeFeature(e.feature));

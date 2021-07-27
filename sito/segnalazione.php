@@ -67,12 +67,14 @@ if (!isset($_SESSION['loggedin'])) {
                         <!--  echo $_COOKIE['profile_viewer_uid'];  -->
                         <form method="POST" action="inviaSegnalazione.php" enctype="multipart/form-data">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lat" name="lat" >
+                                <input type="text" class="form-control" id="lat1" name="lat1" disabled>
+                                <input type="text" class="form-control" id="lat" name="lat" hidden>
                                 <label for="floatingInput">latitudine</label>
 
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="lon" name="lon" >
+                                <input type="text" class="form-control" id="lon1" name="lon1" disabled>
+                                <input type="text" class="form-control" id="lon" name="lon" hidden>
                                 <label for="floatingInput">longitudine</label>
                             </div>
                             <div class="form-floating">
