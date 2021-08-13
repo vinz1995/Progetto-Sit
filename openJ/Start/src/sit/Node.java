@@ -18,7 +18,6 @@ public class Node {
     public Node(int name) {
         this.name = name;
     }
-
     public void addDestination(Node destination, double d) {
         adjacentNodes.put(destination, d);
     }
